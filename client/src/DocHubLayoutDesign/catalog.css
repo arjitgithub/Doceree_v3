@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Anton";
+  src: url("../DocHubAssets/WebAppLogos/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-regular";
+  src: url("../DocHubAssets/WebAppLogos/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-medium";
+  src: url("../DocHubAssets/WebAppLogos/Poppins-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-semibold";
+  src: url("../DocHubAssets/WebAppLogos/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.catalogScreen {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  gap: 22px;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .catalogGrid {
+    grid-template-columns: repeat(3, 255px); /* was 250px */
+  }
+}
+
+@media (max-width: 900px) {
+  .catalogGrid {
+    grid-template-columns: repeat(2, 255px); /* was 250px */
+  }
+}
+
+@media (max-width: 560px) {
+  .catalogGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalogTitle {
+  margin: 0 0 10px;
+  font-size: 34px;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  color: #111;
+}
+
+.vendorTile {
+  height: 325px;
+  border-radius: 15px;
+  padding: 18px 18px 16px;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--tileBg, #e8f3ea);
+  color: #0b0b0b;
+
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.vendorTile:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.02);
+}
+
+.vendorTileKicker {
+  font-family: "Poppins-medium", Arial, sans-serif;
+  font-size: 10px;              
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: rgba(87, 87, 87, 0.821);     
+  margin-top: 2px;
+}
+
+.vendorTileTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.vendorTileTitle {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.15;
+  color: inherit;                   /* uses DB text color */
+  margin-top: auto;
+}
+
+.vendorTileDesc {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  color: inherit;
+  max-width: 110%;
+  margin-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 0;
+}
+
+.vendorTileBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.vendorTileCta {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(0, 0, 0, 0.82);
+  color: #ffffff;
+
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.vendorTile:hover .vendorTileCta {
+  background: #ffffff;
+  color: #000000;
+}
+
+.vendorTileArrow {
+  display: block;
+}
+
+.catalogBody {
+  display: block;
+  padding: 22px;
+}
+
+.catalogHeaderPane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 420px;
+  padding: 0;
+  overflow: hidden;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: -28px;
+
+  min-height: calc(100vh - 52px);
+  background: #ffffff;
+}
+
+.LeftPane {
+  background: #ffffff;
+
+  padding-top: 180px;
+  padding-left: 174px;
+  padding-right: 84px;
+  padding-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vendorTileTextBlock {
+  position: absolute;
+  left: 18px;
+  right: 70px;
+  bottom: 15px;
+}
+
+.CatalogHeaderRightPaneImage {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.CatalogHeaderPaneImage {
+  position: absolute;
+  top: 150px;
+  right: 60px;
+
+  width: 820px;
+  height: 450px;
+
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.catalogLeftPaneHeading1,
+.catalogLeftPaneHeading2,
+.catalogLeftPaneHeading3 {
+  font-family: "Anton", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 0.95;
+  color: #0b2404;
+}
+
+.catalogLeftPaneHeading1 {
+  text-transform: none;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.catalogLeftPaneHeading2,
+.catalogLeftPaneHeading3 {
+  text-transform: uppercase;
+}
+
+.catalogLeftPaneHeading2 {
+  font-size: 130px;
+  margin-top: 20px;
+}
+.catalogLeftPaneHeading3 {
+  font-size: 130px;
+  margin-top: 6px;
+}
+
+.catalogInfoBand {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: #F7F7F7;
+  padding: 46px 0 76px;
+}
+
+.catalogInfoBandInner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 22px;
+  text-align: center;
+}
+
+.catalogInfoTitle {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+}
+
+.catalogInfoSub {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 14px;
+  letter-spacing: -0.2px;
+}
+
+.keystoneWord {
+  color: #ff7a00;
+}
+
+@media (max-width: 900px) {
+  .catalogHeaderPane {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: calc(100vh - 48px);
+  }
+
+  .CatalogHeaderRightPaneImage {
+    min-height: 280px;
+  }
+
+  .CatalogHeaderPaneImage {
+    position: relative;
+    top: auto;
+    right: auto;
+
+    width: calc(100% - 40px);
+    height: 300px;
+
+    margin: 20px;
+  }
+
+  .LeftPane {
+    padding: 130px 22px 20px;
+  }
+}
+
+.vendorTileLogoSlot {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  
+}
+
+.vendorTileLogoImg {
+  max-width: 240px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.vendorTileTextBottom {
+  margin-top: auto;
+}
