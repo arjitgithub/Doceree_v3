@@ -150,7 +150,7 @@ export const vendors = [
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#FFC3AE",
     VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "ETF.png"
+    VENDOR_TILE_LOGO: "ETFGlobal.png"
   },
   {
     VENDOR_ID: "0b51ccff-efdb-5d41-85ad-0135f55fb2c2",
@@ -302,7 +302,7 @@ export const vendors = [
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#FFF2D6",
     VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "TCWGroup.png"
+    VENDOR_TILE_LOGO: "TCW.png"
   },
   {
     VENDOR_ID: "041e2af3-9107-5a03-8c77-8b0f7c0b6fdb",
@@ -398,7 +398,7 @@ export const vendors = [
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#DCE4FF",
     VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Directory.png"
+    VENDOR_TILE_LOGO: "DTCC.png"
   },
   {
     VENDOR_ID: "b1c7c251-8b0f-5b4f-bd5e-17e6e7d51d8a",
@@ -510,7 +510,7 @@ export const vendors = [
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#6468f6ff",
     VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "WoodMackenzie.png"
+    VENDOR_TILE_LOGO: "WoodMac.png"
   },
   {
     VENDOR_ID: "a8b7c6d5-e4f3-5a21-9b0c-1d2e3f4a5b6d",
@@ -558,7 +558,7 @@ export const vendors = [
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#FAEEDD",
     VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "HaverAnalytics.png"
+    VENDOR_TILE_LOGO: "Haver.png"
   },
   {
     VENDOR_ID: "a2b1c0d9-e8f7-5031-9c5d-6e7f8091a2b3",
@@ -593,11 +593,27 @@ export const vendors = [
     VENDOR_TILE_LOGO: "Rearc.png"
   },
   {
-    VENDOR_ID: "3960c8ff-ffe9-5675-aa7d-5f9075dc2a36",
+    VENDOR_ID: "3230c8gf-fge1-5375-aa7d-5f9075dc2a36",
     VENDOR_NAME: "Goldman Sachs",
     VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
     VENDOR_BKG_COLOR: "#E6F0FF",
     VENDOR_NAME_TEXT_COLOR: "#111827",
     VENDOR_TILE_LOGO: "GS.png"
+  },
+  {
+    VENDOR_ID: "3960c4ff-ffe9-8963-fa7g-5f9075dc2a36",
+    VENDOR_NAME: "JP Morgan Chase",
+    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+    VENDOR_BKG_COLOR: "#E6F0FF",
+    VENDOR_NAME_TEXT_COLOR: "#111827",
+    VENDOR_TILE_LOGO: "JPMC.png"
+  },
+  {
+    VENDOR_ID: "7289c8ff-ghe2-3985-bf3q-5f9075dc2a36",
+    VENDOR_NAME: "KRIS",
+    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+    VENDOR_BKG_COLOR: "#E6F0FF",
+    VENDOR_NAME_TEXT_COLOR: "#111827",
+    VENDOR_TILE_LOGO: "KRIS.png"
   }
 ];
