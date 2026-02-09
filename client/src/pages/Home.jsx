@@ -1,5 +1,6 @@
 import React from "react";
 import "../DocHubLayoutDesign/home.css";
+import Footer from "../components/Footer.jsx";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         loop
         playsInline
       />
+      <Footer />
     </div>
   );
 }

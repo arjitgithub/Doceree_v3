@@ -7,6 +7,7 @@ import "./DocHubLayoutDesign/header.css";
 import "./DocHubLayoutDesign/home.css";
 import "./DocHubLayoutDesign/catalog.css";
 import "./DocHubLayoutDesign/vendor.css";
+import "./DocHubLayoutDesign/admin.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

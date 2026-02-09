@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Inter-medium";
+  src: url("../DocHubAssets/WebAppLogos/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-semibold";
+  src: url("../DocHubAssets/WebAppLogos/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 550;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url("../DocHubAssets/WebAppLogos/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Vendor name font (requested) */
+@font-face {
+  font-family: "Montserrat-Variable";
+  src: url("../DocHubAssets/WebAppLogos/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
 :root {
   --appHeaderHeight: 52px;
 }
@@ -17,42 +46,102 @@
 
 .vendorInfoSection {
   width: 100vw;
-  height: calc((100vh - var(--appHeaderHeight)) * 0.60);
+  min-height: calc(100vh - var(--appHeaderHeight));
 
   margin: 0;
-  padding: 40px 48px;
+  /* keep existing top/right padding; add extra bottom padding so the buttons can sit near the bottom */
+  padding: 40px 48px 63px;
 
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
+  align-items: stretch;
 
-  background: #ffffff;
+  background: #f5f5f5;
+  background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(212, 226, 250, 0.55) 100%);
   color: var(--vendorText);
 
   position: relative;
   top: 0;
 }
 
-.vendorInfoLeft {
-  display: flex;
+.vendorInfoLeft {display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .vendorInfoTitle {
   margin: 0;
-  font-family: "Poppins-semibold", Arial, sans-serif;
-  font-size: 48px;
+  font-family: "Montserrat-Variable", Arial, sans-serif;
+  font-size: 60pt;
   line-height: 1.05;
+  margin-top: 60px;
+  padding-left: 30px;
+
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+/* Vendor name partial coloring (first half black, second half deterministic accent) */
+.vendorNameBase {
+  color: #000000;
+}
+
+.vendorNameAccent {
+  color: var(--vendorNameAccent);
 }
 
 .vendorInfoDesc {
-  margin: 16px 0 0;
+  margin: 21px 0 0;
   max-width: 90%;
   font-family: "Poppins-regular", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.45;
   opacity: 0.85;
+  padding-left: 40px;
+  color: #3b4145;
+  font-weight: 550;
+}
+
+/* ===== Vendor hero buttons (Website / Confluence Page) ===== */
+.vendorInfoButtons {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+
+  /* push the buttons to the bottom of the left column */
+  margin-top: auto;
+
+  z-index: 2;
+  margin-left: 70px;
+}
+
+.vendorInfoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 4px 30px;
+  border-radius: 999px;
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  /* keep button label casing as-is (e.g., "website", "confluence page") */
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.82);
+  text-decoration: none;
+  background: linear-gradient(135deg, #6ff7f1 0%, #39e6db 60%, #22d3ee 100%);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.vendorInfoBtn:hover {
+  transform: translateY(-1px);
+}
+
+.vendorInfoBtn:active {
+  transform: translateY(0px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.11);
 }
 
 .vendorInfoRight {
@@ -110,16 +199,211 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: #ffffff;
-  padding: 22px 22px 40px;
+
+  /* space inside section + space before site footer */
+  padding: 22px 22px 44px;
+  margin-bottom: 34px;
 }
 
 .docTableWrap {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.docTableTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 2px 12px;
+}
+
+/* Title + inline controls (Upload Date / Search / Export) */
+.docTableControls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.docDateControl {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
   background: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.docDateWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.docDateValue {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.82);
+  white-space: nowrap;
+}
+
+.docDatePopover {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 300px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.10);
+  z-index: 40;
+}
+
+.docDatePopoverRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.docDatePopoverLabel {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.70);
+  min-width: 42px;
+}
+
+.docDatePopoverActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.docDateClearBtn,
+.docDateApplyBtn {
   border: none;
-  border-radius: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.docDateClearBtn {
+  background: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,0.78);
+}
+
+.docDateApplyBtn {
+  background: #f4c44f;
+  color: rgba(0,0,0,0.78);
+}
+
+.docDateIcon {
+  display: block;
+  color: rgba(0,0,0,0.70);
+}
+
+.docDatePillText {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.70);
+  white-space: nowrap;
+}
+
+.docDateLabel {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.70);
+  white-space: nowrap;
+}
+
+.docDateInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.82);
+}
+
+.docDateDash {
+  color: rgba(0,0,0,0.45);
+}
+
+.docSearchControl {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #ffffff;
+}
+
+.docSearchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  min-width: 220px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.82);
+  height: 100%;
+}
+
+.docExportBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4c44f;
+  color: rgba(0,0,0,0.70);
+}
+
+.docExportBtn:hover {
+  filter: brightness(0.98);
+}
+
+.docExportIcon {
+  display: block;
+}
+
+.docTableTitle {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.86);
+}
+
+.docTableHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.docTableCount {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.70);
+}
+
+.docTableCard {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -127,141 +411,124 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  background: #ffffff;
-  border-top: 1px solid rgba(0,0,0,0.10);
-  border-bottom: 1px solid rgba(0,0,0,0.10);
   table-layout: fixed;
+  background: #ffffff;
 }
 
-
-.docTable thead th {
+/* header */
+.docHeadRow {
   background: #ffffff;
-  color: rgba(0, 0, 0, 0.55);
+}
+
+.docHeadCell {
+  padding: 12px 14px;
   font-family: "Poppins-semibold", Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
   text-align: left;
-
-  padding: 10px 12px;            
   white-space: nowrap;
 
-  border-bottom: 1px solid rgba(0,0,0,0.10);
-  border-left: none;
-  border-right: none;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.docTable thead th.isSortable {
+.docHeadCell.isSortable {
   cursor: pointer;
   user-select: none;
 }
 
-
-.docThInner { display: inline-flex; align-items: center; gap: 6px; }
-
-
-.docTable tbody tr {
-  position: relative;
-  background: #ffffff;
-
-
-  box-shadow: inset 4px 0 0 transparent;
+.docHeadCell.isSortable:hover {
+  color: rgba(0,0,0,0.72);
 }
 
-.docTable tbody td {
+.docHeadLabel {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.docHeadIcon {
+  display: none; /* your JSX passes none; keep off */
+}
+
+.docSortIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  color: rgba(0,0,0,0.45);
+  vertical-align: middle;
+}
+
+.docHeadCheck {
+  text-align: center;
+}
+
+.docHeadAction {
+  text-align: center;
+}
+
+/* body rows */
+.docRow {
+  background: #ffffff;
+}
+
+.docCell {
+  padding: 12px 14px;
   font-family: "Poppins-regular", Arial, sans-serif;
   font-size: 13px;
-  color: #0b0b0b;            
-  padding: 9px 12px;                
+  color: rgba(0,0,0,0.86);
   vertical-align: middle;
-
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  border-right: 1px solid rgba(0,0,0,0.08);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.docTable tbody td:last-child {
-  border-right: none;  
+.docCellId {
+  font-family: "Inter-semibold", "Poppins-regular", Arial, sans-serif;
+  font-weight: 550;
 }
 
+.docCellName {
+  font-family: "Inter-medium", "Poppins-regular", Arial, sans-serif;
+  font-weight: 500;
+}
 
-.docTable tbody tr:hover td {
+.docRow:hover .docCell {
   background: rgba(0,0,0,0.02);
 }
 
-
-.docTable tbody tr.isSelected td {
+.docRow.isSelected .docCell {
   background: rgba(17, 83, 255, 0.06);
 }
-.docTable tbody tr.isSelected {
-  box-shadow: inset 4px 0 0 #1c3cff;  
+
+.docCellCheck,
+.docCellAction {
+  text-align: center;
 }
 
-
-.docThCheck, .docTdCheck { width: 44px; }
-.docThId, .docTdId { width: 120px; }
-.docThName, .docTdName { width: 260px; }
-.docThDesc, .docTdDesc { width: 360px; }
-.docThCat, .docTdCat { width: 160px; }
-.docThFmt, .docTdFmt { width: 120px; }
-.docThSize, .docTdSize { width: 110px; }
-.docThUpd, .docTdUpd { width: 200px; }
-.docThAct, .docTdAct { width: 70px; text-align: right; }
-
-
-.docTdId,
-.docTdName,
-.docTdDesc,
-.docTdCat,
-.docTdFmt,
-.docTdSize,
-.docTdUpd {
+.docCellId,
+.docCellName,
+.docCellDesc,
+.docCellFmt,
+.docCellSize,
+.docCellUpdated {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.docTdDesc {
-  color: rgba(0,0,0,0.78);  
+.docCellDesc {
+  color: rgba(0,0,0,0.70);
 }
 
- 
+/* checkbox (native, clean) */
 .docCheck {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.docCheck input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.docCheckUi {
-  width: 18px;
-  height: 18px;
-  border-radius: 6px;
-  border: 1.5px solid rgba(0,0,0,0.22);
-  background: #ffffff;
-  display: inline-block;
-}
-.docCheck input:checked + .docCheckUi {
-  background: #1c3cff;
-  border-color: #1c3cff;
-}
-.docCheck input:checked + .docCheckUi::after {
-  content: "";
-  position: relative;
-  display: block;
-  width: 8px;
-  height: 4px;
-  border-left: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  transform: rotate(-45deg);
-  left: 4px;
-  top: 5px;
+  width: 16px;
+  height: 16px;
+  accent-color: #111827;
+  cursor: pointer;
 }
 
- 
-.docCatPill {
+/* category badge */
+.docBadge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -273,13 +540,8 @@
   white-space: nowrap;
 }
 
-.docCatPill.isLink { background: rgba(28, 60, 255, 0.10); color: #1c3cff; }
-.docCatPill.isMisc { background: rgba(0, 0, 0, 0.06); color: rgba(0,0,0,0.85); }
-.docCatPill.isUserGuide { background: rgba(16, 185, 129, 0.12); color: #0f766e; }
-.docCatPill.isMethodology { background: rgba(245, 158, 11, 0.14); color: #b45309; }
-.docCatPill.isDiagram { background: rgba(168, 85, 247, 0.14); color: #7c3aed; }
-
-.docDownloadBtn {
+/* download button */
+.docDlBtn {
   background: transparent;
   border: none;
   padding: 0;
@@ -288,26 +550,71 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-  color: rgba(0,0,0,0.45);  
-}
-.docDownloadBtn:hover {
-  color: #1c3cff;  
-}
-.docDownloadBtn.isActive {
-  color: #16a34a;  
+  color: rgba(0,0,0,0.45);
 }
 
- 
-.docTableFooter {
+.docDlBtn:hover {
+  color: rgba(0,0,0,0.85);
+}
+
+.docDlBtn.isActive {
+  color: #16a34a;
+}
+
+.docDlIcon {
+  display: block;
+}
+
+/* empty state */
+.docEmpty {
+  padding: 18px 6px;
+  color: rgba(0,0,0,0.60);
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* table footer (pagination) */
+.docFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 12px 0 0;
+  padding: 12px 14px;
+
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.08);
+
   color: rgba(0,0,0,0.62);
   font-family: "Poppins-regular", Arial, sans-serif;
   font-size: 12px;
+}
+
+.docTable,
+.docTable thead th,
+.docHeadCell,
+.docCell,
+.docFooter {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.docTable thead th,
+.docHeadCell {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.docCellDesc,
+.docCellFmt,
+.docCellSize,
+.docCellUpdated {
+  color: rgba(0, 0, 0, 0.60);
+  font-weight: 500;
+}
+
+.docCellCat,
+.docCellCat .docBadge {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 550;
+  color: rgba(0, 0, 0, 0.88);
 }
 
 .docFooterLeft {
@@ -316,16 +623,25 @@
   gap: 10px;
 }
 
-.docFooterSelect {
+.docFooterLabel {
+  color: rgba(0,0,0,0.62);
+}
+
+.docRowsSelect {
   height: 28px;
   border: 1px solid rgba(0,0,0,0.14);
   border-radius: 8px;
   padding: 0 10px;
   background: #ffffff;
+
   font-family: "Poppins-regular", Arial, sans-serif;
   font-size: 12px;
   color: rgba(0,0,0,0.78);
   outline: none;
+}
+
+.docRange {
+  color: rgba(0,0,0,0.62);
 }
 
 .docFooterRight {
@@ -334,8 +650,8 @@
   gap: 8px;
 }
 
-.docPageBtn,
-.docPageNum {
+.docNavBtn,
+.docPageBtn {
   height: 28px;
   min-width: 28px;
   border-radius: 8px;
@@ -346,19 +662,1214 @@
   padding: 0 10px;
 }
 
-.docPageNum.isActive {
+.docNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.docPageBtn.isActive {
   background: rgba(0,0,0,0.06);
   color: rgba(0,0,0,0.88);
   border-color: rgba(0,0,0,0.18);
 }
 
-.docPageDots {
+.docDots {
   color: rgba(0,0,0,0.45);
   padding: 0 4px;
 }
 
- 
-@media (max-width: 900px) {
-  .docTableWrap { overflow-x: auto; }
-  .docTable { min-width: 1100px; }
+
+.docRow {
+  position: relative;
 }
+
+
+.docTable tr.isSelected > td:first-child {
+  position: relative;
+  box-shadow: inset 4px 0 0 #09008a;
+}
+
+@media (max-width: 900px) {
+  .docTableCard {
+    overflow-x: auto;
+  }
+  .docTable {
+    min-width: 1100px;
+  }
+}
+
+
+.vendorInfoSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.vendorInfoFxCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vendorInfoFxCanvas .vanta-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.vendorInfoSection > *:not(.vendorInfoFxCanvas) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== Vendor Details (Full-width section before table) ===================== */
+
+.vendorDetailsSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #f5f5f5;
+    background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(212, 226, 250, 0.55) 100%);
+  padding: 10px 22px 26px;
+}
+
+.vendorDetailsSection {
+  padding-top: 6px !important;
+  padding-bottom: 18px !important;
+}
+
+.vendorDetailsInner {
+  gap: 10px !important;
+}
+
+.vendorDetailBlock {
+  padding: 6px 0 !important;
+}
+
+.vendorDetailBody {
+  margin-top: 4px !important;
+}
+
+.vendorDetailsInner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.vendorDetailBlock {
+  padding: 10px 0;
+}
+
+.vendorDetailHead {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.vendorDetailIcon {
+  color: rgba(0,0,0,0.72);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendorDetailTitle {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: px;
+  color: rgba(0,0,0,0.92);
+}
+
+.vendorDetailBody {
+  margin-left: 34px;
+  margin-top: 6px;
+}
+
+.vendorDetailText {
+  margin: 0;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.78);
+  max-width: 1100px;
+}
+
+.vendorPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vendorPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #E8F3FF;
+  color: #1c3cff;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.vendorInlineTable {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vendorInlineItem {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.80);
+}
+
+.vendorInlineItem::after {
+  content: ",";
+  margin-left: 2px;
+  color: rgba(0,0,0,0.40);
+}
+
+.vendorInlineItem:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+.vendorSupportList {
+  display: grid;
+  gap: 10px;
+}
+
+.vendorSupportRow {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.vendorSupportLabel {
+  font-family: "Poppins-medium", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.88);
+}
+
+.vendorSupportValue {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.78);
+  overflow-wrap: anywhere;
+}
+
+.vendorSupportLink {
+  color: #1c3cff;
+  text-decoration: underline;
+}
+
+.vendorUsageList {
+  display: grid;
+  gap: 22px;
+}
+
+.vendorUsageTitle {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 15px;
+  color: rgba(0,0,0,0.92);
+}
+
+.vendorUsageDesc {
+  margin-top: 6px;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.78);
+}
+
+.vendorCodeBlock {
+  margin: 12px 0 0;
+  background: rgba(0,0,0,0.04);
+  border-radius: 14px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.vendorCodeLine {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.vendorCodeLn {
+  color: rgba(0,0,0,0.55);
+  text-align: right;
+}
+
+.vendorCodeText {
+  white-space: pre;
+}
+
+@media (max-width: 900px) {
+  .vendorSupportRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .vendorDetailBody {
+    margin-left: 0;
+  }
+}
+
+.vendorDetailsSection {
+  background: #f7fafc;
+}
+
+.vendorDetailsSection,
+.vendorDetailsSection * {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.vendorDetailIcon {
+  width: 22px;
+  height: 22px;
+  color: rgba(0,0,0,0.75);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendorDetailSvg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.vendorDetailTitle {
+  font-weight: 600;
+  color: rgba(0,0,0,0.92);
+}
+
+.vendorDetailText {
+  color: rgba(0,0,0,0.78);
+}
+
+.vendorPill {
+  background: rgba(28, 60, 255, 0.12);
+  color: #1c3cff;
+  border-radius: 999px;
+}
+
+/* ===== Usage examples styling like your screenshot (no rounded borders) ===== */
+
+.vendorUsageTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(0,0,0,0.92);
+}
+
+.vendorUsageDesc {
+  color: rgba(0,0,0,0.72);
+}
+
+.vendorCodeBlock {
+  background: rgba(0,0,0,0.04);
+  border-radius: 0;
+  padding: 14px 16px;
+}
+
+
+.vendorCodeLine {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.vendorCodeLn {
+  color: rgba(0,0,0,0.45);
+}
+
+.vendorCodeText {
+  color: rgba(0,0,0,0.86);
+}
+
+/* ===================== Vendor Details Section (Snowflake-style) ===================== */
+
+.vendorDetailsSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #f2f8ff;
+  padding: 36px 48px 34px;
+}
+
+.vendorDetailsInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vendorDetailBlock {
+  padding: 18px 0;
+}
+
+.vendorDetailHead {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.vendorDetailIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.vendorDetailSvg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.vendorDetailTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 24px;
+  color: rgba(0,0,0,0.92);
+}
+
+/* ===================== Final overrides (must be LAST) ===================== */
+
+
+.vendorDetailBody {
+  margin-left: 0 !important;
+  padding-left: 44px !important; 
+  padding-right: 10px;
+}
+
+.vendorCodeBox.isAuto .vendorCodeLines {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.vendorCodeBox.isCollapsible .vendorCodeLines {
+  max-height: 170px !important;
+  overflow: hidden !important;
+}
+
+.vendorHeadRight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,0.65);
+}
+
+.vendorDetailBody {
+  margin-left: 34px; 
+  margin-top: 8px;
+}
+
+.vendorDetailsSection,
+.vendorDetailsSection * {
+  font-family: "Inter-medium", Arial, sans-serif;
+}
+
+.vendorDetailText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(0,0,0,0.78);
+  max-width: 980px;
+}
+
+.vendorTextSectionTitle {
+  margin-top: 18px;
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: rgba(0,0,0,0.88);
+}
+
+.vendorBulletList {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(0,0,0,0.78);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* pills */
+.vendorPills { display: flex; flex-wrap: wrap; gap: 10px; }
+.vendorPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(30, 90, 255, 0.12);
+  color: rgba(0,0,0,0.88);
+  font-size: 14px;
+}
+
+/* Contact rows like the right panel */
+.vendorContactList {
+  display: grid;
+  gap: 12px;
+}
+
+.vendorContactRow {
+  display: grid;
+  grid-template-columns: 70px 1fr 18px;
+  gap: 10px;
+  align-items: center;
+}
+
+.vendorContactLabel {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.86);
+}
+
+.vendorContactLink {
+  font-size: 14px;
+  color: rgba(0,0,0,0.86);
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vendorContactExt {
+  display: inline-flex;
+  justify-content: flex-end;
+  color: rgba(0,0,0,0.55);
+}
+
+.vendorExtSvg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* ===================== Usage examples (fixed box + show more + copy) ===================== */
+
+.vendorUsageList { display: grid; gap: 26px; }
+
+.vendorUsageTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 15px;
+  color: rgba(0,0,0,0.92);
+}
+
+.vendorUsageDesc {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.72);
+  max-width: 980px;
+}
+
+.vendorCodeBox {
+  margin-top: 14px;
+  position: relative;
+  background: rgba(0,0,0,0.04);
+  border-radius: 0;          /* user requested no rounded */
+  padding: 18px 18px;
+  height: 170px;             /* fixed height like reference */
+  overflow: hidden;
+}
+
+.vendorCodeBox.isOpen {
+  height: auto;              /* expand on show more */
+  overflow: visible;
+}
+
+/* copy button top-right inside the box */
+.vendorCopyBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: rgba(0,0,0,0.55);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.vendorCopyBtn:hover {
+  color: rgba(0,0,0,0.82);
+}
+
+.vendorCopySvg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* code */
+.vendorCodePre {
+  margin: 0;
+  white-space: pre;
+  overflow-x: auto;
+  padding-right: 40px; /* keep text away from copy icon */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.84);
+}
+
+/* show more */
+.vendorShowMoreBtn {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(0,0,0,0.65);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendorChevron {
+  display: inline-block;
+  transform: translateY(1px);
+  transition: transform 140ms ease;
+}
+
+.vendorChevron.isUp {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+/* ===================== Overrides to match screenshots ===================== */
+
+/* Remove divider lines between sections */
+.vendorDetailBlock + .vendorDetailBlock {
+  border-top: none !important;
+}
+
+/* Icon inline with title */
+.vendorDetailHead {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.vendorDetailIcon {
+  margin-top: 0 !important;
+  flex: 0 0 auto;
+}
+
+.vendorDetailTitle {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Usage example description: clamp to 2 lines and expand on demand */
+.vendorExpandableText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vendorExpandableText.isExpanded {
+  display: block;
+  overflow: visible;
+}
+
+.vendorExpandableBtn {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(0,0,0,0.65);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Usage example SQL box:
+   - short SQL => auto height, no Show more
+   - long SQL => collapsed max-height, expand on Show more */
+.vendorCodeBox {
+  border-radius: 0 !important;
+}
+
+.vendorCodeBox.isAuto {
+  overflow: visible !important;
+}
+
+.vendorCodeBox.isCollapsible .vendorCodeLines {
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.vendorCodeBox.isExpanded .vendorCodeLines {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Remove any leftover line-number layout spacing */
+.vendorCodeLine,
+.vendorCodeLn {
+  display: none !important;
+}
+
+.vendorCopiedToast {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.65);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .vendorDetailsSection { padding: 28px 22px 28px; }
+  .vendorDetailsInner { max-width: 100%; }
+  .vendorDetailBody { margin-left: 0; }
+  .vendorContactRow { grid-template-columns: 70px 1fr 18px; }
+}
+
+/* === Vendor Details section: background + Inter + spacing (NO structure change) === */
+
+.vendorDetailsSection {
+  background: #f2f8ff;
+}
+
+/* Force Inter only inside this section */
+.vendorDetailsSection,
+.vendorDetailsSection * {
+  font-family: "Inter-medium", Arial, sans-serif;
+}
+
+/* spacing between blocks like Snowflake panel */
+.vendorDetailBlock {
+  padding: 16px 0;
+}
+
+/* icon + title row */
+.vendorDetailHead {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ✅ indentation requested: 10px (not 34px) */
+.vendorDetailBody {
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+/* titles a bit stronger */
+.vendorDetailTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+}
+
+/* ===== Usage examples: fixed box + show more expand + copy button ===== */
+
+.vendorCodeBox {
+  position: relative;
+  background: rgba(0,0,0,0.04);
+  border-radius: 0;     /* no rounded */
+  padding: 18px;
+  height: 170px;        /* fixed size */
+  overflow: hidden;
+}
+
+.vendorCodeBox.isOpen {
+  height: auto;
+  overflow: visible;
+}
+
+.vendorCopyBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: rgba(0,0,0,0.55);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.vendorCopyBtn:hover {
+  color: rgba(0,0,0,0.82);
+}
+
+.vendorCodePre {
+  margin: 0;
+  padding-right: 42px; /* space for copy button */
+  white-space: pre;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.84);
+}
+
+.vendorShowMoreBtn {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(0,0,0,0.65);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendorChevron {
+  display: inline-block;
+  transform: translateY(1px);
+  transition: transform 140ms ease;
+}
+
+.vendorChevron.isUp {
+  transform: rotate(180deg) translateY(-1px);
+}
+/* ===================== Vendor Details Section (NEW) ===================== */
+
+.vendorDetailsSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #f2f8ff;
+  padding: 26px 0 30px;
+}
+
+.vendorDetailsInner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* "Vendor Detail" heading (requested: 20px) */
+.vendorDetailsHeading {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgba(0,0,0,0.86);
+  margin: 0 0 8px 0;
+  padding-left: 10px;
+}
+
+/* block spacing like your right-side reference */
+.vendorDetailBlock {
+  padding: 18px 0;
+}
+
+.vendorDetailBlock + .vendorDetailBlock {
+  border-top: none; /* remove divider line between sections */
+}
+
+.vendorDetailHead {
+  display: flex;
+  align-items: center; /* icon inline with title */
+  gap: 12px;
+  padding-left: 10px; /* your requested indent */
+}
+
+.vendorDetailIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.80);
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+/* ===================== Expandable text (Usage example descriptions) ===================== */
+
+.vendorExpandableText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vendorExpandableText.isExpanded {
+  display: block;
+  overflow: visible;
+}
+
+.vendorExpandableBtn {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(0,0,0,0.65);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendorExpandableBtn:hover {
+  color: rgba(0,0,0,0.82);
+}
+
+/* ===================== Usage examples code box behavior ===================== */
+
+/* For short SQL (no show more): auto height */
+.vendorCodeBox.isAuto {
+  height: auto;
+}
+
+/* For long SQL: fixed-looking collapsed height + expand */
+.vendorCodeBox.isCollapsible .vendorCodeLines {
+  max-height: 140px; /* collapsed height like screenshot */
+  overflow: hidden;
+}
+
+.vendorCodeBox.isExpanded .vendorCodeLines {
+  max-height: none;
+  overflow: visible;
+}
+
+/* ensure our pre doesn't introduce extra margin */
+.vendorCodePre {
+  margin: 0;
+}
+
+.vendorDetailSvg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.vendorDetailTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+/* body lines up under the text (not under icon) */
+.vendorDetailBody {
+  padding-left: 44px; /* icon + gap alignment like screenshot */
+  padding-right: 10px;
+  margin-top: 8px;
+}
+
+.vendorDetailText {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+  max-width: 1050px;
+}
+
+/* categories pill */
+.vendorPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vendorPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.14);
+  color: #1d4ed8;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* inline products/projects (no borders) */
+.vendorInlineTable {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  max-width: 1100px;
+}
+
+.vendorInlineItem {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* support list like “Contact” spacing */
+.vendorSupportList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 1100px;
+}
+
+.vendorSupportRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.vendorSupportLabel {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.90);
+}
+
+.vendorSupportValue {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.vendorSupportLink {
+  color: rgba(0, 0, 0, 0.78);
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendorExtSvg {
+  width: 18px;
+  height: 18px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* ===================== Usage examples (Copy + Show more) ===================== */
+
+.vendorUsageList {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 1100px;
+}
+
+.vendorUsageTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.vendorUsageDesc {
+  margin-top: 6px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+/* fixed-looking code box, NO rounded borders */
+.vendorCodeBox {
+  margin-top: 14px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 980px;
+}
+
+.vendorCodeLines {
+  padding: 16px 18px 10px;
+  max-height: 140px; /* collapsed height */
+  overflow: hidden;
+}
+
+.vendorCodeLines.isExpanded {
+  max-height: none;
+}
+
+.vendorCodeLine {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 2px 0;
+}
+
+.vendorCodeLn {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.vendorCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.85);
+  white-space: pre;
+}
+
+.vendorCopyBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.55);
+  padding: 6px;
+}
+
+.vendorCopyBtn:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.vendorCopySvg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* small "Copied" hint like UI */
+.vendorCopiedToast {
+  position: absolute;
+  top: 12px;
+  right: 44px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.vendorCodeFooter {
+  padding: 10px 18px 14px;
+}
+
+.vendorShowMoreBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vendorShowMoreBtn:hover {
+  color: rgba(0, 0, 0, 0.82);
+}
+
+.vendorChevron {
+  display: inline-block;
+  transform: translateY(1px);
+  transition: transform 140ms ease;
+}
+
+.vendorChevron.isUp {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+
+/* ===================== Screenshot fixes appended at EOF ===================== */
+
+/* Body text should align under the title (not under the icon) */
+.vendorDetailBody {
+  margin-left: 0 !important;
+  padding-left: 44px !important;
+  padding-right: 10px;
+}
+
+/* SQL code box: short = auto height, long = collapsible */
+.vendorCodeBox.isAuto .vendorCodeLines {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.vendorCodeBox.isCollapsible .vendorCodeLines {
+  max-height: 140px !important;
+  overflow: hidden !important;
+}
+
+.vendorCodeBox.isExpanded .vendorCodeLines {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* === Overrides requested: Vendor Details background gradient + Vendor Info title letter spacing === */
+.vendorDetailsSection {
+  background: #f5f5f5 !important;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgb(255, 255, 255) 21%, rgb(251, 254, 255) 55%, rgba(66, 86, 122, 0.55) 100%) !important;
+}
+
+.vendorInfoTitle {
+  letter-spacing: normal !important;
+}
+
+
+/* Restore base body spacing so Support stays exactly the same */
+.vendorDetailBody {
+  padding-left: 44px !important;
+  margin-top: 8px !important;
+}
+
+/* +5px indent ONLY for non-support values */
+.vendorDetailBody .vendorDetailText,
+.vendorDetailBody .vendorPills,
+.vendorDetailBody .vendorInlineTable,
+.vendorDetailBody .vendorUsageList {
+  margin-left: 5px !important;
+}
+
+/* +5px more spacing from the title row ONLY for non-support values */
+.vendorDetailBody .vendorDetailText,
+.vendorDetailBody .vendorPills,
+.vendorDetailBody .vendorInlineTable,
+.vendorDetailBody .vendorUsageList {
+  margin-top: 5px !important;
+}
+
+/* Make sure Support never inherits those tweaks */
+.vendorDetailBody .vendorSupportGrid,
+.vendorDetailBody .vendorSupportList {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+/* === FIX: Support section should stay as 2 columns (like screenshot) === */
+/* JSX uses .vendorSupportGrid (two columns) + .vendorSupportCol wrappers */
+.vendorSupportGrid{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px !important; /* requested gap between the 2 columns */
+  align-items: start;
+}
+
+.vendorSupportCol{
+  display: grid;
+  row-gap: 10px;
+}
+
+/* stack on small screens */
+@media (max-width: 900px){
+  .vendorSupportGrid{
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+}
+

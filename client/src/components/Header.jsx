@@ -36,9 +36,7 @@ export default function Header() {
         </nav>
 
         {/* far right */}
-        <Link className="loginBtn" to="/login">
-          Login
-        </Link>
+        <Link className="loginBtn" to="/admin">Login</Link>
       </div>
     </header>
   );

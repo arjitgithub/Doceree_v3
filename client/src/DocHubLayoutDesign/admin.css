@@ -1,0 +1,340 @@
+/* /mnt/data/admin.css */
+@font-face {
+  font-family: "InterCustom";
+  src: url("./DocHubAssets/WebAppLogosInter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PreussTitle";
+  src:
+    url("./DocHubAssets/WebAppLogos/preussischevi9ag2schattenlinie.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+  --brand: #0d3c71;
+  --fieldBg: #FDEBE4;
+
+  /* task 1: reduce border by 1pt (was 5px) */
+  --borderW: 2px;
+
+  /* reduce width ~40% */
+  --fieldW: 60%;
+}
+
+
+/* Page */
+.adminPage{
+  width: 100%;
+  min-height: 100%;
+  padding: 16px 16px 30px;
+  font-family: "InterCustom", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--brand);
+  position: relative;
+  z-index: 0;
+}
+
+/* Vanta overlay: effect only, keep existing gradient visible */
+.vantaLayer{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vantaLayer canvas{
+  background: transparent !important;
+}
+
+.pageTitle,
+.adminShell{
+  position: relative;
+  z-index: 1;
+}
+
+.adminShell{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Sections */
+.adminSection{
+  background: transparent;
+}
+
+/* Headers */
+.sectionHeaderRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* task 3: +5px (was 14px) */
+.sectionTitle{
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.sectionTitleSmall{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.sectionActions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Layout helpers */
+.vendorDetailsLayout,
+.addItemLayout{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  /* task 2: enforce same baseline/height behavior */
+  align-items: stretch;
+}
+
+.colStack{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+  height: 100%;
+}
+
+/* Field rows */
+.fieldRow{
+  background: var(--fieldBg);
+  border: var(--borderW) solid var(--brand);
+  border-radius: 0;
+  padding: 14px 16px;
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+.fieldRow.compact{
+  padding: 10px 14px;
+}
+
+.fieldRow.descBox{
+  align-items:flex-start;
+  height: 100%;
+}
+
+/* Labels */
+.fieldLabel{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand);
+  min-width: 140px;
+  white-space: nowrap;
+}
+
+/* Controls */
+.fieldControl{
+  flex: 1;
+  display:flex;
+  justify-content:flex-start;
+  min-width: 0;
+}
+
+/* Inputs / selects */
+.fieldInput,
+.fieldTextarea{
+  width: var(--fieldW);
+  background: transparent !important;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand);
+  padding: 8px 10px;
+  border-radius: 0;
+}
+
+.fieldInput::placeholder,
+.fieldTextarea::placeholder{
+  color: rgba(0, 50, 108, 0.45);
+}
+
+select.fieldInput{
+  appearance: none;
+}
+
+/* task 2: make right textarea height align perfectly with left stack bottom */
+.vendorDescRow .fieldTextarea,
+.assetDescRow .fieldTextarea{
+  width: var(--fieldW);
+  height: 100%;
+  min-height: 0;
+  resize: vertical;
+}
+
+/* Tick */
+.fieldTick{
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* Validation errors */
+.errorText{
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.fieldInput.error,
+.fieldTextarea.error{
+  outline: var(--borderW) solid var(--brand);
+}
+
+/* Tabs */
+.tabs{
+  display:flex;
+  gap: 10px;
+  margin: 8px 0 12px;
+  flex-wrap: wrap;
+}
+
+.tabBtn{
+  background: var(--fieldBg);
+  border: var(--borderW) solid var(--brand);
+  border-radius: 0;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor:pointer;
+  color: var(--brand);
+}
+
+.tabBtn.active{
+  background: var(--brand);
+  color: #ffffff;
+}
+
+/* Table */
+.tableWrap{
+  background: var(--fieldBg);
+  border: var(--borderW) solid var(--brand);
+  border-radius: 0;
+  overflow: auto;
+}
+
+.table{
+  width:100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.table th{
+  border-bottom: var(--borderW) solid var(--brand);
+  padding: 12px;
+  font-size: 12px;
+  text-align:left;
+  color: var(--brand);
+}
+
+.table td{
+  border-bottom: 1px solid rgba(0, 50, 108, 0.25);
+  padding: 12px;
+  color: var(--brand);
+  vertical-align: middle;
+}
+
+.emptyRow{
+  padding: 18px 12px;
+  color: rgba(0, 50, 108, 0.75);
+}
+
+.rowActions{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12.5px;
+}
+
+/* Form actions – keep under both columns */
+.formActions{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons: no rounded corners */
+.btnPrimary,
+.btnSecondary,
+.btnSmall,
+.btnDanger{
+  border-radius: 0;
+  border: var(--borderW) solid var(--brand);
+  background: var(--fieldBg);
+  color: var(--brand);
+  font-family: "InterCustom", system-ui, sans-serif;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor:pointer;
+}
+
+.btnPrimary{
+  background: var(--brand);
+  color: #fff;
+}
+
+/* file input */
+.fileOnly{
+  margin-left: 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .vendorDetailsLayout,
+  .addItemLayout{ grid-template-columns: 1fr; }
+
+  .fieldInput,
+  .fieldTextarea{ width: 100%; }
+
+  .vendorDescRow .fieldTextarea,
+  .assetDescRow .fieldTextarea{
+    height: auto;
+    min-height: 140px;
+  }
+}
+
+.pageTitle{
+  font-family: "PreussTitle", "InterCustom", system-ui, sans-serif;
+  font-size: 50px;
+  color: var(--brand);
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.adminShell{
+  width: min(1100px, calc(100% - 100px));
+  margin-left: 50px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+

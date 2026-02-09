@@ -6,6 +6,14 @@
 }
 
 @font-face {
+  font-family: "Inter-medium";
+  src: url("../DocHubAssets/WebAppLogos/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: "Poppins-regular";
   src: url("../DocHubAssets/WebAppLogos/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -39,7 +47,7 @@ body {
 
 .catalogGrid {
   display: grid;
-  grid-template-columns: repeat(4, 310px);
+  grid-template-columns: repeat(3, 390px);
   gap: 22px;
   justify-content: center;
 }
@@ -66,7 +74,7 @@ body {
   margin: 0 0 10px;
   font-size: 34px;
   text-align: center;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-weight: 600;
   color: #111;
 }
@@ -104,24 +112,43 @@ body {
 .vendorTileTop {
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding-top: 22px;
 }
 
+.vendorTileKicker {
+  font-family: "Poppins-medium", Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: rgba(87, 87, 87, 0.821);
+  margin-top: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+
 .vendorTileTitle {
-  font-family: "Poppins-semibold", Arial, sans-serif;
-  font-size: 18px;
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.15;
-  color: inherit;                   /* uses DB text color */
+  color: rgb(0, 0, 0);          
   margin-top: auto;
 }
 
 .vendorTileDesc {
-  font-family: "Poppins-regular", Arial, sans-serif;
-  font-size: 13px;
+  font-family: "Inter-regular", Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.35;
-  color: inherit;
+  font-weight: 400;
+  color: rgb(75, 75, 75);
   max-width: 110%;
   margin-top: 10px;
   padding-right: 15px;
+  -webkit-box-orient: vertical;
   padding-bottom: 0;
 }
 
@@ -146,7 +173,7 @@ body {
 }
 
 .vendorTile:hover .vendorTileCta {
-  background: #ffffff;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -164,7 +191,7 @@ body {
   grid-template-columns: 1fr 1fr;
   height: 420px;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -172,11 +199,11 @@ body {
   margin-top: -28px;
 
   min-height: calc(100vh - 52px);
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .LeftPane {
-  background: #ffffff;
+  background-color: #ffffff;
 
   padding-top: 180px;
   padding-left: 174px;
@@ -197,8 +224,8 @@ body {
 
 .CatalogHeaderRightPaneImage {
   position: relative;
-  overflow: hidden;
-  background: #ffffff;
+  overflow: visible;
+  background-color: #ffffff;
 }
 
 .CatalogHeaderPaneImage {
@@ -310,27 +337,670 @@ body {
 }
 
 .vendorTileLogoSlot {
-  width: 100%;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  overflow: hidden;
-  flex: 0 0 auto;
-  
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 0 !important;
+  background: #000000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
 }
 
 .vendorTileLogoImg {
-  max-width: 240px;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 .vendorTileTextBottom {
   margin-top: auto;
+}
+
+/* ===== Vanta / header FX layering fix ===== */
+
+/* Ensure the header is the positioning context for the FX layer */
+.catalogHeaderPane {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make the FX host cover the entire header and NOT participate in the grid layout */
+.catalogHeaderFxCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  /* keep it out of layout + behind content */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Vanta injects a canvas with class vanta-canvas; ensure it fills */
+.catalogHeaderFxCanvas .vanta-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.catalogHeaderPane > *:not(.catalogHeaderFxCanvas) {
+  position: relative;
+  z-index: 1;
+}
+
+.LeftPane {
+  background: transparent;
+}
+
+.CatalogHeaderRightPaneImage {
+  background: transparent;
+}
+
+
+/* ===== Controls bar alignment (search + sort on the right) ===== */
+.catalogControlsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.catalogControlsRightGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: 1;
+}
+
+.catalogVendorCount {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+/* Make the vendor select button align visually with the Sort button */
+.vendorSelectButton,
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vendorSearchIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sortChevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2px;
+}
+
+
+
+/* ===== Controls bar alignment (count on left, search + sort on right) ===== */
+.catalogControlsBar {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 18px 0 10px;
+  background-color: #ffffff;
+}
+
+.catalogControlsInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.catalogControlsRightGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.catalogVendorCount {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.88);
+  white-space: nowrap;
+}
+
+/* ===== Vendor search button (match top-row style) ===== */
+.vendorSelectButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 39px;           /* matches Sort; 1px shorter than previous 40 */
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  cursor: pointer;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.vendorSelectButton:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.vendorSelectButtonText {
+  white-space: nowrap;
+}
+
+.vendorSearchIcon,
+.vendorSelectChevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* ===== Sort button + menu (match screenshot style) ===== */
+.catalogControlsRight {
+  position: relative;
+}
+
+.sortButtonOrange {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f08b3a;
+  color: #ffffff;
+  border: none;
+  height: 39px;
+  padding: 0 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.sortButtonOrange:hover {
+  filter: brightness(0.98);
+}
+
+.sortButtonOrange:active {
+  transform: translateY(1px);
+}
+
+.sortButtonOrange .sortIcon,
+.sortButtonOrange .sortChevron {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.sortMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  padding: 10px;
+  z-index: 50;
+}
+
+.sortMenuHeader {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  padding: 8px 10px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  margin-bottom: 6px;
+}
+
+.sortMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 10px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.70);
+}
+
+.sortMenuItem:hover {
+  background: rgba(240, 139, 58, 0.10);
+}
+
+.sortMenuDot {
+  opacity: 0;
+  color: #f08b3a;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.sortMenuItem.isSelected .sortMenuDot {
+  opacity: 1;
+}
+
+
+/* ===== Top Categories gradient background ===== */
+.topCategoriesSection {
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 0%, 100%) 24%,
+    hsl(0, 0%, 100%) 42%,
+    hsl(0, 0%, 100%) 52%,
+    hsl(177, 92%, 85%) 73%,
+    hsl(158deg 100% 50%) 100%
+
+  );
+}
+
+/* ===== Top Categories section ===== */
+.topCategoriesSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #ffffff;
+  padding: 34px 0 26px;
+}
+
+.topCategoriesInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.topCategoriesHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.topCategoriesTitle {
+  margin: 0;
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.topCategoriesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.topCategoriesLink:hover {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.topCategoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.topCategoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.topCategoryIcon {
+  width: 78px;
+  height: 78px;
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.topCategoryLabel {
+  margin-top: 10px;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.70);
+  max-width: 220px;
+}
+
+@media (max-width: 1100px) {
+  .topCategoriesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .topCategoriesHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topCategoriesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topCategoryLabel {
+    max-width: 170px;
+  }
+}
+
+/* ===== Vendor Catalog hero band ===== */
+.vendorCatalogHero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 0%, 100%) 9%,
+    hsl(240, 16%, 35%) 25%,
+    hsl(215, 100%, 20%) 61%,
+    hwb(216 17% 59%) 87%,
+    hsl(0, 0%, 100%) 100%
+
+  );
+  padding: 86px 0 86px;
+}
+
+.vendorCatalogHeroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  text-align: center;
+}
+
+.vendorCatalogHeroTitle {
+  font-family: "Anton", sans-serif;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 52px;
+  color: #ffffff;
+}
+
+.vendorCatalogHeroSub {
+  margin-top: 18px;
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  .vendorCatalogHero {
+    padding: 62px 0 62px;
+  }
+
+  .vendorCatalogHeroTitle {
+    font-size: 38px;
+  }
+
+  .vendorCatalogHeroSub {
+    font-size: 16px;
+  }
+}
+
+/* ===== Catalog pagination (centered under tiles, above footer) ===== */
+.catalogPaginationWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 28px 0 34px;
+}
+
+.catalogPagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.catalogPageArrow {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #111;
+}
+
+.catalogPageArrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.catalogPageNumber {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #111;
+}
+
+.catalogPageNumber.isActive {
+  background: #b9a7ff;
+  font-weight: 600;
+}
+
+.catalogEllipsis {
+  font-size: 14px;
+  padding: 0 4px;
+  opacity: 0.7;
+}
+
+
+/* ===== Gradient background (Info band) ===== */
+.catalogInfoBand {
+  background-image: linear-gradient(
+    0deg,
+    hsl(158deg 100% 50%) 0%,
+    hsl(72deg 88% 76%) 24%,
+    hsl(42deg 95% 80%) 42%,
+    hsl(25deg 95% 90%) 52%,
+    hsl(0deg 0% 100%) 73%,
+    hsl(0deg 0% 100%) 100%
+
+  );
+}
+
+
+/* ===== Sort button + menu (matches provided screenshot) ===== */
+.sortButton {
+  background: #F07A46;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.sortButton:hover {
+  filter: brightness(0.98);
+}
+
+.sortButton:active {
+  transform: translateY(1px);
+}
+
+.sortIcon,
+.sortChevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sortMenu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 220px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+  padding: 14px 14px 10px;
+  z-index: 50;
+}
+
+.sortMenuHeader {
+  font-family: "Poppins-semibold", Arial, sans-serif;
+  font-size: 18px;
+  color: #3b3b3b;
+}
+
+.sortMenuDivider {
+  height: 2px;
+  width: 100%;
+  background: #F07A46;
+  margin: 10px 0 8px;
+  border-radius: 999px;
+}
+
+.sortMenuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.sortMenuItem:hover {
+  background: rgba(240, 122, 70, 0.10);
+}
+
+.sortRadioDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.sortMenuItem.isSelected .sortRadioDot {
+  background: #F07A46;
+  border-color: #F07A46;
+}
+
+.sortMenuItemLabel {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+
+/* Anchor the sort menu to the sort button */
+.catalogControlsRight {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vendorTile {
+  height: 170px;
+  border-radius: 15px;
+  padding: 16px 16px;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  background: #ffffff;
+  color: #0b0b0b;
+
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.vendorTileMain {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.vendorTileIconBox {
+  width: 55px;
+  height: 55px;
+  border-radius: 0px;
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.vendorTileIconImg {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+}
+
+.vendorTileTextStack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+
+.vendorTileCta {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(0, 0, 0, 0.82);
+  color: #ffffff;
+
+  align-self: center; /* centers arrow vertically */
+  flex: 0 0 auto;
+
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.vendorTile:hover .vendorTileCta {
+  background-color: #ffffff;
+  color: #000000;
 }
