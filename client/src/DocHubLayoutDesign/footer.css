@@ -111,3 +111,23 @@
     gap: 10px;
   }
 }
+
+
+/* ================= Vendor page only: invert footer based on vendor theme ================= */
+body[data-vendor-page="true"][data-vendor-theme="dark"] .footer {
+  background: #ffffff;
+  color: #000000;
+}
+
+body[data-vendor-page="true"][data-vendor-theme="dark"] .footerLink {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+body[data-vendor-page="true"][data-vendor-theme="dark"] .footerBottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  color: rgba(0, 0, 0, 0.68);
+}
+
+body[data-vendor-page="true"][data-vendor-theme="dark"] .footerLinkInline {
+  color: rgba(0, 0, 0, 0.80);
+}

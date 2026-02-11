@@ -1,695 +1,695 @@
 export const vendors = [
   {
-    VENDOR_ID: "f961ebcc-65ca-525f-9dcb-08a2d4bdcc37",
-    VENDOR_NAME: "FactSet",
-    VENDOR_PARENT_COMPANY: "FactSet Research Systems Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#0afff7ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "FactSet.png"
-  },
-  {
-    VENDOR_ID: "e4df5fb7-9785-555d-aee7-47ade7ddd248",
-    VENDOR_NAME: "LSEG",
-    VENDOR_PARENT_COMPANY: "London Stock Exchange Group plc",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#8b47ffff",
-    VENDOR_NAME_TEXT_COLOR: "#ffffffff",
-    VENDOR_TILE_LOGO: "LSEG.png"
-  },
-  {
-    VENDOR_ID: "9275ab48-9d8a-5f3e-a7a6-25de54562c48",
-    VENDOR_NAME: "Bloomberg",
-    VENDOR_PARENT_COMPANY: "Bloomberg L.P.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#a000b1ff",
-    VENDOR_NAME_TEXT_COLOR: "#ffffffff",
-    VENDOR_TILE_LOGO: "BBG.png"
-  },
-  {
-    VENDOR_ID: "62b721b9-0c5e-567b-99af-4bdf0b2c10db",
-    VENDOR_NAME: "S&P Global",
-    VENDOR_PARENT_COMPANY: "S&P Global Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#ff4b27ff",
-    VENDOR_NAME_TEXT_COLOR: "#fafafaff",
-    VENDOR_TILE_LOGO: "SPG.png"
-  },
-  {
-    VENDOR_ID: "c07592d3-c9d9-5a93-9604-4d72094f1a53",
-    VENDOR_NAME: "MSCI",
-    VENDOR_PARENT_COMPANY: "MSCI Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#64f6c1ff",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "MSCI.png"
-  },
-  {
-    VENDOR_ID: "f05b78ef-3d1a-53de-8870-70d61dce9b5f",
-    VENDOR_NAME: "Swaps Monitor",
-    VENDOR_PARENT_COMPANY: "Swaps Monitor",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE4EE",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "SwapsMonitor.png"
-  },
-  {
-    VENDOR_ID: "4de7e1d8-4dc2-59a7-b503-e73d6b7fcbca",
-    VENDOR_NAME: "Preqin",
-    VENDOR_PARENT_COMPANY: "BlackRock, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#EADBFF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Preqin.png"
-  },
-  {
-    VENDOR_ID: "a72f27ef-3717-5d1a-8fa0-6b9d80f0f8e6",
-    VENDOR_NAME: "Harmonic Ai",
-    VENDOR_PARENT_COMPANY: "Harmonic Ai",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F1F5F9",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "HarmonicAI.png"
-  },
-  {
-    VENDOR_ID: "7dc0bf69-ccdc-5f55-b3f6-bf6b7f49a9b7",
-    VENDOR_NAME: "CB Insights",
-    VENDOR_PARENT_COMPANY: "CB Insights",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF2D6",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "CBInsight.png"
-  },
-  {
-    VENDOR_ID: "b7f5ed7f-a7b6-5a1c-9b93-f0f6c35ec96a",
-    VENDOR_NAME: "CoreLogic",
-    VENDOR_PARENT_COMPANY: "Stone Point Capital & Insight Partners",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE8E2",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Corelogic.png"
-  },
-  {
-    VENDOR_ID: "afaa2279-06b0-5b8a-88d4-1018b3c8d8d3",
-    VENDOR_NAME: "U.S. Government",
-    VENDOR_PARENT_COMPANY: "U.S. Government",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FAEEDD",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "USGovernment.png"
-  },
-  {
-    VENDOR_ID: "5b0aab62-4a0f-53df-8bc2-38a2a3ed80d9",
-    VENDOR_NAME: "SWIFT",
-    VENDOR_PARENT_COMPANY: "S.W.I.F.T. SCRL",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF9F0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Swift.png"
-  },
-  {
-    VENDOR_ID: "e7f2206e-3f7f-5f44-a3d2-30a0de3df4fd",
-    VENDOR_NAME: "U.K. Government",
-    VENDOR_PARENT_COMPANY: "U.K. Government",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#EDF7ED",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "UKGovernment.png"
-  },
-  {
-    VENDOR_ID: "0a4576df-123f-57e9-9cbd-94f11270e8b1",
-    VENDOR_NAME: "VocaLink",
-    VENDOR_PARENT_COMPANY: "Mastercard Incorporated",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#D6F6FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Vocalink.png"
-  },
-  {
-    VENDOR_ID: "6e2f95d6-7182-5c6d-9fd3-e4a3ab134335",
-    VENDOR_NAME: "AFME",
-    VENDOR_PARENT_COMPANY: "Association for Financial Markets in Europe",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E9F1FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "AFME.png"
-  },
-  {
-    VENDOR_ID: "aaed2b27-20b9-56da-b2c6-7bbce9b1db3d",
-    VENDOR_NAME: "Derivatives Service Bureau",
-    VENDOR_PARENT_COMPANY: "Association of National Numbering Agencies (ANNA)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E6F0FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "DSB.png"
-  },
-  {
-    VENDOR_ID: "ef8c78e5-0a7a-5fe7-9a0f-d5847f97f632",
-    VENDOR_NAME: "Argus",
-    VENDOR_PARENT_COMPANY: "Argus",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F7DCE0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Argus.png"
-  },
-  {
-    VENDOR_ID: "b7d0c0f8-631b-5fba-8142-fd01f43bfb2f",
-    VENDOR_NAME: "CoStar Group",
-    VENDOR_PARENT_COMPANY: "CoStar Group, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#ECFFC8",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Costar.png"
-  },
-  {
-    VENDOR_ID: "05c135c8-4d33-5e4c-8fb0-08efdb61b6d2",
-    VENDOR_NAME: "ETF Global",
-    VENDOR_PARENT_COMPANY: "ETF Global",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFC3AE",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "ETFGlobal.png"
-  },
-  {
-    VENDOR_ID: "0b51ccff-efdb-5d41-85ad-0135f55fb2c2",
-    VENDOR_NAME: "Thinknum Alternative Data",
-    VENDOR_PARENT_COMPANY: "Thinknum Alternative Data",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F7FFA0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Thinknum.png"
-  },
-  {
-    VENDOR_ID: "a31e26ff-7dcf-5b5e-8fc9-6e0d7d5f6c62",
-    VENDOR_NAME: "Wilmington Trust",
-    VENDOR_PARENT_COMPANY: "M&T Bank Corporation",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#DCE4FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "WilmingtonTrust.png"
-  },
-  {
-    VENDOR_ID: "9f2fa229-17c4-5b10-8bb9-6c2c1b9d8d48",
-    VENDOR_NAME: "MKT Media Stats",
-    VENDOR_PARENT_COMPANY: "MKT Media Stats",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#53FFAF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "MediaMkt.png"
-  },
-  {
-    VENDOR_ID: "d6aa0b99-99c1-5f55-8b47-51e4a0b5c2bd",
-    VENDOR_NAME: "Monetary Financial Institution",
-    VENDOR_PARENT_COMPANY: "Monetary Financial Institution",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FF79C7",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "MFI.png"
-  },
-  {
-    VENDOR_ID: "d5fe3c4c-a61d-5b11-a9f6-8618240c1d2a",
-    VENDOR_NAME: "Moody's Corporation",
-    VENDOR_PARENT_COMPANY: "Moody's Corporation",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#6CF1FF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Moodys.png"
-  },
-  {
-    VENDOR_ID: "1f9b2f8e-6d06-5b18-ae85-8a1a532d9a59",
-    VENDOR_NAME: "European Union",
-    VENDOR_PARENT_COMPANY: "European Union",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFDB61",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "EU.png"
-  },
-  {
-    VENDOR_ID: "d6b37b22-34f9-5b11-a6bd-5c4d2c76cd40",
-    VENDOR_NAME: "Finaeon",
-    VENDOR_PARENT_COMPANY: "Finaeon",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FF7F6A",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Finaeon.png"
-  },
-  {
-    VENDOR_ID: "e0892a69-3f83-5b2d-a72b-2d1b25c356e0",
-    VENDOR_NAME: "Finchina",
-    VENDOR_PARENT_COMPANY: "Finchina",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#1FCFFF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Finchina.png"
-  },
-  {
-    VENDOR_ID: "4baf7f61-31aa-58b9-bb8e-31d3f0a3552f",
-    VENDOR_NAME: "Nasdaq",
-    VENDOR_PARENT_COMPANY: "Nasdaq, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#3072ffff",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Nasdaq.png"
-  },
-  {
-    VENDOR_ID: "8b019e98-2cb7-55ad-86ea-e7f8c8d1ae58",
-    VENDOR_NAME: "Rimes Technologies",
-    VENDOR_PARENT_COMPANY: "Five Arrows",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#4CFF47",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Rimes.png"
-  },
-  {
-    VENDOR_ID: "c2b0e860-3808-55d8-90a0-2a1df5bbca8e",
-    VENDOR_NAME: "Rose Ai",
-    VENDOR_PARENT_COMPANY: "Rose Ai",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#7DACFF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "RoseAI.png"
-  },
-  {
-    VENDOR_ID: "f3b7f96b-0f13-5e9a-bc04-92b2a9f1ad91",
-    VENDOR_NAME: "Intercontinental Exchange",
-    VENDOR_PARENT_COMPANY: "Intercontinental Exchange, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#e1ff88ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "ICE.png"
-  },
-  {
-    VENDOR_ID: "8ed0f6c2-c985-5a33-9bdf-d2bcb99d596c",
-    VENDOR_NAME: "Rystad Energy",
-    VENDOR_PARENT_COMPANY: "Rystad Energy",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#e24466ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "Rystad.png"
-  },
-  {
-    VENDOR_ID: "f0bf2a3f-9d96-5b52-92f5-e8a7b6dc9e8c",
-    VENDOR_NAME: "National Futures Association",
-    VENDOR_PARENT_COMPANY: "National Futures Association",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#c5a8c8ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "NFA.png"
-  },
-  {
-    VENDOR_ID: "a0b3ef5e-70e2-5f35-8f86-5a4e4f88b492",
-    VENDOR_NAME: "S3 Partners",
-    VENDOR_PARENT_COMPANY: "S3 Partners",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#f480ffff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "S3partners.png"
-  },
-  {
-    VENDOR_ID: "8a6d3f71-49ac-5f27-9d38-4d45a0f9f1a6",
-    VENDOR_NAME: "Snowflake Marketplace",
-    VENDOR_PARENT_COMPANY: "Snowflake Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#6468f6ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "snowflake.png"
-  },
-  {
-    VENDOR_ID: "6aaf8e1c-7b7a-5df4-8f98-1a7e7b0b2a42",
-    VENDOR_NAME: "Trepp",
-    VENDOR_PARENT_COMPANY: "Daily Mail and General Trust plc (DMGT)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE4EE",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Trepp.png"
-  },
-  {
-    VENDOR_ID: "3d91d6c5-9c0e-5b56-9b9c-86c3e2df7f64",
-    VENDOR_NAME: "Sourcescrub",
-    VENDOR_PARENT_COMPANY: "Sourcescrub",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F1F5F9",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Sourcescrub.png"
-  },
-  {
-    VENDOR_ID: "e3ef2de2-62c0-5a6c-9d62-9b4f1e5c48a8",
-    VENDOR_NAME: "The TCW Group",
-    VENDOR_PARENT_COMPANY: "The TCW Group",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF2D6",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "TCW.png"
-  },
-  {
-    VENDOR_ID: "041e2af3-9107-5a03-8c77-8b0f7c0b6fdb",
-    VENDOR_NAME: "FINRA",
-    VENDOR_PARENT_COMPANY: "Financial Industry Regulatory Authority, Inc. (FINRA)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE8E2",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "FINRA.png"
-  },
-  {
-    VENDOR_ID: "9c30c3e7-00b6-5a62-a7e5-0b9f1f4f6f6c",
-    VENDOR_NAME: "Simplify Asset Management",
-    VENDOR_PARENT_COMPANY: "Simplify Asset Management",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FAEEDD",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "SimplifyPortfolio.png"
-  },
-  {
-    VENDOR_ID: "b0bfe3b6-7b86-5d3a-a610-0a2a6e0a8b8f",
-    VENDOR_NAME: "YipitData",
-    VENDOR_PARENT_COMPANY: "YipitData",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF9F0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Yipit.png"
-  },
-  {
-    VENDOR_ID: "77df3f6a-6f33-5d2d-8606-71c49c3d3e73",
-    VENDOR_NAME: "Yes Energy",
-    VENDOR_PARENT_COMPANY: "Yes Energy",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#EDF7ED",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "YesEnergy.png"
-  },
-  {
-    VENDOR_ID: "56bd50f2-3b65-5f22-8f6d-0fd80b51b0ea",
-    VENDOR_NAME: "SimCorp",
-    VENDOR_PARENT_COMPANY: "Deutsche Börse AG",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#D6F6FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Simcorp.png"
-  },
-  {
-    VENDOR_ID: "9a5d3a1a-6a8c-58f8-9f0f-8a2f7c7d5b3f",
-    VENDOR_NAME: "ClimateArc",
-    VENDOR_PARENT_COMPANY: "ClimateArc",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E9F1FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "CA100.png"
-  },
-  {
-    VENDOR_ID: "76c1e25a-7430-5f3f-8a75-2b34a4c70dbd",
-    VENDOR_NAME: "AlphaRoc",
-    VENDOR_PARENT_COMPANY: "AlphaRoc",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E6F0FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "AlphaRoc.png"
-  },
-  {
-    VENDOR_ID: "4c5f01b5-1a8e-5f7b-9ae0-2d9b2b2df1bc",
-    VENDOR_NAME: "RelPro",
-    VENDOR_PARENT_COMPANY: "RelPro",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F7DCE0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Relpro.png"
-  },
-  {
-    VENDOR_ID: "ce6fd59c-0c1b-54e4-a468-0f548c3e8a8b",
-    VENDOR_NAME: "GreenStreet",
-    VENDOR_PARENT_COMPANY: "GreenStreet",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#ECFFC8",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Greenstreet.png"
-  },
-  {
-    VENDOR_ID: "4f22781d-6ce5-5c1f-98fb-48c07cc8be6c",
-    VENDOR_NAME: "CBRE",
-    VENDOR_PARENT_COMPANY: "CBRE Group, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFC3AE",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "CBRE.png"
-  },
-  {
-    VENDOR_ID: "c3d6f421-2a6a-5ef5-a7a9-21b30fbd2f0b",
-    VENDOR_NAME: "Equilar",
-    VENDOR_PARENT_COMPANY: "Equilar",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F7FFA0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "equilar.png"
-  },
-  {
-    VENDOR_ID: "a24f2da6-e3c2-5c71-b571-081aaf5d57a5",
-    VENDOR_NAME: "DTCC",
-    VENDOR_PARENT_COMPANY: "The Depository Trust & Clearing Corporation (DTCC)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#DCE4FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "DTCC.png"
-  },
-  {
-    VENDOR_ID: "b1c7c251-8b0f-5b4f-bd5e-17e6e7d51d8a",
-    VENDOR_NAME: "ESG Book",
-    VENDOR_PARENT_COMPANY: "ESG Book",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#53FFAF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "ESGBook.png"
-  },
-  {
-    VENDOR_ID: "9fbde7d4-0e5b-5e5d-9ee0-7cfad6fbb9d0",
-    VENDOR_NAME: "DV01",
-    VENDOR_PARENT_COMPANY: "Fitch Group, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FF79C7",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "DV01.png"
-  },
-  {
-    VENDOR_ID: "4f86e4e0-0e65-58ac-bd20-dc21d2f6a1d1",
-    VENDOR_NAME: "Google",
-    VENDOR_PARENT_COMPANY: "Alphabet Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#6CF1FF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Google.png"
-  },
-  {
-    VENDOR_ID: "3b2c5d0b-0b33-53c6-9e9d-3af0f2a23ac0",
-    VENDOR_NAME: "Kroll Bond Rating Agency",
-    VENDOR_PARENT_COMPANY: "Kroll Bond Rating Agency",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFDB61",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "KBRA.png"
-  },
-  {
-    VENDOR_ID: "e2d8b2f7-0c1f-57b4-9e0e-6a0f3c44a0c8",
-    VENDOR_NAME: "Morningstar",
-    VENDOR_PARENT_COMPANY: "Morningstar, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FF7F6A",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "MorningStar.png"
-  },
-  {
-    VENDOR_ID: "f0d0e0b0-9d8e-57c8-8b0d-8a0d2f2f0f7b",
-    VENDOR_NAME: "Finsight",
-    VENDOR_PARENT_COMPANY: "Finsight",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#1FCFFF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "finsight.png"
-  },
-  {
-    VENDOR_ID: "d1b12f6a-8f78-55aa-9b7f-3e1f2d3c4b5a",
-    VENDOR_NAME: "Crunchbase",
-    VENDOR_PARENT_COMPANY: "Crunchbase",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F3FF29",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Crunchbase.png"
-  },
-  {
-    VENDOR_ID: "a6b1a8cc-0c7f-5c11-9f0b-6aa0d1f1e2c3",
-    VENDOR_NAME: "MSRB",
-    VENDOR_PARENT_COMPANY: "Municipal Securities Rulemaking Board (MSRB)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#4CFF47",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "MSRB.png"
-  },
-  {
-    VENDOR_ID: "a1b2c3d4-e5f6-5a78-9b0c-1d2e3f4a5b6c",
-    VENDOR_NAME: "Zengin System",
-    VENDOR_PARENT_COMPANY: "Zengin System",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#7DACFF",
-    VENDOR_NAME_TEXT_COLOR: "#0B1324",
-    VENDOR_TILE_LOGO: "Zengin.png"
-  },
-  {
-    VENDOR_ID: "cb4a32e8-19f1-56a2-9c7e-9de2f3a41b2c",
-    VENDOR_NAME: "Climate Action 100+",
-    VENDOR_PARENT_COMPANY: "Climate Action 100+",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#f35471ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "CA100.png"
-  },
-  {
-    VENDOR_ID: "31a5c6d7-0e1f-5a2b-9c3d-4e5f6a7b8c9d",
-    VENDOR_NAME: "Financial Conduct Authority",
-    VENDOR_PARENT_COMPANY: "Financial Conduct Authority",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#cdb79c",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "FCA.png"
-  },
-  {
-    VENDOR_ID: "e2c3b4a5-6d7e-58f9-9a0b-1c2d3e4f5a6b",
-    VENDOR_NAME: "FFIEC",
-    VENDOR_PARENT_COMPANY: "Federal Financial Institutions Examination Council (FFIEC)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#c5a8c8ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "FFIEC.png"
-  },
-  {
-    VENDOR_ID: "9d8c7b6a-5f4e-53d2-9c1b-0a9b8c7d6e5f",
-    VENDOR_NAME: "GLEIF",
-    VENDOR_PARENT_COMPANY: "Global Legal Entity Identifier Foundation (GLEIF)",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#f480ffff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "GLEIF.png"
-  },
-  {
-    VENDOR_ID: "0f1e2d3c-4b5a-5c6d-9e8f-7a6b5c4d3e2f",
-    VENDOR_NAME: "Wood Mackenzie",
-    VENDOR_PARENT_COMPANY: "Veritas Capital",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#6468f6ff",
-    VENDOR_NAME_TEXT_COLOR: "#000000ff",
-    VENDOR_TILE_LOGO: "WoodMac.png"
-  },
-  {
-    VENDOR_ID: "a8b7c6d5-e4f3-5a21-9b0c-1d2e3f4a5b6d",
-    VENDOR_NAME: "RavenPack",
-    VENDOR_PARENT_COMPANY: "RavenPack",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE4EE",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Ravenpack.png"
-  },
-  {
-    VENDOR_ID: "b7c6d5e4-f3a2-5b10-9c0d-1e2f3a4b5c6d",
-    VENDOR_NAME: "Quant IP",
-    VENDOR_PARENT_COMPANY: "Quant IP",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#EADBFF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "QuantIP.png"
-  },
-  {
-    VENDOR_ID: "c6d5e4f3-a2b1-5c0d-9e1f-2a3b4c5d6e7f",
-    VENDOR_NAME: "Transition Pathway Initiative",
-    VENDOR_PARENT_COMPANY: "Transition Pathway Initiative",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#F1F5F9",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "TPI.png"
-  },
-  {
-    VENDOR_ID: "d5e4f3a2-b1c0-5d1e-9f2a-3b4c5d6e7f80",
-    VENDOR_NAME: "EPFR",
-    VENDOR_PARENT_COMPANY: "ISI Markets",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF2D6",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "EPFR.png"
-  },
-  {
-    VENDOR_ID: "e4f3a2b1-c0d9-5e2f-9a3b-4c5d6e7f8091",
-    VENDOR_NAME: "Novata",
-    VENDOR_PARENT_COMPANY: "Novata",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFE8E2",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Novata.png"
-  },
-  {
-    VENDOR_ID: "f3a2b1c0-d9e8-5f30-9b4c-5d6e7f8091a2",
-    VENDOR_NAME: "Haver Analytics",
-    VENDOR_PARENT_COMPANY: "Haver Analytics",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FAEEDD",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Haver.png"
-  },
-  {
-    VENDOR_ID: "a2b1c0d9-e8f7-5031-9c5d-6e7f8091a2b3",
-    VENDOR_NAME: "Turnleaf Analytics",
-    VENDOR_PARENT_COMPANY: "Turnleaf Analytics",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#FFF9F0",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Turnleaf.png"
-  },
-  {
-    VENDOR_ID: "b1c0d9e8-f7a6-5132-9d6e-7f8091a2b3c4",
-    VENDOR_NAME: "Cognitive Credit",
-    VENDOR_PARENT_COMPANY: "Cognitive Credit",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#EDF7ED",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "CognitiveCredit.png"
-  },
-  {
-    VENDOR_ID: "c0d9e8f7-a6b5-5233-9e7f-8091a2b3c4d5",
-    VENDOR_NAME: "Fitch",
-    VENDOR_PARENT_COMPANY: "Fitch Group, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#D6F6FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Fitch.png"
-  },
-  {
-    VENDOR_ID: "d9e8f7a6-b5c4-5334-9f80-91a2b3c4d5e6",
-    VENDOR_NAME: "Rearc",
-    VENDOR_PARENT_COMPANY: "Rearc",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E9F1FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "Rearc.png"
-  },
-  {
-    VENDOR_ID: "3230c8gf-fge1-5375-aa7d-5f9075dc2a36",
-    VENDOR_NAME: "Goldman Sachs",
-    VENDOR_PARENT_COMPANY: "The Goldman Sachs Group, Inc.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E6F0FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "GS.png"
-  },
-  {
-    VENDOR_ID: "3960c4ff-ffe9-8963-fa7g-5f9075dc2a36",
-    VENDOR_NAME: "JP Morgan Chase",
-    VENDOR_PARENT_COMPANY: "JPMorgan Chase & Co.",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E6F0FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "JPMC.png"
-  },
-  {
-    VENDOR_ID: "7289c8ff-ghe2-3985-bf3q-5f9075dc2a36",
-    VENDOR_NAME: "KRIS",
-    VENDOR_PARENT_COMPANY: "KRIS",
-    VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
-    VENDOR_BKG_COLOR: "#E6F0FF",
-    VENDOR_NAME_TEXT_COLOR: "#111827",
-    VENDOR_TILE_LOGO: "KRIS.png"
-  }
+      VENDOR_ID: "f961ebcc-65ca-525f-9dcb-08a2d4bdcc37",
+      VENDOR_NAME: "FactSet",
+      VENDOR_PARENT_COMPANY: "FactSet Research Systems Inc.",
+      VENDOR_WEBSITE: "https://www.factset.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "FactSet is a global financial information and analytics provider used by investment professionals\nfor security reference data, real‑time and end‑of‑day market pricing, corporate fundamentals,\nestimates, ownership, and portfolio and risk analytics. For financial analysts, the platform helps\nanswer core questions—what a security is, how it is classified, what it is worth, and how it\ntrades—by delivering normalized identifiers, symbology mapping, corporate actions, and instrument\nattributes alongside pricing and valuation inputs. Typical data products include equities, fixed\nincome, derivatives, fund data, indices, company financial statements, consensus estimates, events\nand news, and analytics that support screening, relative value, scenario analysis, and attribution.\nThe value for users is reliability and comparability: data is curated, cross‑checked, and\ndistributed in consistent schemas so models, dashboards, and downstream reporting don’t break when\nmarkets change. Many clients integrate the data into research workflows, OMS/EMS and portfolio\nsystems, and enterprise warehouses to power pricing, risk, performance measurement, and regulatory\nreporting. For an analyst building an investment case, this vendor’s datasets help validate\nassumptions, triangulate valuation, monitor catalysts, and document methodology with traceable\nsources. It is commonly selected for market data, pricing, valuation, product classification use\ncases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "FactSet.jpg"
+    },
+  {
+      VENDOR_ID: "e4df5fb7-9785-555d-aee7-47ade7ddd248",
+      VENDOR_NAME: "LSEG",
+      VENDOR_PARENT_COMPANY: "London Stock Exchange Group plc",
+      VENDOR_WEBSITE: "https://www.lseg.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "LSEG is a market infrastructure and data organization connected to securities and derivatives\ntrading venues. It supports analysts by providing authoritative exchange data (listed instrument\nreference, corporate actions related to listings, trading calendars, and market statistics) as well\nas market technology and data distribution services. Its datasets commonly include exchange market\ndata feeds, end‑of‑day prices, index and benchmark information, listings and issuer reference, and\nhistorical trading metrics such as volumes, liquidity indicators, and volatility measures. These\ninputs help analysts evaluate market depth, compare execution conditions across venues, and\nunderstand how corporate actions and listing events affect tradable instruments. For firms that\nprice portfolios, run risk, or back‑test strategies, exchange‑sourced data can serve as a “ground\ntruth” for trade and quote history and for validating vendor‑aggregated pricing. Exchange groups\noften combine data with analytics and workflow tools, enabling users to monitor markets, build\nindices or investment products, and ensure data lineage and licensing compliance in enterprise\ndistribution. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "LSEG.jpg"
+    },
+  {
+      VENDOR_ID: "9275ab48-9d8a-5f3e-a7a6-25de54562c48",
+      VENDOR_NAME: "Bloomberg",
+      VENDOR_PARENT_COMPANY: "Bloomberg L.P.",
+      VENDOR_WEBSITE: "https://www.bloomberg.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Bloomberg is a global financial information and analytics provider used by investment professionals\nfor security reference data, real‑time and end‑of‑day market pricing, corporate fundamentals,\nestimates, ownership, and portfolio and risk analytics. For financial analysts, the platform helps\nanswer core questions—what a security is, how it is classified, what it is worth, and how it\ntrades—by delivering normalized identifiers, symbology mapping, corporate actions, and instrument\nattributes alongside pricing and valuation inputs. Typical data products include equities, fixed\nincome, derivatives, fund data, indices, company financial statements, consensus estimates, events\nand news, and analytics that support screening, relative value, scenario analysis, and attribution.\nThe value for users is reliability and comparability: data is curated, cross‑checked, and\ndistributed in consistent schemas so models, dashboards, and downstream reporting don’t break when\nmarkets change. Many clients integrate the data into research workflows, OMS/EMS and portfolio\nsystems, and enterprise warehouses to power pricing, risk, performance measurement, and regulatory\nreporting. For an analyst building an investment case, this vendor’s datasets help validate\nassumptions, triangulate valuation, monitor catalysts, and document methodology with traceable\nsources. It is commonly selected for market data, pricing, valuation, product classification use\ncases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "BBG.jpg"
+    },
+  {
+      VENDOR_ID: "62b721b9-0c5e-567b-99af-4bdf0b2c10db",
+      VENDOR_NAME: "S&P Global",
+      VENDOR_PARENT_COMPANY: "S&P Global Inc.",
+      VENDOR_WEBSITE: "https://www.spglobal.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "S&P Global is a global financial information and analytics provider used by investment professionals\nfor security reference data, real‑time and end‑of‑day market pricing, corporate fundamentals,\nestimates, ownership, and portfolio and risk analytics. For financial analysts, the platform helps\nanswer core questions—what a security is, how it is classified, what it is worth, and how it\ntrades—by delivering normalized identifiers, symbology mapping, corporate actions, and instrument\nattributes alongside pricing and valuation inputs. Typical data products include equities, fixed\nincome, derivatives, fund data, indices, company financial statements, consensus estimates, events\nand news, and analytics that support screening, relative value, scenario analysis, and attribution.\nThe value for users is reliability and comparability: data is curated, cross‑checked, and\ndistributed in consistent schemas so models, dashboards, and downstream reporting don’t break when\nmarkets change. Many clients integrate the data into research workflows, OMS/EMS and portfolio\nsystems, and enterprise warehouses to power pricing, risk, performance measurement, and regulatory\nreporting. For an analyst building an investment case, this vendor’s datasets help validate\nassumptions, triangulate valuation, monitor catalysts, and document methodology with traceable\nsources. It is commonly selected for market data, pricing, valuation, product classification use\ncases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "SPG.jpg"
+    },
+  {
+      VENDOR_ID: "c07592d3-c9d9-5a93-9604-4d72094f1a53",
+      VENDOR_NAME: "MSCI",
+      VENDOR_PARENT_COMPANY: "MSCI Inc.",
+      VENDOR_WEBSITE: "https://www.msci.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "MSCI is a global financial information and analytics provider used by investment professionals for\nsecurity reference data, real‑time and end‑of‑day market pricing, corporate fundamentals, estimates,\nownership, and portfolio and risk analytics. For financial analysts, the platform helps answer core\nquestions—what a security is, how it is classified, what it is worth, and how it trades—by\ndelivering normalized identifiers, symbology mapping, corporate actions, and instrument attributes\nalongside pricing and valuation inputs. Typical data products include equities, fixed income,\nderivatives, fund data, indices, company financial statements, consensus estimates, events and news,\nand analytics that support screening, relative value, scenario analysis, and attribution. The value\nfor users is reliability and comparability: data is curated, cross‑checked, and distributed in\nconsistent schemas so models, dashboards, and downstream reporting don’t break when markets change.\nMany clients integrate the data into research workflows, OMS/EMS and portfolio systems, and\nenterprise warehouses to power pricing, risk, performance measurement, and regulatory reporting. For\nan analyst building an investment case, this vendor’s datasets help validate assumptions,\ntriangulate valuation, monitor catalysts, and document methodology with traceable sources. It is\ncommonly selected for market data, pricing, valuation, product classification use cases, where\nconsistent product classification and valuation inputs are essential for downstream analytics.\nAnalysts should also evaluate licensing terms, data lineage, and refresh cadence to ensure the\ndataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "MSCI.jpg"
+    },
+  {
+      VENDOR_ID: "f05b78ef-3d1a-53de-8870-70d61dce9b5f",
+      VENDOR_NAME: "Swaps Monitor",
+      VENDOR_PARENT_COMPANY: "Swaps Monitor",
+      VENDOR_WEBSITE: "https://www.swapsmonitor.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Swaps Monitor provides finance‑related data, analytics, or content that supports investment\nresearch, valuation, risk, and operational decision‑making. Analysts use this category of vendor to\nenrich core market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "SwapsMonitor.jpg"
+    },
+  {
+      VENDOR_ID: "4de7e1d8-4dc2-59a7-b503-e73d6b7fcbca",
+      VENDOR_NAME: "Preqin",
+      VENDOR_PARENT_COMPANY: "BlackRock, Inc.",
+      VENDOR_WEBSITE: "https://www.preqin.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Preqin provides data and intelligence focused on private companies and private capital markets,\nsupporting analysts who track venture capital, private equity, growth equity, and M&A. The platform\ntypically aggregates company profiles, funding rounds, investors, ownership and cap table signals\n(where available), leadership and employee data, transactions, valuation signals, and thematic or\nsector taxonomies. For financial analysts, this helps with pipeline sourcing, peer and comparable\nselection, market mapping, and diligence—especially when public disclosures are limited. Users can\nidentify fast‑growing companies, understand investor syndicates, track follow‑on funding and exit\npathways, and monitor competitive landscapes. Data products often include deal databases, fund\nperformance or fundraising metrics (depending on the provider), relationship mapping, and export/API\naccess for integration into CRM, research notes, and dashboards. The value is speed and coverage:\nanalysts can move from a hypothesis to a vetted target list, triangulate traction using multiple\nindicators, and document investment rationales with structured, searchable datasets. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Preqin.jpg"
+    },
+  {
+      VENDOR_ID: "a72f27ef-3717-5d1a-8fa0-6b9d80f0f8e6",
+      VENDOR_NAME: "Harmonic Ai",
+      VENDOR_PARENT_COMPANY: "Harmonic AI, Inc.",
+      VENDOR_WEBSITE: "https://www.harmonic.ai/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Harmonic Ai provides data and intelligence focused on private companies and private capital markets,\nsupporting analysts who track venture capital, private equity, growth equity, and M&A. The platform\ntypically aggregates company profiles, funding rounds, investors, ownership and cap table signals\n(where available), leadership and employee data, transactions, valuation signals, and thematic or\nsector taxonomies. For financial analysts, this helps with pipeline sourcing, peer and comparable\nselection, market mapping, and diligence—especially when public disclosures are limited. Users can\nidentify fast‑growing companies, understand investor syndicates, track follow‑on funding and exit\npathways, and monitor competitive landscapes. Data products often include deal databases, fund\nperformance or fundraising metrics (depending on the provider), relationship mapping, and export/API\naccess for integration into CRM, research notes, and dashboards. The value is speed and coverage:\nanalysts can move from a hypothesis to a vetted target list, triangulate traction using multiple\nindicators, and document investment rationales with structured, searchable datasets. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "HarmonicAI.jpg"
+    },
+  {
+      VENDOR_ID: "7dc0bf69-ccdc-5f55-b3f6-bf6b7f49a9b7",
+      VENDOR_NAME: "CB Insights",
+      VENDOR_PARENT_COMPANY: "CB Insights, Inc.",
+      VENDOR_WEBSITE: "https://www.cbinsights.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "CB Insights provides data and intelligence focused on private companies and private capital markets,\nsupporting analysts who track venture capital, private equity, growth equity, and M&A. The platform\ntypically aggregates company profiles, funding rounds, investors, ownership and cap table signals\n(where available), leadership and employee data, transactions, valuation signals, and thematic or\nsector taxonomies. For financial analysts, this helps with pipeline sourcing, peer and comparable\nselection, market mapping, and diligence—especially when public disclosures are limited. Users can\nidentify fast‑growing companies, understand investor syndicates, track follow‑on funding and exit\npathways, and monitor competitive landscapes. Data products often include deal databases, fund\nperformance or fundraising metrics (depending on the provider), relationship mapping, and export/API\naccess for integration into CRM, research notes, and dashboards. The value is speed and coverage:\nanalysts can move from a hypothesis to a vetted target list, triangulate traction using multiple\nindicators, and document investment rationales with structured, searchable datasets. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "CBInsight.jpg"
+    },
+  {
+      VENDOR_ID: "b7f5ed7f-a7b6-5a1c-9b93-f0f6c35ec96a",
+      VENDOR_NAME: "CoreLogic",
+      VENDOR_PARENT_COMPANY: "CoreLogic, Inc.",
+      VENDOR_WEBSITE: "https://www.corelogic.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "CoreLogic is a real‑estate information and analytics provider used for commercial and/or residential\nproperty research. It helps financial analysts by supplying property‑level data (location,\ncharacteristics, ownership, tenancy where applicable), transaction comps, valuations and appraisal\ninputs, market supply/demand indicators, and performance benchmarks. Core datasets can include CRE\nlistings and leasing activity, rent and cap‑rate trends, mortgage and securitization performance\n(for certain providers), and neighborhood or risk factors. These inputs support underwriting,\nportfolio valuation, stress testing, and sector strategy for REITs, lenders, insurers, and asset\nmanagers. Analysts use the data to build comparable sales and rent rolls, model cash flows, evaluate\ncollateral, monitor delinquency and prepayment behavior in structured products, and compare regional\nexposures. Many clients integrate these datasets into risk and valuation systems and use them to\nproduce investment memos, credit packages, and market outlooks with traceable assumptions and\ntime‑series evidence. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Corelogic.jpg"
+    },
+  {
+      VENDOR_ID: "afaa2279-06b0-5b8a-88d4-1018b3c8d8d3",
+      VENDOR_NAME: "U.S. Government",
+      VENDOR_PARENT_COMPANY: "United States Government",
+      VENDOR_WEBSITE: "https://www.usa.gov/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "U.S. Government represents an official government portal and its associated agencies’ publications\nand datasets. It helps financial analysts by providing primary‑source economic, financial, legal,\nand policy information—such as macroeconomic indicators, budgets, debt and issuance information,\nstatistical releases, regulations, and open data programs. Analysts rely on government data to\nanchor models (inflation, employment, GDP, trade, yields, fiscal metrics), assess policy impacts,\nand validate assumptions with authoritative releases. Government sources also publish corporate\nregistries, procurement and sanctions information, and sector‑specific datasets that can be critical\nfor diligence and risk screening. The value is credibility and transparency: definitions,\nmethodologies, and revision policies are typically documented, enabling reproducible analysis and\nauditability. These datasets can be ingested into research pipelines and dashboards to provide\ntimely updates around scheduled releases and policy announcements. It is commonly selected for\nmarket data, pricing, valuation, product classification use cases, where consistent product\nclassification and valuation inputs are essential for downstream analytics. Analysts should also\nevaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is appropriate for\ntheir intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "USGovernment.jpg"
+    },
+  {
+      VENDOR_ID: "5b0aab62-4a0f-53df-8bc2-38a2a3ed80d9",
+      VENDOR_NAME: "SWIFT",
+      VENDOR_PARENT_COMPANY: "S.W.I.F.T. SCRL",
+      VENDOR_WEBSITE: "https://www.swift.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "SWIFT is a financial market infrastructure organization that enables secure messaging, clearing,\nsettlement, or payments connectivity across institutions. It helps analysts and operations teams by\nproviding standardized identifiers, messaging formats, and network services that support the\nmovement of cash and securities and the reconciliation of transactions. Data products can include\nreference and directory information, message standards documentation, transaction and settlement\nprocessing services, and operational metrics (coverage varies by provider). For financial analysts,\nunderstanding this infrastructure is important for evaluating operational risk, counterparty\nexposure, settlement cycles, and systemic dependencies. In data terms, these vendors often provide\nauthoritative institution and payment rail information that supports payment analytics, fraud and\nAML monitoring, and liquidity management. Their standards and reference datasets can also be used to\nnormalize transaction data across systems so firms can produce consistent reporting, investigate\nbreaks, and meet regulatory requirements. It is commonly selected for market data, pricing,\nvaluation, product classification use cases, where consistent product classification and valuation\ninputs are essential for downstream analytics. Analysts should also evaluate licensing terms, data\nlineage, and refresh cadence to ensure the dataset is appropriate for their intended research and\nreporting workflows.",
+      VENDOR_TILE_LOGO: "Swift.jpg"
+    },
+  {
+      VENDOR_ID: "e7f2206e-3f7f-5f44-a3d2-30a0de3df4fd",
+      VENDOR_NAME: "U.K. Government",
+      VENDOR_PARENT_COMPANY: "United Kingdom Government",
+      VENDOR_WEBSITE: "https://www.gov.uk/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "U.K. Government represents an official government portal and its associated agencies’ publications\nand datasets. It helps financial analysts by providing primary‑source economic, financial, legal,\nand policy information—such as macroeconomic indicators, budgets, debt and issuance information,\nstatistical releases, regulations, and open data programs. Analysts rely on government data to\nanchor models (inflation, employment, GDP, trade, yields, fiscal metrics), assess policy impacts,\nand validate assumptions with authoritative releases. Government sources also publish corporate\nregistries, procurement and sanctions information, and sector‑specific datasets that can be critical\nfor diligence and risk screening. The value is credibility and transparency: definitions,\nmethodologies, and revision policies are typically documented, enabling reproducible analysis and\nauditability. These datasets can be ingested into research pipelines and dashboards to provide\ntimely updates around scheduled releases and policy announcements. It is commonly selected for\nmarket data, pricing, valuation, product classification use cases, where consistent product\nclassification and valuation inputs are essential for downstream analytics. Analysts should also\nevaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is appropriate for\ntheir intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "UKGovernment.jpg"
+    },
+  {
+      VENDOR_ID: "0a4576df-123f-57e9-9cbd-94f11270e8b1",
+      VENDOR_NAME: "VocaLink",
+      VENDOR_PARENT_COMPANY: "Mastercard Incorporated",
+      VENDOR_WEBSITE: "https://www.vocalink.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "VocaLink is a financial market infrastructure organization that enables secure messaging, clearing,\nsettlement, or payments connectivity across institutions. It helps analysts and operations teams by\nproviding standardized identifiers, messaging formats, and network services that support the\nmovement of cash and securities and the reconciliation of transactions. Data products can include\nreference and directory information, message standards documentation, transaction and settlement\nprocessing services, and operational metrics (coverage varies by provider). For financial analysts,\nunderstanding this infrastructure is important for evaluating operational risk, counterparty\nexposure, settlement cycles, and systemic dependencies. In data terms, these vendors often provide\nauthoritative institution and payment rail information that supports payment analytics, fraud and\nAML monitoring, and liquidity management. Their standards and reference datasets can also be used to\nnormalize transaction data across systems so firms can produce consistent reporting, investigate\nbreaks, and meet regulatory requirements. It is commonly selected for market data, pricing,\nvaluation, product classification use cases, where consistent product classification and valuation\ninputs are essential for downstream analytics. Analysts should also evaluate licensing terms, data\nlineage, and refresh cadence to ensure the dataset is appropriate for their intended research and\nreporting workflows.",
+      VENDOR_TILE_LOGO: "Vocalink.jpg"
+    },
+  {
+      VENDOR_ID: "6e2f95d6-7182-5c6d-9fd3-e4a3ab134335",
+      VENDOR_NAME: "AFME",
+      VENDOR_PARENT_COMPANY: "Association for Financial Markets in Europe",
+      VENDOR_WEBSITE: "https://www.afme.eu/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "AFME is a regulatory or industry standards body that publishes official rules, guidance, and data to\nsupport transparent and orderly markets. It helps analysts and compliance teams by providing\nauthoritative information on market structure, reporting requirements, enforcement actions,\nand—depending on the body—datasets such as filings, registrations, disciplinary records, market\nstatistics, or supervisory guidance. Analysts use these sources to understand regulatory constraints\non products and counterparties, monitor rule changes that may affect liquidity or capital\nrequirements, and incorporate compliance considerations into investment and risk decisions. Official\ndatasets are also useful for due diligence (e.g., broker/dealer status, adviser registrations,\nenforcement history) and for validating assumptions in market research. Because these bodies are\nprimary sources, their publications provide strong evidentiary support and defensible citations in\ninternal memos, policy documents, and client reporting. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "AFME.jpg"
+    },
+  {
+      VENDOR_ID: "aaed2b27-20b9-56da-b2c6-7bbce9b1db3d",
+      VENDOR_NAME: "Derivatives Service Bureau",
+      VENDOR_PARENT_COMPANY: "Association of National Numbering Agencies (ANNA)",
+      VENDOR_WEBSITE: "https://www.anna-dsb.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Derivatives Service Bureau provides official identifiers, reference standards, or taxonomy services\nthat help uniquely define financial instruments, legal entities, or derivatives contracts across the\nmarket. These datasets are foundational for analysts because they reduce ambiguity when joining data\nfrom multiple sources, aggregating exposures, and producing consistent reporting. Typical products\ninclude identifier assignment and lookup (e.g., entity IDs, instrument or contract identifiers),\nreference attributes, hierarchy relationships, and lifecycle event updates. Users rely on these\nstandards to improve data quality, support regulatory reporting, and ensure that risk, valuation,\nand operations systems refer to the same underlying objects. For a financial analyst, strong\nidentifier coverage enables accurate peer sets, correct mapping of positions to issuers and sectors,\nand reliable historical analysis through corporate actions and contract lifecycle changes. It is\ncommonly selected for market data, pricing, valuation, product classification use cases, where\nconsistent product classification and valuation inputs are essential for downstream analytics.\nAnalysts should also evaluate licensing terms, data lineage, and refresh cadence to ensure the\ndataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "DSB.jpg"
+    },
+  {
+      VENDOR_ID: "ef8c78e5-0a7a-5fe7-9a0f-d5847f97f632",
+      VENDOR_NAME: "Argus",
+      VENDOR_PARENT_COMPANY: "Argus Media Limited",
+      VENDOR_WEBSITE: "https://www.argusmedia.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Argus is a specialist energy and/or commodities market intelligence provider. It supports analysts\nwith pricing benchmarks, supply/demand fundamentals, asset and project databases, and industry\nresearch across commodities such as oil, gas, LNG, power, metals, or agriculture (coverage varies by\nprovider). Typical data products include assessed spot and forward prices, curves, refinery and\nupstream assets, production and capacity forecasts, shipping and storage indicators, and market\nbalances. Financial analysts use these inputs to model commodity‑linked revenues and costs, evaluate\nproducers and consumers, stress test earnings sensitivity, and price derivatives or structured\nexposures. For macro and sector strategy, the datasets help identify turning points in inventories,\ncapacity additions, policy shifts, and regional bottlenecks. In risk management, the data enables\nscenario analysis and hedge effectiveness testing with defensible benchmark references and\ntransparent methodology. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Argus.jpg"
+    },
+  {
+      VENDOR_ID: "b7d0c0f8-631b-5fba-8142-fd01f43bfb2f",
+      VENDOR_NAME: "CoStar Group",
+      VENDOR_PARENT_COMPANY: "CoStar Group, Inc.",
+      VENDOR_WEBSITE: "https://www.costargroup.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "CoStar Group is a real‑estate information and analytics provider used for commercial and/or\nresidential property research. It helps financial analysts by supplying property‑level data\n(location, characteristics, ownership, tenancy where applicable), transaction comps, valuations and\nappraisal inputs, market supply/demand indicators, and performance benchmarks. Core datasets can\ninclude CRE listings and leasing activity, rent and cap‑rate trends, mortgage and securitization\nperformance (for certain providers), and neighborhood or risk factors. These inputs support\nunderwriting, portfolio valuation, stress testing, and sector strategy for REITs, lenders, insurers,\nand asset managers. Analysts use the data to build comparable sales and rent rolls, model cash\nflows, evaluate collateral, monitor delinquency and prepayment behavior in structured products, and\ncompare regional exposures. Many clients integrate these datasets into risk and valuation systems\nand use them to produce investment memos, credit packages, and market outlooks with traceable\nassumptions and time‑series evidence. It is commonly selected for market data, pricing, valuation,\nproduct classification use cases, where consistent product classification and valuation inputs are\nessential for downstream analytics. Analysts should also evaluate licensing terms, data lineage, and\nrefresh cadence to ensure the dataset is appropriate for their intended research and reporting\nworkflows.",
+      VENDOR_TILE_LOGO: "Costar.jpg"
+    },
+  {
+      VENDOR_ID: "05c135c8-4d33-5e4c-8fb0-08efdb61b6d2",
+      VENDOR_NAME: "ETF Global",
+      VENDOR_PARENT_COMPANY: "ETF Global",
+      VENDOR_WEBSITE: "https://www.etfglobal.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "ETF Global provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "ETFGlobal.jpg"
+    },
+  {
+      VENDOR_ID: "0b51ccff-efdb-5d41-85ad-0135f55fb2c2",
+      VENDOR_NAME: "Thinknum Alternative Data",
+      VENDOR_PARENT_COMPANY: "Thinknum, Inc.",
+      VENDOR_WEBSITE: "https://www.thinknum.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Thinknum Alternative Data is an alternative data, analytics, or workflow provider that complements\ntraditional market and fundamentals data with differentiated signals. Depending on the vendor, this\ncan include news and event analytics, sentiment and NLP‑derived indicators, web and app traffic,\npricing scraped from e‑commerce, transaction and supply‑chain signals, capital markets flows, or\ncredit and loan performance datasets. For financial analysts, these products help detect inflection\npoints earlier than financial statements, validate management commentary, and improve forecasting\nfor revenue, margins, demand, or credit risk. Common deliverables include cleaned datasets, factor\nor signal libraries, APIs/feeds, and research dashboards, often with metadata to support data\nlineage and compliance. Analysts incorporate the data into screening, event studies, nowcasting, and\nrisk monitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Thinknum.jpg"
+    },
+  {
+      VENDOR_ID: "a31e26ff-7dcf-5b5e-8fc9-6e0d7d5f6c62",
+      VENDOR_NAME: "Wilmington Trust",
+      VENDOR_PARENT_COMPANY: "M&T Bank Corporation",
+      VENDOR_WEBSITE: "https://www.wilmingtontrust.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Wilmington Trust is a financial institution that produces research, market commentary, and in some\ncases proprietary datasets or indices for clients. It helps analysts by providing structured and\nunstructured insights—sector and macro research, strategy notes, flow commentary, earnings and\ncredit views, and methodology around house views and models. Depending on the institution, data\nproducts may include proprietary indices, factor research, curated datasets distributed to clients,\nand analytics tied to trading and risk services. For buy‑side analysts, this content supports idea\ngeneration, peer comparisons, scenario framing, and understanding positioning and liquidity\nconditions. For sell‑side and banking users, these materials can also provide standardized market\nassumptions and research distribution that complements internal analysis. Because this vendor\ncategory is not a neutral data utility, analysts typically use it alongside independent sources and\napply governance around conflicts and usage rights. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "WilmingtonTrust.jpg"
+    },
+  {
+      VENDOR_ID: "9f2fa229-17c4-5b10-8bb9-6c2c1b9d8d48",
+      VENDOR_NAME: "MKT Media Stats",
+      VENDOR_PARENT_COMPANY: "MKT Media Stats",
+      VENDOR_WEBSITE: "https://www.mktmediastats.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "MKT Media Stats provides finance‑related data, analytics, or content that supports investment\nresearch, valuation, risk, and operational decision‑making. Analysts use this category of vendor to\nenrich core market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "MediaMkt.jpg"
+    },
+  {
+      VENDOR_ID: "d6aa0b99-99c1-5f55-8b47-51e4a0b5c2bd",
+      VENDOR_NAME: "Monetary Financial Institution",
+      VENDOR_PARENT_COMPANY: "Monetary Financial Institution",
+      VENDOR_WEBSITE: "https://www.bis.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Monetary Financial Institution provides finance‑related data, analytics, or content that supports\ninvestment research, valuation, risk, and operational decision‑making. Analysts use this category of\nvendor to enrich core market and fundamentals data with specialized coverage—such as sector‑specific\ndatasets, workflow tools, research content, or curated analytics outputs. Typical deliverables\ninclude downloadable datasets and APIs, dashboards, and documentation that enable repeatable\nanalysis and integration into models and data platforms. The primary value for users is improved\ndecision quality and efficiency: structured datasets reduce manual collection, while analytics and\nmetadata help establish lineage, interpretability, and compliance with usage terms. When integrating\nsuch sources, financial analysts often focus on coverage, update frequency, methodology\ntransparency, and mapping to identifiers so the vendor’s data can be joined cleanly with existing\nsecurity master and portfolio data. It is commonly selected for market data, pricing, valuation,\nproduct classification use cases, where consistent product classification and valuation inputs are\nessential for downstream analytics. Analysts should also evaluate licensing terms, data lineage, and\nrefresh cadence to ensure the dataset is appropriate for their intended research and reporting\nworkflows.",
+      VENDOR_TILE_LOGO: "MFI.jpg"
+    },
+  {
+      VENDOR_ID: "d5fe3c4c-a61d-5b11-a9f6-8618240c1d2a",
+      VENDOR_NAME: "Moody's Corporation",
+      VENDOR_PARENT_COMPANY: "Moody's Corporation",
+      VENDOR_WEBSITE: "https://www.moodys.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Moody's Corporation is a credit ratings and research organization that evaluates the\ncreditworthiness of issuers and debt instruments. It helps financial analysts by providing\nforward‑looking opinions on default risk, loss severity, and relative ranking within capital\nstructures, along with detailed research reports that explain key drivers, sensitivities, and\nscenarios. Core data products include long‑ and short‑term ratings, outlooks and watchlists, rating\nhistories, methodology documentation, sector research, and in many cases estimated recovery ratings\nand structured finance deal surveillance. Analysts use these datasets to screen for credit quality,\nmonitor downgrade/upgrade risk, support relative value and spread analysis, and inform portfolio\nguidelines and counterparty limits. Ratings and accompanying research are particularly useful for\nfixed‑income valuation, stress testing, covenant and structural analysis, and comparing credits\nacross industries and geographies with a standardized scale. In enterprise workflows, the data is\nintegrated into risk systems, regulatory reporting, and investment policy monitoring, providing\nauditable evidence for credit decisions and ongoing surveillance. It is commonly selected for market\ndata, pricing, valuation, product classification use cases, where consistent product classification\nand valuation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Moodys.jpg"
+    },
+  {
+      VENDOR_ID: "1f9b2f8e-6d06-5b18-ae85-8a1a532d9a59",
+      VENDOR_NAME: "European Union",
+      VENDOR_PARENT_COMPANY: "European Union",
+      VENDOR_WEBSITE: "https://european-union.europa.eu/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "European Union represents an official government portal and its associated agencies’ publications\nand datasets. It helps financial analysts by providing primary‑source economic, financial, legal,\nand policy information—such as macroeconomic indicators, budgets, debt and issuance information,\nstatistical releases, regulations, and open data programs. Analysts rely on government data to\nanchor models (inflation, employment, GDP, trade, yields, fiscal metrics), assess policy impacts,\nand validate assumptions with authoritative releases. Government sources also publish corporate\nregistries, procurement and sanctions information, and sector‑specific datasets that can be critical\nfor diligence and risk screening. The value is credibility and transparency: definitions,\nmethodologies, and revision policies are typically documented, enabling reproducible analysis and\nauditability. These datasets can be ingested into research pipelines and dashboards to provide\ntimely updates around scheduled releases and policy announcements. It is commonly selected for\nmarket data, pricing, valuation, product classification use cases, where consistent product\nclassification and valuation inputs are essential for downstream analytics. Analysts should also\nevaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is appropriate for\ntheir intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "EU.jpg"
+    },
+  {
+      VENDOR_ID: "d6b37b22-34f9-5b11-a6bd-5c4d2c76cd40",
+      VENDOR_NAME: "Finaeon",
+      VENDOR_PARENT_COMPANY: "Finaeon",
+      VENDOR_WEBSITE: "https://www.finaeon.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Finaeon provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Finaeon.jpg"
+    },
+  {
+      VENDOR_ID: "e0892a69-3f83-5b2d-a72b-2d1b25c356e0",
+      VENDOR_NAME: "Finchina",
+      VENDOR_PARENT_COMPANY: "Finchina",
+      VENDOR_WEBSITE: "https://www.finchina.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Finchina provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Finchina.jpg"
+    },
+  {
+      VENDOR_ID: "4baf7f61-31aa-58b9-bb8e-31d3f0a3552f",
+      VENDOR_NAME: "Nasdaq",
+      VENDOR_PARENT_COMPANY: "Nasdaq, Inc.",
+      VENDOR_WEBSITE: "https://www.nasdaq.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Nasdaq is a market infrastructure and data organization connected to securities and derivatives\ntrading venues. It supports analysts by providing authoritative exchange data (listed instrument\nreference, corporate actions related to listings, trading calendars, and market statistics) as well\nas market technology and data distribution services. Its datasets commonly include exchange market\ndata feeds, end‑of‑day prices, index and benchmark information, listings and issuer reference, and\nhistorical trading metrics such as volumes, liquidity indicators, and volatility measures. These\ninputs help analysts evaluate market depth, compare execution conditions across venues, and\nunderstand how corporate actions and listing events affect tradable instruments. For firms that\nprice portfolios, run risk, or back‑test strategies, exchange‑sourced data can serve as a “ground\ntruth” for trade and quote history and for validating vendor‑aggregated pricing. Exchange groups\noften combine data with analytics and workflow tools, enabling users to monitor markets, build\nindices or investment products, and ensure data lineage and licensing compliance in enterprise\ndistribution. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Nasdaq.jpg"
+    },
+  {
+      VENDOR_ID: "8b019e98-2cb7-55ad-86ea-e7f8c8d1ae58",
+      VENDOR_NAME: "Rimes Technologies",
+      VENDOR_PARENT_COMPANY: "Rimes Technologies Ltd.",
+      VENDOR_WEBSITE: "https://www.rimes.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Rimes Technologies provides finance‑related data, analytics, or content that supports investment\nresearch, valuation, risk, and operational decision‑making. Analysts use this category of vendor to\nenrich core market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Rimes.jpg"
+    },
+  {
+      VENDOR_ID: "c2b0e860-3808-55d8-90a0-2a1df5bbca8e",
+      VENDOR_NAME: "Rose Ai",
+      VENDOR_PARENT_COMPANY: "Rose AI",
+      VENDOR_WEBSITE: "https://www.rose.ai/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Rose Ai is an alternative data, analytics, or workflow provider that complements traditional market\nand fundamentals data with differentiated signals. Depending on the vendor, this can include news\nand event analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped from\ne‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "RoseAI.jpg"
+    },
+  {
+      VENDOR_ID: "f3b7f96b-0f13-5e9a-bc04-92b2a9f1ad91",
+      VENDOR_NAME: "Intercontinental Exchange",
+      VENDOR_PARENT_COMPANY: "Intercontinental Exchange, Inc.",
+      VENDOR_WEBSITE: "https://www.ice.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Intercontinental Exchange is a market infrastructure and data organization connected to securities\nand derivatives trading venues. It supports analysts by providing authoritative exchange data\n(listed instrument reference, corporate actions related to listings, trading calendars, and market\nstatistics) as well as market technology and data distribution services. Its datasets commonly\ninclude exchange market data feeds, end‑of‑day prices, index and benchmark information, listings and\nissuer reference, and historical trading metrics such as volumes, liquidity indicators, and\nvolatility measures. These inputs help analysts evaluate market depth, compare execution conditions\nacross venues, and understand how corporate actions and listing events affect tradable instruments.\nFor firms that price portfolios, run risk, or back‑test strategies, exchange‑sourced data can serve\nas a “ground truth” for trade and quote history and for validating vendor‑aggregated pricing.\nExchange groups often combine data with analytics and workflow tools, enabling users to monitor\nmarkets, build indices or investment products, and ensure data lineage and licensing compliance in\nenterprise distribution. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "ICE.jpg"
+    },
+  {
+      VENDOR_ID: "8ed0f6c2-c985-5a33-9bdf-d2bcb99d596c",
+      VENDOR_NAME: "Rystad Energy",
+      VENDOR_PARENT_COMPANY: "Rystad Energy",
+      VENDOR_WEBSITE: "https://www.rystadenergy.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Rystad Energy is a specialist energy and/or commodities market intelligence provider. It supports\nanalysts with pricing benchmarks, supply/demand fundamentals, asset and project databases, and\nindustry research across commodities such as oil, gas, LNG, power, metals, or agriculture (coverage\nvaries by provider). Typical data products include assessed spot and forward prices, curves,\nrefinery and upstream assets, production and capacity forecasts, shipping and storage indicators,\nand market balances. Financial analysts use these inputs to model commodity‑linked revenues and\ncosts, evaluate producers and consumers, stress test earnings sensitivity, and price derivatives or\nstructured exposures. For macro and sector strategy, the datasets help identify turning points in\ninventories, capacity additions, policy shifts, and regional bottlenecks. In risk management, the\ndata enables scenario analysis and hedge effectiveness testing with defensible benchmark references\nand transparent methodology. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Rystad.jpg"
+    },
+  {
+      VENDOR_ID: "f0bf2a3f-9d96-5b52-92f5-e8a7b6dc9e8c",
+      VENDOR_NAME: "National Futures Association",
+      VENDOR_PARENT_COMPANY: "National Futures Association",
+      VENDOR_WEBSITE: "https://www.nfa.futures.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "National Futures Association is a regulatory or industry standards body that publishes official\nrules, guidance, and data to support transparent and orderly markets. It helps analysts and\ncompliance teams by providing authoritative information on market structure, reporting requirements,\nenforcement actions, and—depending on the body—datasets such as filings, registrations, disciplinary\nrecords, market statistics, or supervisory guidance. Analysts use these sources to understand\nregulatory constraints on products and counterparties, monitor rule changes that may affect\nliquidity or capital requirements, and incorporate compliance considerations into investment and\nrisk decisions. Official datasets are also useful for due diligence (e.g., broker/dealer status,\nadviser registrations, enforcement history) and for validating assumptions in market research.\nBecause these bodies are primary sources, their publications provide strong evidentiary support and\ndefensible citations in internal memos, policy documents, and client reporting. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "NFA.jpg"
+    },
+  {
+      VENDOR_ID: "a0b3ef5e-70e2-5f35-8f86-5a4e4f88b492",
+      VENDOR_NAME: "S3 Partners",
+      VENDOR_PARENT_COMPANY: "S3 Partners",
+      VENDOR_WEBSITE: "https://s3partners.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "S3 Partners provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "S3partners.jpg"
+    },
+  {
+      VENDOR_ID: "8a6d3f71-49ac-5f27-9d38-4d45a0f9f1a6",
+      VENDOR_NAME: "Snowflake Marketplace",
+      VENDOR_PARENT_COMPANY: "Snowflake Inc.",
+      VENDOR_WEBSITE: "https://www.snowflake.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Snowflake Marketplace provides a data marketplace and cloud platform that allows organizations to\ndiscover, license, and securely share datasets with governed access controls. For financial analysts\nand data teams, the marketplace model helps shorten the time from data idea to usable dataset by\noffering standardized procurement, entitlement, and delivery into cloud environments. Data products\nvary widely and can include traditional market and reference data, alternative datasets, ESG\nmetrics, geospatial and weather data, and industry‑specific feeds. The platform typically supports\nsecure data sharing, auditing, and integration with analytics tools so users can prototype quickly,\nscale workloads, and maintain compliance with licensing terms. For analysts, this is helpful for\nrapid experimentation, back‑testing, and combining multiple vendors’ data in a single compute\nenvironment, reducing friction associated with file transfers and complex on‑prem pipelines. It is\ncommonly selected for market data, pricing, valuation, product classification use cases, where\nconsistent product classification and valuation inputs are essential for downstream analytics.\nAnalysts should also evaluate licensing terms, data lineage, and refresh cadence to ensure the\ndataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "snowflake.jpg"
+    },
+  {
+      VENDOR_ID: "6aaf8e1c-7b7a-5df4-8f98-1a7e7b0b2a42",
+      VENDOR_NAME: "Trepp",
+      VENDOR_PARENT_COMPANY: "Trepp, Inc.",
+      VENDOR_WEBSITE: "https://www.trepp.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Trepp is a real‑estate information and analytics provider used for commercial and/or residential\nproperty research. It helps financial analysts by supplying property‑level data (location,\ncharacteristics, ownership, tenancy where applicable), transaction comps, valuations and appraisal\ninputs, market supply/demand indicators, and performance benchmarks. Core datasets can include CRE\nlistings and leasing activity, rent and cap‑rate trends, mortgage and securitization performance\n(for certain providers), and neighborhood or risk factors. These inputs support underwriting,\nportfolio valuation, stress testing, and sector strategy for REITs, lenders, insurers, and asset\nmanagers. Analysts use the data to build comparable sales and rent rolls, model cash flows, evaluate\ncollateral, monitor delinquency and prepayment behavior in structured products, and compare regional\nexposures. Many clients integrate these datasets into risk and valuation systems and use them to\nproduce investment memos, credit packages, and market outlooks with traceable assumptions and\ntime‑series evidence. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Trepp.jpg"
+    },
+  {
+      VENDOR_ID: "3d91d6c5-9c0e-5b56-9b9c-86c3e2df7f64",
+      VENDOR_NAME: "Sourcescrub",
+      VENDOR_PARENT_COMPANY: "SourceScrub, LLC",
+      VENDOR_WEBSITE: "https://sourcescrub.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Sourcescrub provides data and intelligence focused on private companies and private capital markets,\nsupporting analysts who track venture capital, private equity, growth equity, and M&A. The platform\ntypically aggregates company profiles, funding rounds, investors, ownership and cap table signals\n(where available), leadership and employee data, transactions, valuation signals, and thematic or\nsector taxonomies. For financial analysts, this helps with pipeline sourcing, peer and comparable\nselection, market mapping, and diligence—especially when public disclosures are limited. Users can\nidentify fast‑growing companies, understand investor syndicates, track follow‑on funding and exit\npathways, and monitor competitive landscapes. Data products often include deal databases, fund\nperformance or fundraising metrics (depending on the provider), relationship mapping, and export/API\naccess for integration into CRM, research notes, and dashboards. The value is speed and coverage:\nanalysts can move from a hypothesis to a vetted target list, triangulate traction using multiple\nindicators, and document investment rationales with structured, searchable datasets. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Sourcescrub.jpg"
+    },
+  {
+      VENDOR_ID: "e3ef2de2-62c0-5a6c-9d62-9b4f1e5c48a8",
+      VENDOR_NAME: "The TCW Group",
+      VENDOR_PARENT_COMPANY: "TCW Group, Inc.",
+      VENDOR_WEBSITE: "https://www.tcw.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "The TCW Group is a financial institution that produces research, market commentary, and in some\ncases proprietary datasets or indices for clients. It helps analysts by providing structured and\nunstructured insights—sector and macro research, strategy notes, flow commentary, earnings and\ncredit views, and methodology around house views and models. Depending on the institution, data\nproducts may include proprietary indices, factor research, curated datasets distributed to clients,\nand analytics tied to trading and risk services. For buy‑side analysts, this content supports idea\ngeneration, peer comparisons, scenario framing, and understanding positioning and liquidity\nconditions. For sell‑side and banking users, these materials can also provide standardized market\nassumptions and research distribution that complements internal analysis. Because this vendor\ncategory is not a neutral data utility, analysts typically use it alongside independent sources and\napply governance around conflicts and usage rights. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "TCW.jpg"
+    },
+  {
+      VENDOR_ID: "041e2af3-9107-5a03-8c77-8b0f7c0b6fdb",
+      VENDOR_NAME: "FINRA",
+      VENDOR_PARENT_COMPANY: "Financial Industry Regulatory Authority, Inc.",
+      VENDOR_WEBSITE: "https://www.finra.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "FINRA is a regulatory or industry standards body that publishes official rules, guidance, and data\nto support transparent and orderly markets. It helps analysts and compliance teams by providing\nauthoritative information on market structure, reporting requirements, enforcement actions,\nand—depending on the body—datasets such as filings, registrations, disciplinary records, market\nstatistics, or supervisory guidance. Analysts use these sources to understand regulatory constraints\non products and counterparties, monitor rule changes that may affect liquidity or capital\nrequirements, and incorporate compliance considerations into investment and risk decisions. Official\ndatasets are also useful for due diligence (e.g., broker/dealer status, adviser registrations,\nenforcement history) and for validating assumptions in market research. Because these bodies are\nprimary sources, their publications provide strong evidentiary support and defensible citations in\ninternal memos, policy documents, and client reporting. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "FINRA.jpg"
+    },
+  {
+      VENDOR_ID: "9c30c3e7-00b6-5a62-a7e5-0b9f1f4f6f6c",
+      VENDOR_NAME: "Simplify Asset Management",
+      VENDOR_PARENT_COMPANY: "Simplify Asset Management Inc.",
+      VENDOR_WEBSITE: "https://www.simplify.us/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Simplify Asset Management provides finance‑related data, analytics, or content that supports\ninvestment research, valuation, risk, and operational decision‑making. Analysts use this category of\nvendor to enrich core market and fundamentals data with specialized coverage—such as sector‑specific\ndatasets, workflow tools, research content, or curated analytics outputs. Typical deliverables\ninclude downloadable datasets and APIs, dashboards, and documentation that enable repeatable\nanalysis and integration into models and data platforms. The primary value for users is improved\ndecision quality and efficiency: structured datasets reduce manual collection, while analytics and\nmetadata help establish lineage, interpretability, and compliance with usage terms. When integrating\nsuch sources, financial analysts often focus on coverage, update frequency, methodology\ntransparency, and mapping to identifiers so the vendor’s data can be joined cleanly with existing\nsecurity master and portfolio data. It is commonly selected for market data, pricing, valuation,\nproduct classification use cases, where consistent product classification and valuation inputs are\nessential for downstream analytics. Analysts should also evaluate licensing terms, data lineage, and\nrefresh cadence to ensure the dataset is appropriate for their intended research and reporting\nworkflows.",
+      VENDOR_TILE_LOGO: "SimplifyPortfolio.jpg"
+    },
+  {
+      VENDOR_ID: "b0bfe3b6-7b86-5d3a-a610-0a2a6e0a8b8f",
+      VENDOR_NAME: "YipitData",
+      VENDOR_PARENT_COMPANY: "YipitData, Inc.",
+      VENDOR_WEBSITE: "https://www.yipitdata.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "YipitData is an alternative data, analytics, or workflow provider that complements traditional\nmarket and fundamentals data with differentiated signals. Depending on the vendor, this can include\nnews and event analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped\nfrom e‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Yipit.jpg"
+    },
+  {
+      VENDOR_ID: "77df3f6a-6f33-5d2d-8606-71c49c3d3e73",
+      VENDOR_NAME: "Yes Energy",
+      VENDOR_PARENT_COMPANY: "Yes Energy, LLC",
+      VENDOR_WEBSITE: "https://www.yesenergy.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Yes Energy is a specialist energy and/or commodities market intelligence provider. It supports\nanalysts with pricing benchmarks, supply/demand fundamentals, asset and project databases, and\nindustry research across commodities such as oil, gas, LNG, power, metals, or agriculture (coverage\nvaries by provider). Typical data products include assessed spot and forward prices, curves,\nrefinery and upstream assets, production and capacity forecasts, shipping and storage indicators,\nand market balances. Financial analysts use these inputs to model commodity‑linked revenues and\ncosts, evaluate producers and consumers, stress test earnings sensitivity, and price derivatives or\nstructured exposures. For macro and sector strategy, the datasets help identify turning points in\ninventories, capacity additions, policy shifts, and regional bottlenecks. In risk management, the\ndata enables scenario analysis and hedge effectiveness testing with defensible benchmark references\nand transparent methodology. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "YesEnergy.jpg"
+    },
+  {
+      VENDOR_ID: "56bd50f2-3b65-5f22-8f6d-0fd80b51b0ea",
+      VENDOR_NAME: "SimCorp",
+      VENDOR_PARENT_COMPANY: "SimCorp A/S",
+      VENDOR_WEBSITE: "https://www.simcorp.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "SimCorp is an investment management technology provider offering an integrated platform for\nportfolio management, trading support, risk, performance, compliance, and data management. It helps\nanalysts by centralizing positions, transactions, security master data, pricing, and analytics so\nteams can produce consistent valuations, exposures, attribution, and reporting across asset classes.\nData products include normalized security and instrument reference, pricing integrations, corporate\nactions processing, benchmark and performance datasets, and configurable analytics outputs. For\nfinancial analysts, the platform improves workflow efficiency: scenarios and risk metrics can be\ngenerated from the same golden source used for accounting and reporting, reducing reconciliation\ntime and improving confidence in results. It is commonly used by asset managers, pension funds,\ninsurers, and sovereign entities to support daily NAV, risk monitoring, regulatory reporting, and\nclient reporting with strong controls and audit trails. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Simcorp.jpg"
+    },
+  {
+      VENDOR_ID: "9a5d3a1a-6a8c-58f8-9f0f-8a2f7c7d5b3f",
+      VENDOR_NAME: "ClimateArc",
+      VENDOR_PARENT_COMPANY: "ClimateArc",
+      VENDOR_WEBSITE: "https://www.climatearc.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "ClimateArc provides ESG and climate analytics designed to quantify sustainability risks,\nopportunities, and disclosures for companies, portfolios, and private assets. It helps financial\nanalysts by translating complex reporting (emissions, governance, controversy events, transition\nplans, physical risk exposures, and alignment targets) into structured datasets and scores that can\nbe compared across peers. Data products often include company ESG metrics, carbon footprints (Scopes\n1–3 where available), controversy and engagement signals, taxonomy alignment, climate scenario or\nphysical hazard overlays, and portfolio analytics such as temperature alignment or financed\nemissions. Analysts use these inputs to meet client and regulatory reporting needs, integrate ESG\nfactors into valuation and credit work, identify material risks (e.g., litigation, stranded assets,\nsupply‑chain disruption), and support stewardship and engagement strategies. The value is\ndecision‑useful standardization: the datasets help reconcile inconsistent disclosures, document\nassumptions, and produce repeatable analytics for portfolio construction, risk monitoring, and\nproduct labeling. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "CA100.jpg"
+    },
+  {
+      VENDOR_ID: "76c1e25a-7430-5f3f-8a75-2b34a4c70dbd",
+      VENDOR_NAME: "AlphaRoc",
+      VENDOR_PARENT_COMPANY: "AlphaRoc",
+      VENDOR_WEBSITE: "https://alpharoc.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "AlphaRoc provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "AlphaRoc.jpg"
+    },
+  {
+      VENDOR_ID: "4c5f01b5-1a8e-5f7b-9ae0-2d9b2b2df1bc",
+      VENDOR_NAME: "RelPro",
+      VENDOR_PARENT_COMPANY: "RelPro, Inc.",
+      VENDOR_WEBSITE: "https://www.relpro.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "RelPro provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Relpro.jpg"
+    },
+  {
+      VENDOR_ID: "ce6fd59c-0c1b-54e4-a468-0f548c3e8a8b",
+      VENDOR_NAME: "GreenStreet",
+      VENDOR_PARENT_COMPANY: "Green Street Advisors, LLC",
+      VENDOR_WEBSITE: "https://www.greenstreet.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "GreenStreet is a real‑estate information and analytics provider used for commercial and/or\nresidential property research. It helps financial analysts by supplying property‑level data\n(location, characteristics, ownership, tenancy where applicable), transaction comps, valuations and\nappraisal inputs, market supply/demand indicators, and performance benchmarks. Core datasets can\ninclude CRE listings and leasing activity, rent and cap‑rate trends, mortgage and securitization\nperformance (for certain providers), and neighborhood or risk factors. These inputs support\nunderwriting, portfolio valuation, stress testing, and sector strategy for REITs, lenders, insurers,\nand asset managers. Analysts use the data to build comparable sales and rent rolls, model cash\nflows, evaluate collateral, monitor delinquency and prepayment behavior in structured products, and\ncompare regional exposures. Many clients integrate these datasets into risk and valuation systems\nand use them to produce investment memos, credit packages, and market outlooks with traceable\nassumptions and time‑series evidence. It is commonly selected for market data, pricing, valuation,\nproduct classification use cases, where consistent product classification and valuation inputs are\nessential for downstream analytics. Analysts should also evaluate licensing terms, data lineage, and\nrefresh cadence to ensure the dataset is appropriate for their intended research and reporting\nworkflows.",
+      VENDOR_TILE_LOGO: "Greenstreet.jpg"
+    },
+  {
+      VENDOR_ID: "4f22781d-6ce5-5c1f-98fb-48c07cc8be6c",
+      VENDOR_NAME: "CBRE",
+      VENDOR_PARENT_COMPANY: "CBRE Group, Inc.",
+      VENDOR_WEBSITE: "https://www.cbre.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "CBRE is a real‑estate information and analytics provider used for commercial and/or residential\nproperty research. It helps financial analysts by supplying property‑level data (location,\ncharacteristics, ownership, tenancy where applicable), transaction comps, valuations and appraisal\ninputs, market supply/demand indicators, and performance benchmarks. Core datasets can include CRE\nlistings and leasing activity, rent and cap‑rate trends, mortgage and securitization performance\n(for certain providers), and neighborhood or risk factors. These inputs support underwriting,\nportfolio valuation, stress testing, and sector strategy for REITs, lenders, insurers, and asset\nmanagers. Analysts use the data to build comparable sales and rent rolls, model cash flows, evaluate\ncollateral, monitor delinquency and prepayment behavior in structured products, and compare regional\nexposures. Many clients integrate these datasets into risk and valuation systems and use them to\nproduce investment memos, credit packages, and market outlooks with traceable assumptions and\ntime‑series evidence. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "CBRE.jpg"
+    },
+  {
+      VENDOR_ID: "c3d6f421-2a6a-5ef5-a7a9-21b30fbd2f0b",
+      VENDOR_NAME: "Equilar",
+      VENDOR_PARENT_COMPANY: "Equilar, Inc.",
+      VENDOR_WEBSITE: "https://www.equilar.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Equilar provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "equilar.jpg"
+    },
+  {
+      VENDOR_ID: "a24f2da6-e3c2-5c71-b571-081aaf5d57a5",
+      VENDOR_NAME: "DTCC",
+      VENDOR_PARENT_COMPANY: "The Depository Trust & Clearing Corporation",
+      VENDOR_WEBSITE: "https://www.dtcc.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "DTCC is a financial market infrastructure organization that enables secure messaging, clearing,\nsettlement, or payments connectivity across institutions. It helps analysts and operations teams by\nproviding standardized identifiers, messaging formats, and network services that support the\nmovement of cash and securities and the reconciliation of transactions. Data products can include\nreference and directory information, message standards documentation, transaction and settlement\nprocessing services, and operational metrics (coverage varies by provider). For financial analysts,\nunderstanding this infrastructure is important for evaluating operational risk, counterparty\nexposure, settlement cycles, and systemic dependencies. In data terms, these vendors often provide\nauthoritative institution and payment rail information that supports payment analytics, fraud and\nAML monitoring, and liquidity management. Their standards and reference datasets can also be used to\nnormalize transaction data across systems so firms can produce consistent reporting, investigate\nbreaks, and meet regulatory requirements. It is commonly selected for market data, pricing,\nvaluation, product classification use cases, where consistent product classification and valuation\ninputs are essential for downstream analytics. Analysts should also evaluate licensing terms, data\nlineage, and refresh cadence to ensure the dataset is appropriate for their intended research and\nreporting workflows.",
+      VENDOR_TILE_LOGO: "DTCC.jpg"
+    },
+  {
+      VENDOR_ID: "b1c7c251-8b0f-5b4f-bd5e-17e6e7d51d8a",
+      VENDOR_NAME: "ESG Book",
+      VENDOR_PARENT_COMPANY: "ESG Book",
+      VENDOR_WEBSITE: "https://www.esgbook.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "ESG Book provides ESG and climate analytics designed to quantify sustainability risks,\nopportunities, and disclosures for companies, portfolios, and private assets. It helps financial\nanalysts by translating complex reporting (emissions, governance, controversy events, transition\nplans, physical risk exposures, and alignment targets) into structured datasets and scores that can\nbe compared across peers. Data products often include company ESG metrics, carbon footprints (Scopes\n1–3 where available), controversy and engagement signals, taxonomy alignment, climate scenario or\nphysical hazard overlays, and portfolio analytics such as temperature alignment or financed\nemissions. Analysts use these inputs to meet client and regulatory reporting needs, integrate ESG\nfactors into valuation and credit work, identify material risks (e.g., litigation, stranded assets,\nsupply‑chain disruption), and support stewardship and engagement strategies. The value is\ndecision‑useful standardization: the datasets help reconcile inconsistent disclosures, document\nassumptions, and produce repeatable analytics for portfolio construction, risk monitoring, and\nproduct labeling. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "ESGBook.jpg"
+    },
+  {
+      VENDOR_ID: "9fbde7d4-0e5b-5e5d-9ee0-7cfad6fbb9d0",
+      VENDOR_NAME: "DV01",
+      VENDOR_PARENT_COMPANY: "DV01, Inc.",
+      VENDOR_WEBSITE: "https://www.dv01.co/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "DV01 is an alternative data, analytics, or workflow provider that complements traditional market and\nfundamentals data with differentiated signals. Depending on the vendor, this can include news and\nevent analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped from\ne‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "DV01.jpg"
+    },
+  {
+      VENDOR_ID: "4f86e4e0-0e65-58ac-bd20-dc21d2f6a1d1",
+      VENDOR_NAME: "Google",
+      VENDOR_PARENT_COMPANY: "Alphabet Inc.",
+      VENDOR_WEBSITE: "https://www.google.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Google provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Google.jpg"
+    },
+  {
+      VENDOR_ID: "3b2c5d0b-0b33-53c6-9e9d-3af0f2a23ac0",
+      VENDOR_NAME: "Kroll Bond Rating Agency",
+      VENDOR_PARENT_COMPANY: "Kroll Bond Rating Agency, LLC",
+      VENDOR_WEBSITE: "https://www.kbra.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Kroll Bond Rating Agency is a credit ratings and research organization that evaluates the\ncreditworthiness of issuers and debt instruments. It helps financial analysts by providing\nforward‑looking opinions on default risk, loss severity, and relative ranking within capital\nstructures, along with detailed research reports that explain key drivers, sensitivities, and\nscenarios. Core data products include long‑ and short‑term ratings, outlooks and watchlists, rating\nhistories, methodology documentation, sector research, and in many cases estimated recovery ratings\nand structured finance deal surveillance. Analysts use these datasets to screen for credit quality,\nmonitor downgrade/upgrade risk, support relative value and spread analysis, and inform portfolio\nguidelines and counterparty limits. Ratings and accompanying research are particularly useful for\nfixed‑income valuation, stress testing, covenant and structural analysis, and comparing credits\nacross industries and geographies with a standardized scale. In enterprise workflows, the data is\nintegrated into risk systems, regulatory reporting, and investment policy monitoring, providing\nauditable evidence for credit decisions and ongoing surveillance. It is commonly selected for market\ndata, pricing, valuation, product classification use cases, where consistent product classification\nand valuation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "KBRA.jpg"
+    },
+  {
+      VENDOR_ID: "e2d8b2f7-0c1f-57b4-9e0e-6a0f3c44a0c8",
+      VENDOR_NAME: "Morningstar",
+      VENDOR_PARENT_COMPANY: "Morningstar, Inc.",
+      VENDOR_WEBSITE: "https://www.morningstar.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Morningstar is a global financial information and analytics provider used by investment\nprofessionals for security reference data, real‑time and end‑of‑day market pricing, corporate\nfundamentals, estimates, ownership, and portfolio and risk analytics. For financial analysts, the\nplatform helps answer core questions—what a security is, how it is classified, what it is worth, and\nhow it trades—by delivering normalized identifiers, symbology mapping, corporate actions, and\ninstrument attributes alongside pricing and valuation inputs. Typical data products include\nequities, fixed income, derivatives, fund data, indices, company financial statements, consensus\nestimates, events and news, and analytics that support screening, relative value, scenario analysis,\nand attribution. The value for users is reliability and comparability: data is curated,\ncross‑checked, and distributed in consistent schemas so models, dashboards, and downstream reporting\ndon’t break when markets change. Many clients integrate the data into research workflows, OMS/EMS\nand portfolio systems, and enterprise warehouses to power pricing, risk, performance measurement,\nand regulatory reporting. For an analyst building an investment case, this vendor’s datasets help\nvalidate assumptions, triangulate valuation, monitor catalysts, and document methodology with\ntraceable sources. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "MorningStar.jpg"
+    },
+  {
+      VENDOR_ID: "f0d0e0b0-9d8e-57c8-8b0d-8a0d2f2f0f7b",
+      VENDOR_NAME: "Finsight",
+      VENDOR_PARENT_COMPANY: "Finsight",
+      VENDOR_WEBSITE: "https://www.finsight.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Finsight provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "finsight.jpg"
+    },
+  {
+      VENDOR_ID: "d1b12f6a-8f78-55aa-9b7f-3e1f2d3c4b5a",
+      VENDOR_NAME: "Crunchbase",
+      VENDOR_PARENT_COMPANY: "Crunchbase Inc.",
+      VENDOR_WEBSITE: "https://www.crunchbase.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Crunchbase provides data and intelligence focused on private companies and private capital markets,\nsupporting analysts who track venture capital, private equity, growth equity, and M&A. The platform\ntypically aggregates company profiles, funding rounds, investors, ownership and cap table signals\n(where available), leadership and employee data, transactions, valuation signals, and thematic or\nsector taxonomies. For financial analysts, this helps with pipeline sourcing, peer and comparable\nselection, market mapping, and diligence—especially when public disclosures are limited. Users can\nidentify fast‑growing companies, understand investor syndicates, track follow‑on funding and exit\npathways, and monitor competitive landscapes. Data products often include deal databases, fund\nperformance or fundraising metrics (depending on the provider), relationship mapping, and export/API\naccess for integration into CRM, research notes, and dashboards. The value is speed and coverage:\nanalysts can move from a hypothesis to a vetted target list, triangulate traction using multiple\nindicators, and document investment rationales with structured, searchable datasets. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Crunchbase.jpg"
+    },
+  {
+      VENDOR_ID: "a6b1a8cc-0c7f-5c11-9f0b-6aa0d1f1e2c3",
+      VENDOR_NAME: "MSRB",
+      VENDOR_PARENT_COMPANY: "Municipal Securities Rulemaking Board",
+      VENDOR_WEBSITE: "https://www.msrb.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "MSRB is a regulatory or industry standards body that publishes official rules, guidance, and data to\nsupport transparent and orderly markets. It helps analysts and compliance teams by providing\nauthoritative information on market structure, reporting requirements, enforcement actions,\nand—depending on the body—datasets such as filings, registrations, disciplinary records, market\nstatistics, or supervisory guidance. Analysts use these sources to understand regulatory constraints\non products and counterparties, monitor rule changes that may affect liquidity or capital\nrequirements, and incorporate compliance considerations into investment and risk decisions. Official\ndatasets are also useful for due diligence (e.g., broker/dealer status, adviser registrations,\nenforcement history) and for validating assumptions in market research. Because these bodies are\nprimary sources, their publications provide strong evidentiary support and defensible citations in\ninternal memos, policy documents, and client reporting. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "MSRB.jpg"
+    },
+  {
+      VENDOR_ID: "a1b2c3d4-e5f6-5a78-9b0c-1d2e3f4a5b6c",
+      VENDOR_NAME: "Zengin System",
+      VENDOR_PARENT_COMPANY: "Zengin Data Communications System Corporation",
+      VENDOR_WEBSITE: "https://www.zenginkyo.or.jp/en/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Zengin System is a financial market infrastructure organization that enables secure messaging,\nclearing, settlement, or payments connectivity across institutions. It helps analysts and operations\nteams by providing standardized identifiers, messaging formats, and network services that support\nthe movement of cash and securities and the reconciliation of transactions. Data products can\ninclude reference and directory information, message standards documentation, transaction and\nsettlement processing services, and operational metrics (coverage varies by provider). For financial\nanalysts, understanding this infrastructure is important for evaluating operational risk,\ncounterparty exposure, settlement cycles, and systemic dependencies. In data terms, these vendors\noften provide authoritative institution and payment rail information that supports payment\nanalytics, fraud and AML monitoring, and liquidity management. Their standards and reference\ndatasets can also be used to normalize transaction data across systems so firms can produce\nconsistent reporting, investigate breaks, and meet regulatory requirements. It is commonly selected\nfor market data, pricing, valuation, product classification use cases, where consistent product\nclassification and valuation inputs are essential for downstream analytics. Analysts should also\nevaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is appropriate for\ntheir intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Zengin.jpg"
+    },
+  {
+      VENDOR_ID: "cb4a32e8-19f1-56a2-9c7e-9de2f3a41b2c",
+      VENDOR_NAME: "Climate Action 100+",
+      VENDOR_PARENT_COMPANY: "Climate Action 100+",
+      VENDOR_WEBSITE: "https://www.climateaction100.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Climate Action 100+ provides ESG and climate analytics designed to quantify sustainability risks,\nopportunities, and disclosures for companies, portfolios, and private assets. It helps financial\nanalysts by translating complex reporting (emissions, governance, controversy events, transition\nplans, physical risk exposures, and alignment targets) into structured datasets and scores that can\nbe compared across peers. Data products often include company ESG metrics, carbon footprints (Scopes\n1–3 where available), controversy and engagement signals, taxonomy alignment, climate scenario or\nphysical hazard overlays, and portfolio analytics such as temperature alignment or financed\nemissions. Analysts use these inputs to meet client and regulatory reporting needs, integrate ESG\nfactors into valuation and credit work, identify material risks (e.g., litigation, stranded assets,\nsupply‑chain disruption), and support stewardship and engagement strategies. The value is\ndecision‑useful standardization: the datasets help reconcile inconsistent disclosures, document\nassumptions, and produce repeatable analytics for portfolio construction, risk monitoring, and\nproduct labeling. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "CA100.jpg"
+    },
+  {
+      VENDOR_ID: "31a5c6d7-0e1f-5a2b-9c3d-4e5f6a7b8c9d",
+      VENDOR_NAME: "Financial Conduct Authority",
+      VENDOR_PARENT_COMPANY: "Financial Conduct Authority",
+      VENDOR_WEBSITE: "https://www.fca.org.uk/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Financial Conduct Authority is a regulatory or industry standards body that publishes official\nrules, guidance, and data to support transparent and orderly markets. It helps analysts and\ncompliance teams by providing authoritative information on market structure, reporting requirements,\nenforcement actions, and—depending on the body—datasets such as filings, registrations, disciplinary\nrecords, market statistics, or supervisory guidance. Analysts use these sources to understand\nregulatory constraints on products and counterparties, monitor rule changes that may affect\nliquidity or capital requirements, and incorporate compliance considerations into investment and\nrisk decisions. Official datasets are also useful for due diligence (e.g., broker/dealer status,\nadviser registrations, enforcement history) and for validating assumptions in market research.\nBecause these bodies are primary sources, their publications provide strong evidentiary support and\ndefensible citations in internal memos, policy documents, and client reporting. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "FCA.jpg"
+    },
+  {
+      VENDOR_ID: "e2c3b4a5-6d7e-58f9-9a0b-1c2d3e4f5a6b",
+      VENDOR_NAME: "FFIEC",
+      VENDOR_PARENT_COMPANY: "Federal Financial Institutions Examination Council",
+      VENDOR_WEBSITE: "https://www.ffiec.gov/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "FFIEC represents an official government portal and its associated agencies’ publications and\ndatasets. It helps financial analysts by providing primary‑source economic, financial, legal, and\npolicy information—such as macroeconomic indicators, budgets, debt and issuance information,\nstatistical releases, regulations, and open data programs. Analysts rely on government data to\nanchor models (inflation, employment, GDP, trade, yields, fiscal metrics), assess policy impacts,\nand validate assumptions with authoritative releases. Government sources also publish corporate\nregistries, procurement and sanctions information, and sector‑specific datasets that can be critical\nfor diligence and risk screening. The value is credibility and transparency: definitions,\nmethodologies, and revision policies are typically documented, enabling reproducible analysis and\nauditability. These datasets can be ingested into research pipelines and dashboards to provide\ntimely updates around scheduled releases and policy announcements. It is commonly selected for\nmarket data, pricing, valuation, product classification use cases, where consistent product\nclassification and valuation inputs are essential for downstream analytics. Analysts should also\nevaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is appropriate for\ntheir intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "FFIEC.jpg"
+    },
+  {
+      VENDOR_ID: "9d8c7b6a-5f4e-53d2-9c1b-0a9b8c7d6e5f",
+      VENDOR_NAME: "GLEIF",
+      VENDOR_PARENT_COMPANY: "Global Legal Entity Identifier Foundation",
+      VENDOR_WEBSITE: "https://www.gleif.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "GLEIF provides official identifiers, reference standards, or taxonomy services that help uniquely\ndefine financial instruments, legal entities, or derivatives contracts across the market. These\ndatasets are foundational for analysts because they reduce ambiguity when joining data from multiple\nsources, aggregating exposures, and producing consistent reporting. Typical products include\nidentifier assignment and lookup (e.g., entity IDs, instrument or contract identifiers), reference\nattributes, hierarchy relationships, and lifecycle event updates. Users rely on these standards to\nimprove data quality, support regulatory reporting, and ensure that risk, valuation, and operations\nsystems refer to the same underlying objects. For a financial analyst, strong identifier coverage\nenables accurate peer sets, correct mapping of positions to issuers and sectors, and reliable\nhistorical analysis through corporate actions and contract lifecycle changes. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "GLEIF.jpg"
+    },
+  {
+      VENDOR_ID: "0f1e2d3c-4b5a-5c6d-9e8f-7a6b5c4d3e2f",
+      VENDOR_NAME: "Wood Mackenzie",
+      VENDOR_PARENT_COMPANY: "Wood Mackenzie Limited",
+      VENDOR_WEBSITE: "https://www.woodmac.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Wood Mackenzie is a specialist energy and/or commodities market intelligence provider. It supports\nanalysts with pricing benchmarks, supply/demand fundamentals, asset and project databases, and\nindustry research across commodities such as oil, gas, LNG, power, metals, or agriculture (coverage\nvaries by provider). Typical data products include assessed spot and forward prices, curves,\nrefinery and upstream assets, production and capacity forecasts, shipping and storage indicators,\nand market balances. Financial analysts use these inputs to model commodity‑linked revenues and\ncosts, evaluate producers and consumers, stress test earnings sensitivity, and price derivatives or\nstructured exposures. For macro and sector strategy, the datasets help identify turning points in\ninventories, capacity additions, policy shifts, and regional bottlenecks. In risk management, the\ndata enables scenario analysis and hedge effectiveness testing with defensible benchmark references\nand transparent methodology. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "WoodMac.jpg"
+    },
+  {
+      VENDOR_ID: "a8b7c6d5-e4f3-5a21-9b0c-1d2e3f4a5b6d",
+      VENDOR_NAME: "RavenPack",
+      VENDOR_PARENT_COMPANY: "RavenPack",
+      VENDOR_WEBSITE: "https://www.ravenpack.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "RavenPack is an alternative data, analytics, or workflow provider that complements traditional\nmarket and fundamentals data with differentiated signals. Depending on the vendor, this can include\nnews and event analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped\nfrom e‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Ravenpack.jpg"
+    },
+  {
+      VENDOR_ID: "b7c6d5e4-f3a2-5b10-9c0d-1e2f3a4b5c6d",
+      VENDOR_NAME: "Quant IP",
+      VENDOR_PARENT_COMPANY: "Quant IP",
+      VENDOR_WEBSITE: "https://www.quantip.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Quant IP is an alternative data, analytics, or workflow provider that complements traditional market\nand fundamentals data with differentiated signals. Depending on the vendor, this can include news\nand event analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped from\ne‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "QuantIP.jpg"
+    },
+  {
+      VENDOR_ID: "c6d5e4f3-a2b1-5c0d-9e1f-2a3b4c5d6e7f",
+      VENDOR_NAME: "Transition Pathway Initiative",
+      VENDOR_PARENT_COMPANY: "Transition Pathway Initiative",
+      VENDOR_WEBSITE: "https://www.transitionpathwayinitiative.org/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Transition Pathway Initiative provides ESG and climate analytics designed to quantify sustainability\nrisks, opportunities, and disclosures for companies, portfolios, and private assets. It helps\nfinancial analysts by translating complex reporting (emissions, governance, controversy events,\ntransition plans, physical risk exposures, and alignment targets) into structured datasets and\nscores that can be compared across peers. Data products often include company ESG metrics, carbon\nfootprints (Scopes 1–3 where available), controversy and engagement signals, taxonomy alignment,\nclimate scenario or physical hazard overlays, and portfolio analytics such as temperature alignment\nor financed emissions. Analysts use these inputs to meet client and regulatory reporting needs,\nintegrate ESG factors into valuation and credit work, identify material risks (e.g., litigation,\nstranded assets, supply‑chain disruption), and support stewardship and engagement strategies. The\nvalue is decision‑useful standardization: the datasets help reconcile inconsistent disclosures,\ndocument assumptions, and produce repeatable analytics for portfolio construction, risk monitoring,\nand product labeling. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "TPI.jpg"
+    },
+  {
+      VENDOR_ID: "d5e4f3a2-b1c0-5d1e-9f2a-3b4c5d6e7f80",
+      VENDOR_NAME: "EPFR",
+      VENDOR_PARENT_COMPANY: "EPFR",
+      VENDOR_WEBSITE: "https://www.epfr.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "EPFR provides finance‑related data, analytics, or content that supports investment research,\nvaluation, risk, and operational decision‑making. Analysts use this category of vendor to enrich\ncore market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "EPFR.jpg"
+    },
+  {
+      VENDOR_ID: "e4f3a2b1-c0d9-5e2f-9a3b-4c5d6e7f8091",
+      VENDOR_NAME: "Novata",
+      VENDOR_PARENT_COMPANY: "Novata, Inc.",
+      VENDOR_WEBSITE: "https://www.novata.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Novata provides ESG and climate analytics designed to quantify sustainability risks, opportunities,\nand disclosures for companies, portfolios, and private assets. It helps financial analysts by\ntranslating complex reporting (emissions, governance, controversy events, transition plans, physical\nrisk exposures, and alignment targets) into structured datasets and scores that can be compared\nacross peers. Data products often include company ESG metrics, carbon footprints (Scopes 1–3 where\navailable), controversy and engagement signals, taxonomy alignment, climate scenario or physical\nhazard overlays, and portfolio analytics such as temperature alignment or financed emissions.\nAnalysts use these inputs to meet client and regulatory reporting needs, integrate ESG factors into\nvaluation and credit work, identify material risks (e.g., litigation, stranded assets, supply‑chain\ndisruption), and support stewardship and engagement strategies. The value is decision‑useful\nstandardization: the datasets help reconcile inconsistent disclosures, document assumptions, and\nproduce repeatable analytics for portfolio construction, risk monitoring, and product labeling. It\nis commonly selected for market data, pricing, valuation, product classification use cases, where\nconsistent product classification and valuation inputs are essential for downstream analytics.\nAnalysts should also evaluate licensing terms, data lineage, and refresh cadence to ensure the\ndataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Novata.jpg"
+    },
+  {
+      VENDOR_ID: "f3a2b1c0-d9e8-5f30-9b4c-5d6e7f8091a2",
+      VENDOR_NAME: "Haver Analytics",
+      VENDOR_PARENT_COMPANY: "Haver Analytics, Inc.",
+      VENDOR_WEBSITE: "https://www.haver.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Haver Analytics is a global financial information and analytics provider used by investment\nprofessionals for security reference data, real‑time and end‑of‑day market pricing, corporate\nfundamentals, estimates, ownership, and portfolio and risk analytics. For financial analysts, the\nplatform helps answer core questions—what a security is, how it is classified, what it is worth, and\nhow it trades—by delivering normalized identifiers, symbology mapping, corporate actions, and\ninstrument attributes alongside pricing and valuation inputs. Typical data products include\nequities, fixed income, derivatives, fund data, indices, company financial statements, consensus\nestimates, events and news, and analytics that support screening, relative value, scenario analysis,\nand attribution. The value for users is reliability and comparability: data is curated,\ncross‑checked, and distributed in consistent schemas so models, dashboards, and downstream reporting\ndon’t break when markets change. Many clients integrate the data into research workflows, OMS/EMS\nand portfolio systems, and enterprise warehouses to power pricing, risk, performance measurement,\nand regulatory reporting. For an analyst building an investment case, this vendor’s datasets help\nvalidate assumptions, triangulate valuation, monitor catalysts, and document methodology with\ntraceable sources. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Haver.jpg"
+    },
+  {
+      VENDOR_ID: "a2b1c0d9-e8f7-5031-9c5d-6e7f8091a2b3",
+      VENDOR_NAME: "Turnleaf Analytics",
+      VENDOR_PARENT_COMPANY: "Turnleaf Analytics",
+      VENDOR_WEBSITE: "https://www.turnleafanalytics.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Turnleaf Analytics provides ESG and climate analytics designed to quantify sustainability risks,\nopportunities, and disclosures for companies, portfolios, and private assets. It helps financial\nanalysts by translating complex reporting (emissions, governance, controversy events, transition\nplans, physical risk exposures, and alignment targets) into structured datasets and scores that can\nbe compared across peers. Data products often include company ESG metrics, carbon footprints (Scopes\n1–3 where available), controversy and engagement signals, taxonomy alignment, climate scenario or\nphysical hazard overlays, and portfolio analytics such as temperature alignment or financed\nemissions. Analysts use these inputs to meet client and regulatory reporting needs, integrate ESG\nfactors into valuation and credit work, identify material risks (e.g., litigation, stranded assets,\nsupply‑chain disruption), and support stewardship and engagement strategies. The value is\ndecision‑useful standardization: the datasets help reconcile inconsistent disclosures, document\nassumptions, and produce repeatable analytics for portfolio construction, risk monitoring, and\nproduct labeling. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Turnleaf.jpg"
+    },
+  {
+      VENDOR_ID: "b1c0d9e8-f7a6-5132-9d6e-7f8091a2b3c4",
+      VENDOR_NAME: "Cognitive Credit",
+      VENDOR_PARENT_COMPANY: "Cognitive Credit",
+      VENDOR_WEBSITE: "https://www.cognitivecredit.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Cognitive Credit provides finance‑related data, analytics, or content that supports investment\nresearch, valuation, risk, and operational decision‑making. Analysts use this category of vendor to\nenrich core market and fundamentals data with specialized coverage—such as sector‑specific datasets,\nworkflow tools, research content, or curated analytics outputs. Typical deliverables include\ndownloadable datasets and APIs, dashboards, and documentation that enable repeatable analysis and\nintegration into models and data platforms. The primary value for users is improved decision quality\nand efficiency: structured datasets reduce manual collection, while analytics and metadata help\nestablish lineage, interpretability, and compliance with usage terms. When integrating such sources,\nfinancial analysts often focus on coverage, update frequency, methodology transparency, and mapping\nto identifiers so the vendor’s data can be joined cleanly with existing security master and\nportfolio data. It is commonly selected for market data, pricing, valuation, product classification\nuse cases, where consistent product classification and valuation inputs are essential for downstream\nanalytics. Analysts should also evaluate licensing terms, data lineage, and refresh cadence to\nensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "CognitiveCredit.jpg"
+    },
+  {
+      VENDOR_ID: "c0d9e8f7-a6b5-5233-9e7f-8091a2b3c4d5",
+      VENDOR_NAME: "Fitch",
+      VENDOR_PARENT_COMPANY: "Fitch Group, Inc.",
+      VENDOR_WEBSITE: "https://www.fitchratings.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Fitch is a credit ratings and research organization that evaluates the creditworthiness of issuers\nand debt instruments. It helps financial analysts by providing forward‑looking opinions on default\nrisk, loss severity, and relative ranking within capital structures, along with detailed research\nreports that explain key drivers, sensitivities, and scenarios. Core data products include long‑ and\nshort‑term ratings, outlooks and watchlists, rating histories, methodology documentation, sector\nresearch, and in many cases estimated recovery ratings and structured finance deal surveillance.\nAnalysts use these datasets to screen for credit quality, monitor downgrade/upgrade risk, support\nrelative value and spread analysis, and inform portfolio guidelines and counterparty limits. Ratings\nand accompanying research are particularly useful for fixed‑income valuation, stress testing,\ncovenant and structural analysis, and comparing credits across industries and geographies with a\nstandardized scale. In enterprise workflows, the data is integrated into risk systems, regulatory\nreporting, and investment policy monitoring, providing auditable evidence for credit decisions and\nongoing surveillance. It is commonly selected for market data, pricing, valuation, product\nclassification use cases, where consistent product classification and valuation inputs are essential\nfor downstream analytics. Analysts should also evaluate licensing terms, data lineage, and refresh\ncadence to ensure the dataset is appropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "Fitch.jpg"
+    },
+  {
+      VENDOR_ID: "d9e8f7a6-b5c4-5334-9f80-91a2b3c4d5e6",
+      VENDOR_NAME: "Rearc",
+      VENDOR_PARENT_COMPANY: "Rearc",
+      VENDOR_WEBSITE: "https://www.rearc.io/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Rearc is an alternative data, analytics, or workflow provider that complements traditional market\nand fundamentals data with differentiated signals. Depending on the vendor, this can include news\nand event analytics, sentiment and NLP‑derived indicators, web and app traffic, pricing scraped from\ne‑commerce, transaction and supply‑chain signals, capital markets flows, or credit and loan\nperformance datasets. For financial analysts, these products help detect inflection points earlier\nthan financial statements, validate management commentary, and improve forecasting for revenue,\nmargins, demand, or credit risk. Common deliverables include cleaned datasets, factor or signal\nlibraries, APIs/feeds, and research dashboards, often with metadata to support data lineage and\ncompliance. Analysts incorporate the data into screening, event studies, nowcasting, and risk\nmonitoring, and use it to triangulate theses with independent evidence. The key benefit is\nincremental information: alternative signals can reduce model lag, improve confidence in scenarios,\nand provide timely alerts for catalysts and downside risks. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "Rearc.jpg"
+    },
+  {
+      VENDOR_ID: "3230c8gf-fge1-5375-aa7d-5f9075dc2a36",
+      VENDOR_NAME: "Goldman Sachs",
+      VENDOR_PARENT_COMPANY: "The Goldman Sachs Group, Inc.",
+      VENDOR_WEBSITE: "https://www.goldmansachs.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "Goldman Sachs is a financial institution that produces research, market commentary, and in some\ncases proprietary datasets or indices for clients. It helps analysts by providing structured and\nunstructured insights—sector and macro research, strategy notes, flow commentary, earnings and\ncredit views, and methodology around house views and models. Depending on the institution, data\nproducts may include proprietary indices, factor research, curated datasets distributed to clients,\nand analytics tied to trading and risk services. For buy‑side analysts, this content supports idea\ngeneration, peer comparisons, scenario framing, and understanding positioning and liquidity\nconditions. For sell‑side and banking users, these materials can also provide standardized market\nassumptions and research distribution that complements internal analysis. Because this vendor\ncategory is not a neutral data utility, analysts typically use it alongside independent sources and\napply governance around conflicts and usage rights. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "GS.jpg"
+    },
+  {
+      VENDOR_ID: "3960c4ff-ffe9-8963-fa7g-5f9075dc2a36",
+      VENDOR_NAME: "JP Morgan Chase",
+      VENDOR_PARENT_COMPANY: "JPMorgan Chase & Co.",
+      VENDOR_WEBSITE: "https://www.jpmorganchase.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "JP Morgan Chase is a financial institution that produces research, market commentary, and in some\ncases proprietary datasets or indices for clients. It helps analysts by providing structured and\nunstructured insights—sector and macro research, strategy notes, flow commentary, earnings and\ncredit views, and methodology around house views and models. Depending on the institution, data\nproducts may include proprietary indices, factor research, curated datasets distributed to clients,\nand analytics tied to trading and risk services. For buy‑side analysts, this content supports idea\ngeneration, peer comparisons, scenario framing, and understanding positioning and liquidity\nconditions. For sell‑side and banking users, these materials can also provide standardized market\nassumptions and research distribution that complements internal analysis. Because this vendor\ncategory is not a neutral data utility, analysts typically use it alongside independent sources and\napply governance around conflicts and usage rights. It is commonly selected for market data,\npricing, valuation, product classification use cases, where consistent product classification and\nvaluation inputs are essential for downstream analytics. Analysts should also evaluate licensing\nterms, data lineage, and refresh cadence to ensure the dataset is appropriate for their intended\nresearch and reporting workflows.",
+      VENDOR_TILE_LOGO: "JPMC.jpg"
+    },
+  {
+      VENDOR_ID: "7289c8ff-ghe2-3985-bf3q-5f9075dc2a36",
+      VENDOR_NAME: "KRIS",
+      VENDOR_PARENT_COMPANY: "KRIS",
+      VENDOR_WEBSITE: "https://www.kamakuraco.com/",
+      VENDOR_TILE_DESC: "Market Data, Pricing, Valuation, Product Classification",
+      VENDOR_DESCRIPTION: "KRIS provides official identifiers, reference standards, or taxonomy services that help uniquely\ndefine financial instruments, legal entities, or derivatives contracts across the market. These\ndatasets are foundational for analysts because they reduce ambiguity when joining data from multiple\nsources, aggregating exposures, and producing consistent reporting. Typical products include\nidentifier assignment and lookup (e.g., entity IDs, instrument or contract identifiers), reference\nattributes, hierarchy relationships, and lifecycle event updates. Users rely on these standards to\nimprove data quality, support regulatory reporting, and ensure that risk, valuation, and operations\nsystems refer to the same underlying objects. For a financial analyst, strong identifier coverage\nenables accurate peer sets, correct mapping of positions to issuers and sectors, and reliable\nhistorical analysis through corporate actions and contract lifecycle changes. It is commonly\nselected for market data, pricing, valuation, product classification use cases, where consistent\nproduct classification and valuation inputs are essential for downstream analytics. Analysts should\nalso evaluate licensing terms, data lineage, and refresh cadence to ensure the dataset is\nappropriate for their intended research and reporting workflows.",
+      VENDOR_TILE_LOGO: "KRIS.jpg"
+    }
 ];

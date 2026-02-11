@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import gsLogo from "../DocHubAssets/WebAppLogos/GS_logo.png";
+import GoldmanSachs from "../DocHubAssets/HomePageAssets/GoldmanSachs.png";
+import GoldmanSachsV1 from "../DocHubAssets/HomePageAssets/GoldmanSachsV1.png";
 
 export default function Header() {
   const location = useLocation();
+  const [useLightHeaderLogo, setUseLightHeaderLogo] = useState(false);
+
+  useEffect(() => {
+    const b = document?.body;
+    const isVendor = b?.dataset?.vendorPage === "true";
+    const vendorTheme = b?.dataset?.vendorTheme; // "dark" means vendor page theme is dark => header becomes white via CSS
+    setUseLightHeaderLogo(Boolean(isVendor && vendorTheme === "dark"));
+  }, [location.pathname]);
+
+  const logoSrc = useLightHeaderLogo ? GoldmanSachsV1 : GoldmanSachs;
 
   return (
     <header className="topHeader">
@@ -11,7 +22,7 @@ export default function Header() {
         <Link to="/" className="brand">
           <div className="brandLogoBox">
             <img
-              src={gsLogo}
+              src={logoSrc}
               alt="Logo"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />

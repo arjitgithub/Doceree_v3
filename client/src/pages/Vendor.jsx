@@ -1,8 +1,12 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import "../DocHubLayoutDesign/vendor.css";
-import VendorInfoDotsFx from "../components/VendorInfoDotsFx.jsx";
 import Footer from "../components/Footer.jsx";
+
+// Vendor-page-only header logo swaps (do NOT affect other pages).
+// These assets are expected to exist in: client/src/DocHubAssets/HomePageAssets
+import GoldmanSachs from "../DocHubAssets/HomePageAssets/GoldmanSachs.png";
+import GoldmanSachsV1 from "../DocHubAssets/HomePageAssets/GoldmanSachsV1.png";
 
 // Deterministic “random” accent color from a string (stable across renders).
 // We hash the vendor name into a hue, then create an HSL color.
@@ -404,44 +408,7 @@ ORDER BY DATE DESC;`,
   return (
     <section className="vendorDetailsSection" aria-label="Vendor details">
       <div className="vendorDetailsInner">
-        <div className="vendorDetailsHeading">Vendor Detail</div>
-        {/* About */}
-        <div className="vendorDetailBlock">
-          <div className="vendorDetailHead">
-            <span className="vendorDetailIcon">{Icon.info}</span>
-            <div className="vendorDetailTitle">{dummyVendorDetails.aboutTitle}</div>
-          </div>
-          <div className="vendorDetailBody">
-            <div className="vendorDetailText">{dummyVendorDetails.aboutText}</div>
-          </div>
-        </div>
-
-        <div className="vendorDetailBlock">
-          <div className="vendorDetailHead">
-            <span className="vendorDetailIcon">{Icon.puzzle}</span>
-            <div className="vendorDetailTitle">Parent Company</div>
-          </div>
-          <div className="vendorDetailBody">
-            <div className="vendorDetailText">Vendor Company LLC</div>
-          </div>
-        </div>
-
-        <div className="vendorDetailBlock">
-          <div className="vendorDetailHead">
-            <span className="vendorDetailIcon">{Icon.bookmark}</span>
-            <div className="vendorDetailTitle">Product Categories</div>
-          </div>
-          <div className="vendorDetailBody">
-            <div className="vendorPills">
-              {dummyVendorDetails.categories.map((c) => (
-                <span key={c} className="vendorPill">
-                  {c}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
+        <div className="vendorDetailsGrid">
         {/* Data Products */}
         <div className="vendorDetailBlock">
           <div className="vendorDetailHead">
@@ -475,98 +442,160 @@ ORDER BY DATE DESC;`,
             </div>
           </div>
         </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* Support */}
-        <div className="vendorDetailBlock">
-          <div className="vendorDetailHead">
-            <span className="vendorDetailIcon">{Icon.mail}</span>
-            <div className="vendorDetailTitle">Support</div>
+function VendorTopMeta({ parentCompany, categories, support, dataProducts, alloyProjects }) {
+  const safeCats = Array.isArray(categories) ? categories.filter(Boolean) : [];
+  const safeSupport = Array.isArray(support) ? support.filter(Boolean) : [];
+  const safeDataProducts = Array.isArray(dataProducts) ? dataProducts.filter(Boolean) : [];
+  const safeAlloyProjects = Array.isArray(alloyProjects) ? alloyProjects.filter(Boolean) : [];
+
+  const MetaIcon = {
+    parent: (
+      <svg className="vendorMetaSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 10v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 7h.01" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      </svg>
+    ),
+    support: (
+      <svg className="vendorMetaSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 6h16v12H4V6Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      </svg>
+    ),
+    categories: (
+      <svg className="vendorMetaSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    dataProducts: (
+      <svg className="vendorMetaSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 4h7v7H4V4Z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M13 4h7v7h-7V4Z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M4 13h7v7H4v-7Z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M13 13h7v7h-7v-7Z" stroke="currentColor" strokeWidth="1.8" />
+      </svg>
+    ),
+    alloy: (
+      <svg className="vendorMetaSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M9 3h6v3a2 2 0 1 0 0 4v3h3v6h-3a2 2 0 1 1-4 0H9v-3a2 2 0 1 0 0-4V3Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  };
+
+  const TitleRow = ({ icon, title }) => (
+    <div className="vendorTopMetaTitleRow">
+      <span className="vendorMetaIcon" aria-hidden="true">{icon}</span>
+      <div className="vendorTopMetaTitle">{title}</div>
+    </div>
+  );
+
+  return (
+    <aside className="vendorTopMeta" aria-label="Vendor metadata">
+      <div className="vendorTopMetaGrid">
+        <div className="vendorTopMetaCol">
+          <div className="vendorTopMetaBlock">
+            <TitleRow icon={MetaIcon.parent} title="Parent Company" />
+            <div className="vendorTopMetaText">{parentCompany || "—"}</div>
           </div>
-          <div className="vendorDetailBody">
-            <div className="vendorSupportGrid">
-              <div className="vendorSupportCol">
-                {dummyVendorDetails.support.slice(0, 2).map((s, idx) => (
-                  <div className="vendorSupportRow" key={`${s.label}-${idx}`}>
-                    <div className="vendorSupportLabel">{s.label}</div>
-                    <div className="vendorSupportValue">
-                      {s.href ? (
-                        <a className="vendorSupportLink" href={s.href} target="_blank" rel="noreferrer">
-                          {s.value} {Icon.ext}
-                        </a>
-                      ) : (
-                        s.value
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
 
-              <div className="vendorSupportCol">
-                {dummyVendorDetails.support.slice(2).map((s, idx) => (
-                  <div className="vendorSupportRow" key={`${s.label}-${idx + 2}`}>
-                    <div className="vendorSupportLabel">{s.label}</div>
-                    <div className="vendorSupportValue">
+          <div className="vendorTopMetaBlock">
+            <TitleRow icon={MetaIcon.support} title="Support" />
+            {/*
+              Support layout per mock:
+              - sub-headings (Website / Vendor Relationship Officers / VDP Distribution List / Confluence Link)
+                start ~3px to the right of the Support heading
+              - each value appears BELOW its sub-heading (no 2-column label/value layout)
+            */}
+            <div className="vendorTopMetaSupportList">
+              {safeSupport.length === 0 ? (
+                <div className="vendorTopMetaText">—</div>
+              ) : (
+                safeSupport.map((s, idx) => (
+                  <div className="vendorTopMetaSupportItem" key={`${s.label}-${idx}`}>
+                    <div className="vendorTopMetaSupportSubhead">{s.label}</div>
+                    <div className="vendorTopMetaSupportValue">
                       {s.href ? (
-                        <a className="vendorSupportLink" href={s.href} target="_blank" rel="noreferrer">
-                          {s.value} {Icon.ext}
+                        <a className="vendorTopMetaLink" href={s.href} target="_blank" rel="noreferrer">
+                          {s.value}
                         </a>
                       ) : (
                         s.value
                       )}
                     </div>
                   </div>
-                ))}
-              </div>
+                ))
+              )}
             </div>
           </div>
         </div>
 
-        {/* PyPure Queries */}
-        <div className="vendorDetailBlock">
-          <div className="vendorDetailHead">
-            <span className="vendorDetailIcon">{Icon.book}</span>
-            <div className="vendorDetailTitle">PyPure Queries</div>
+        <div className="vendorTopMetaCol vendorTopMetaColRight">
+          <div className="vendorTopMetaBlock">
+            <TitleRow icon={MetaIcon.categories} title="Product Categories" />
+            <div className="vendorPills vendorPillsTop">
+              {safeCats.length === 0 ? (
+                <span className="vendorPill">—</span>
+              ) : (
+                safeCats.map((c) => (
+                  <span key={c} className="vendorPill">
+                    {c}
+                  </span>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Full-width sections (span across both columns): Data Products + Alloy Projects */}
+        <div className="vendorTopMetaFullSpan">
+          <div className="vendorTopMetaBlock">
+            <TitleRow icon={MetaIcon.dataProducts} title="Data Products" />
+            <div className="vendorTopMetaChips" aria-label="Data Products">
+              {safeDataProducts.length === 0 ? (
+                <span className="vendorPill">—</span>
+              ) : (
+                safeDataProducts.map((x) => (
+                  <span key={`dp-${x}`} className="vendorPill">
+                    {x}
+                  </span>
+                ))
+              )}
+            </div>
           </div>
 
-          <div className="vendorDetailBody">
-            <div className="vendorUsageList">
-              {dummyVendorDetails.queries.map((q, i) => {
-                const expanded = open.has(i);
-                return (
-                  <div key={q.title} className="vendorUsageItem">
-                    <div className="vendorUsageTitle">{q.title}</div>
-                    {/* Long descriptions (e.g., "Change in mobility over time") clamp + expand on demand */}
-                    <div className="vendorUsageDesc">
-                      <ExpandableText text={q.description} collapsedLines={2} />
-                    </div>
-
-                    <div className="vendorUsageSqlWrap" role="region" aria-label={`Query example ${i + 1}`}
-                    >
-                      <button
-                        type="button"
-                        className="vendorCopyBtn"
-                        onClick={() => copyToClipboard(q.sql, i)}
-                        title="Copy"
-                        aria-label="Copy query"
-                      >
-                        {Icon.copy}
-                      </button>
-
-                      <UsageSqlBox
-                        sql={q.sql}
-                        expanded={expanded}
-                        onToggle={() => toggleOpen(i)}
-                        copiedToast={copied === i ? <div className="vendorCopiedToast">Copied</div> : null}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
+          <div className="vendorTopMetaBlock">
+            <TitleRow icon={MetaIcon.alloy} title="Alloy Projects" />
+            <div className="vendorTopMetaChips" aria-label="Alloy Projects">
+              {safeAlloyProjects.length === 0 ? (
+                <span className="vendorPill">—</span>
+              ) : (
+                safeAlloyProjects.map((x) => (
+                  <span key={`ap-${x}`} className="vendorPill">
+                    {x}
+                  </span>
+                ))
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </aside>
   );
 }
 
@@ -961,6 +990,16 @@ function DocumentsTable({ docs }) {
 
             <button
               type="button"
+              className="docUploadBtn"
+              aria-label="Upload data"
+              title="Upload Data"
+              onClick={() => {}}
+            >
+              Upload Data
+            </button>
+
+            <button
+              type="button"
               className="docExportBtn"
               onClick={exportToExcel}
               aria-label="Export to Excel"
@@ -1146,10 +1185,9 @@ function DocumentsTable({ docs }) {
                 ‹
               </button>
 
-              {pageButtons.map((p, idx) =>
-                p === "…" ? (
-                  <span key={`dots-${idx}`} className="docDots">…</span>
-                ) : (
+              {pageButtons
+                .filter((p) => p !== "…")
+                .map((p) => (
                   <button
                     key={p}
                     className={`docPageBtn ${p === safePage ? "isActive" : ""}`}
@@ -1157,8 +1195,7 @@ function DocumentsTable({ docs }) {
                   >
                     {p}
                   </button>
-                )
-              )}
+                ))}
 
               <button className="docNavBtn" onClick={() => goTo(safePage + 1)} disabled={safePage === totalPages} aria-label="Next page">
                 ›
@@ -1216,6 +1253,41 @@ export default function Vendor() {
     ];
   });
 
+  // Toggle vendor hero theme (light/dark)
+  const [isDark, setIsDark] = useState(false);
+
+  // Vendor-only header/footer inversion control
+  useEffect(() => {
+    const b = document?.body;
+    if (!b) return;
+    b.dataset.vendorPage = "true";
+    b.dataset.vendorTheme = isDark ? "dark" : "light";
+    return () => {
+      delete b.dataset.vendorPage;
+      delete b.dataset.vendorTheme;
+    };
+  }, [isDark]);
+
+  // Vendor page only: swap the header logo depending on the header background.
+  // When vendor theme is light => header is black => use GoldmanSachs.
+  // When vendor theme is dark  => header is white => use GoldmanSachsV1.
+  useEffect(() => {
+    const img = document?.querySelector?.(".topHeader .brandLogoBox img");
+    if (!img) return;
+
+    const prev = img.dataset.vendorPrevSrc || img.getAttribute("src") || "";
+    if (!img.dataset.vendorPrevSrc) img.dataset.vendorPrevSrc = prev;
+
+    img.setAttribute("src", isDark ? GoldmanSachsV1 : GoldmanSachs);
+
+    return () => {
+      if (img?.dataset?.vendorPrevSrc) {
+        img.setAttribute("src", img.dataset.vendorPrevSrc);
+        delete img.dataset.vendorPrevSrc;
+      }
+    };
+  }, [isDark]);
+
   useEffect(() => {
     if (vendor) return;
 
@@ -1240,7 +1312,7 @@ export default function Vendor() {
     })();
   }, [id, vendor]);
 
-  const vendorName =
+  const vendorNameRaw =
     vendor?.VENDOR_TILE_NAME ||
     vendor?.VENDOR_NAME ||
     vendor?.name ||
@@ -1249,15 +1321,39 @@ export default function Vendor() {
     vendor?.VENDOR_DISPLAY_NAME ||
     "";
 
+  // Vendor name must always be capitalized (as in the reference image)
+  const vendorName = String(vendorNameRaw || "").toUpperCase();
+
+  // Use the full vendor description (not the tile description)
   const vendorDesc =
-    vendor?.VENDOR_TILE_DESC ||
+    vendor?.VENDOR_DESCRIPTION ||
     vendor?.VENDOR_DESC ||
     vendor?.DESCRIPTION ||
-    vendor?.tagline ||
-    vendor?.desc ||
     vendor?.vendor_desc ||
-    vendor?.VENDOR_DESCRIPTION ||
+    vendor?.desc ||
+    vendor?.tagline ||
     "";
+
+  // Optional vendor info logo (200x200 header slot). If no match is found,
+  // we render an empty box to preserve layout.
+  const vendorLogoFileName =
+    vendor?.INFO_LOGO ||
+    vendor?.info_logo ||
+    vendor?.VENDOR_INFO_LOGO ||
+    vendor?.VENDOR_LOGO ||
+    vendor?.LOGO ||
+    vendor?.logo ||
+    vendor?.LOGO_FILE ||
+    vendor?.logo_file ||
+    vendor?.LOGO_FILENAME ||
+    vendor?.logo_filename ||
+    vendor?.TILE_LOGO ||
+    vendor?.tile_logo ||
+    vendor?.ICON ||
+    vendor?.icon ||
+    null;
+
+  const vendorInfoLogoSrc = useMemo(() => getLogoSrc(vendorLogoFileName), [vendorLogoFileName]);
 
   const websiteUrl =
     vendor?.WEBSITE || vendor?.website || vendor?.URL || vendor?.url || "https://starschema.com";
@@ -1269,49 +1365,178 @@ export default function Vendor() {
     vendor?.confluence_url ||
     "https://confluence.yourcompany.com";
 
-  const safeTextColor = (() => {
-    const c = String(vendor?.VENDOR_NAME_TEXT_COLOR || "").trim().toLowerCase();
-    if (!c) return "#0a0a0a";
-    // prevent white-on-white (most common reason the text “disappears”)
-    if (c === "#fff" || c === "#ffffff" || c === "white") return "#0a0a0a";
-    return c;
-  })();
+  const parentCompany =
+    vendor?.PARENT_COMPANY ||
+    vendor?.PARENT ||
+    vendor?.VENDOR_PARENT_COMPANY ||
+    vendor?.PARENT_VENDOR ||
+    vendor?.PARENT_NAME ||
+    "";
 
-  const logoSrc = useMemo(() => getLogoSrc(vendor?.VENDOR_TILE_LOGO), [vendor]);
+  // Normalize categories: accept array OR comma/semicolon-separated string.
+  const productCategories = useMemo(() => {
+    const raw =
+      vendor?.PRODUCT_CATEGORIES ||
+      vendor?.PRODUCT_CATEGORY ||
+      vendor?.CATEGORIES ||
+      vendor?.CATEGORY ||
+      vendor?.VENDOR_CATEGORIES ||
+      vendor?.VENDOR_CATEGORY ||
+      null;
+
+    if (Array.isArray(raw)) return raw.map((x) => String(x || "").trim()).filter(Boolean);
+    if (raw == null) return [];
+    return String(raw)
+      .split(/[,;|]/g)
+      .map((x) => String(x || "").trim())
+      .filter(Boolean);
+  }, [vendor]);
+
+  const supportLinks = useMemo(() => {
+    const vendorRelationshipOfficers =
+      vendor?.VENDOR_RELATIONSHIP_OFFICERS ||
+      vendor?.VENDOR_RELATIONSHIP_OFFICER ||
+      vendor?.RELATIONSHIP_OFFICER ||
+      vendor?.VRO ||
+      vendor?.vendor_relationship_officers ||
+      vendor?.vendor_relationship_officer ||
+      "";
+
+    const vdpList =
+      vendor?.VDP_DISTRIBUTION_LIST || vendor?.VDP_DL || vendor?.vdp_dl || vendor?.VDP || "";
+
+    const list = [];
+
+    // Support sub-headings order per latest request:
+    // Website, Confluence Link, Vendor Relationship Officer, VDP Distribution List
+    if (websiteUrl) list.push({ label: "Website", value: websiteUrl, href: websiteUrl });
+    if (confluenceUrl) list.push({ label: "Confluence Link", value: "Vendor Page", href: confluenceUrl });
+
+    if (vendorRelationshipOfficers)
+      list.push({
+        label: "Vendor Relationship Officer",
+        value: String(vendorRelationshipOfficers),
+        href: "",
+      });
+
+    if (vdpList)
+      list.push({
+        label: "VDP Distribution List",
+        value: String(vdpList),
+        href: "",
+      });
+
+    return list;
+  }, [vendor, websiteUrl, confluenceUrl]);
+
+  // Data Products + Alloy Projects shown under Support in the right meta panel.
+  // Accept either arrays or comma/semicolon separated strings.
+  const dataProducts = useMemo(() => {
+    const raw =
+      vendor?.DATA_PRODUCTS ||
+      vendor?.DATA_PRODUCT ||
+      vendor?.PRODUCTS ||
+      vendor?.DATASETS ||
+      vendor?.data_products ||
+      vendor?.data_product ||
+      null;
+
+    if (Array.isArray(raw)) return raw.map((x) => String(x || "").trim()).filter(Boolean);
+    if (raw == null) return [];
+    return String(raw)
+      .split(/[,;|]/g)
+      .map((x) => String(x || "").trim())
+      .filter(Boolean);
+  }, [vendor]);
+
+  const alloyProjects = useMemo(() => {
+    const raw =
+      vendor?.ALLOY_PROJECTS ||
+      vendor?.ALLOY_PROJECT ||
+      vendor?.PROJECTS ||
+      vendor?.alloy_projects ||
+      vendor?.alloy_project ||
+      null;
+
+    if (Array.isArray(raw)) return raw.map((x) => String(x || "").trim()).filter(Boolean);
+    if (raw == null) return [];
+    return String(raw)
+      .split(/[,;|]/g)
+      .map((x) => String(x || "").trim())
+      .filter(Boolean);
+  }, [vendor]);
+
+
 
   if (loading) return <div className="vendorPageWrap">Loading…</div>;
   if (error) return <div className="vendorPageWrap">Failed to load: {error}</div>;
 
   return (
-    <div className="vendorPageWrap">
-      <section className="vendorInfoSection" style={{ "--vendorText": safeTextColor }}>
-        <VendorInfoDotsFx />
+    <div
+      className={`vendorPageWrap ${isDark ? "vendorPageDark" : "vendorPageLight"}`}
+      style={{
+        "--vendorBg": isDark ? "#000000" : "#ffffff",
+        "--vendorText": isDark ? "#ffffff" : "#0a0a0a",
+        // Watermark letter: dark grey on light theme, transparent white on dark theme.
+        "--vendorWatermarkColor": isDark ? "#ffffff" : "#2b2b2b",
+        "--vendorWatermarkOpacity": isDark ? "0.08" : "0.14",
+      }}
+    >
+      <section className={`vendorInfoSection ${isDark ? "vendorThemeDark" : "vendorThemeLight"}`}>
+        <button
+          type="button"
+          className={`vendorThemeToggle ${isDark ? "on" : "off"}`}
+          aria-label="Toggle theme"
+          onClick={() => setIsDark((v) => !v)}
+        >
+          <span className="vendorThemeToggleKnob" />
+        </button>
 
-        <div className="vendorInfoLeft">
-          {(() => {
-            const { base, accent } = splitVendorNameHalf(vendorName);
-            const accentColor = accentColorFromName(vendorName);
-            return (
-              <h1 className="vendorInfoTitle" style={{ "--vendorNameAccent": accentColor }}>
-                <span className="vendorNameBase">{base}</span>
-                <span className="vendorNameAccent">{accent}</span>
-              </h1>
-            );
-          })()}
+        <div className="vendorHeroWatermark" aria-hidden="true">
+          {(vendorName || "").trim().slice(0, 1)}
+        </div>
+
+        {/* Row 1: Vendor logo + vendor name spans both columns */}
+        <div className="vendorHeroTop">
+          <div className="vendorHeroLogo" aria-hidden="true">
+            {vendorInfoLogoSrc ? (
+              <img className="vendorHeroLogoImg" src={vendorInfoLogoSrc} alt="" />
+            ) : null}
+          </div>
+
+          <div className="vendorNameStack" aria-label={vendorName}>
+            <div className="vendorNameOutline" aria-hidden="true">{vendorName}</div>
+            <div className="vendorNameSolid">{vendorName}</div>
+          </div>
+        </div>
+
+        {/* Row 2 (left): Vendor description (keep existing styling/alignment exactly) */}
+        <div className="vendorDescCol">
           <p className="vendorInfoDesc">{vendorDesc}</p>
         </div>
 
-        <div className="vendorInfoRight">
-          {logoSrc && <img className="vendorInfoLogo" src={logoSrc} alt={`${vendorName} logo`} />}
-        </div>
+        {/* Row 2 (right): Vendor meta panel (must NOT sit under the vendor name) */}
+        <aside className="vendorMetaRight">
+          <VendorTopMeta
+            parentCompany={parentCompany}
+            categories={productCategories}
+            support={supportLinks}
+            dataProducts={dataProducts}
+            alloyProjects={alloyProjects}
+          />
+        </aside>
 
-
+        {/* Row 3 (left): Quick links */}
         <div className="vendorInfoButtons" aria-label="Vendor quick links">
-          <a className="vendorInfoBtn" href={websiteUrl} target="_blank" rel="noreferrer">Website</a>
-          <a className="vendorInfoBtn" href={confluenceUrl} target="_blank" rel="noreferrer">Confluence Page</a>
+          <a className="vendorInfoBtn" href={websiteUrl} target="_blank" rel="noreferrer">
+            Website
+          </a>
+          <a className="vendorInfoBtn" href={confluenceUrl} target="_blank" rel="noreferrer">
+            Confluence Page
+          </a>
         </div>
-
       </section>
+
       <VendorDetailsSection />
       <DocumentsTable docs={docs} />
       <Footer />

@@ -27,6 +27,14 @@
   font-weight: 100 900;
   font-style: normal;
 }
+
+/* Vendor name font (Urbanist ExtraBold) */
+@font-face {
+  font-family: "Urbanist-ExtraBold";
+  src: url("../DocHubAssets/WebAppLogos/Urbanist-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
 :root {
   --appHeaderHeight: 52px;
 }
@@ -54,33 +62,88 @@
 
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  align-items: stretch;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
+  column-gap: 48px;
 
-  background: #f5f5f5;
-  background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(212, 226, 250, 0.55) 100%);
   color: var(--vendorText);
 
   position: relative;
   top: 0;
 }
 
-.vendorInfoLeft {display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+/* Theme switching (driven by the toggle) */
+.vendorThemeLight {
+  background: var(--vendorBg, #ffffff);
 }
 
-.vendorInfoTitle {
+.vendorThemeDark {
+  background: var(--vendorBg, #000000);
+}
+
+/* vendorInfoLeft is no longer used (layout is grid-based) */
+
+/* Vendor name (hollow + solid stack, Urbanist) */
+.vendorNameStack {
   margin: 0;
-  font-family: "Montserrat-Variable", Arial, sans-serif;
-  font-size: 60pt;
-  line-height: 1.05;
-  margin-top: 60px;
-  padding-left: 30px;
-
-  text-transform: uppercase;
-  letter-spacing: normal;
+  /* closer to header like reference */
+  /* moved up ~30px */
+  margin-top: 0;
+  display: grid;
+  grid-auto-rows: min-content;
+  /* reduced spacing between outline + solid */
+  gap: 2px;
 }
+
+/* 200x200 logo slot inline with vendor name */
+.vendorHeroTop {
+  padding-left: 70px; /* keep existing left indent for both logo + text */
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  grid-column: 1 / -1; /* span both columns */
+  grid-row: 1;
+}
+
+.vendorHeroLogo {
+  width: 200px;
+  height: 200px;
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendorHeroLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vendorNameOutline {
+  margin: 0;
+  font-family: "Urbanist-ExtraBold", "Montserrat-Variable", Arial, sans-serif;
+  font-size: clamp(44px, 7vw, 92px);
+  line-height: 0.95;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--vendorText);
+  text-stroke: 2px var(--vendorText);
+  letter-spacing: 0;
+}
+
+.vendorNameSolid {
+  margin: 0;
+  font-family: "Urbanist-ExtraBold", "Montserrat-Variable", Arial, sans-serif;
+  /* match holo (outline) size exactly */
+  font-size: clamp(44px, 7vw, 92px);
+  line-height: 0.95;
+  color: var(--vendorText);
+  letter-spacing: 0;
+}
+
+/* Legacy title (not used) */
+.vendorInfoTitle { display: none; }
+
 
 /* Vendor name partial coloring (first half black, second half deterministic accent) */
 .vendorNameBase {
@@ -92,16 +155,281 @@
 }
 
 .vendorInfoDesc {
-  margin: 21px 0 0;
+  /* moved up ~30px */
+  margin: 10px 0 0;
   max-width: 90%;
   font-family: "Poppins-regular", Arial, sans-serif;
   font-size: 15px;
   line-height: 1.45;
   opacity: 0.85;
-  padding-left: 40px;
-  color: #3b4145;
+  padding-left: 70px;
+  color: var(--vendorText);
   font-weight: 550;
 }
+
+.vendorDescCol {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+
+.vendorMetaRight {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  margin-top: 10px; /* match vendorInfoDesc top margin */
+  position: relative;
+  z-index: 2; /* keep above watermark */
+}
+
+/* Row 3: quick links anchored under description */
+.vendorInfoButtons {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+@media (max-width: 980px) {
+  .vendorInfoSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    row-gap: 18px;
+  }
+
+  .vendorMetaRight {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0;
+  }
+
+  .vendorInfoButtons {
+    grid-column: 1;
+    grid-row: 4;
+    margin-left: 70px; /* keep visual alignment under description */
+  }
+}
+
+.vendorTopMeta {
+  position: relative;
+  z-index: 2; /* must sit above watermark letter if it overlaps */
+  width: 100%;
+}
+
+.vendorTopMetaGrid {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  /* requested: add 30px more spacing between left/right columns */
+  gap: 22px 86px;
+}
+
+/* Header row with icon + title (matches vendor detail section style) */
+.vendorTopMetaTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.vendorMetaIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.14);
+  color: rgba(59, 130, 246, 1);
+  flex: 0 0 28px;
+}
+
+.vendorMetaSvg {
+  width: 16px;
+  height: 16px;
+}
+
+.vendorPageDark .vendorMetaIcon {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Full-width sections under Support (Data Products + Alloy Projects).
+   These should NOT be split into two columns; they must be able to extend
+   underneath the Product Categories column. */
+.vendorTopMetaFullSpan {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vendorTopMetaChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+@media (max-width: 980px) {
+  .vendorTopMetaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vendorTopMetaBlock {
+  padding-top: 2px;
+}
+
+.vendorTopMetaTitle {
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--vendorText);
+  opacity: 0.86;
+  margin-bottom: 8px;
+}
+
+.vendorTopMetaText {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--vendorText);
+  opacity: 0.92;
+}
+
+.vendorTopMetaSupportRow {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 6px;
+  padding: 6px 0;
+}
+
+@media (max-width: 980px) {
+  .vendorTopMetaSupportRow {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+}
+
+.vendorTopMetaSupportLabel {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 12.5px;
+  color: var(--vendorText);
+  opacity: 0.70;
+  white-space: nowrap;
+}
+
+.vendorTopMetaSupportValue {
+  font-family: "Poppins-regular", Arial, sans-serif;
+  font-size: 13px;
+  color: var(--vendorText);
+  opacity: 0.92;
+  padding-left: 3px; /* match subhead indent */
+  word-break: break-word;
+}
+
+/* Support layout (matches mock): indent sub-headings ~3px from the Support heading,
+   and place the value BELOW each sub-heading (no 2-column label/value layout). */
+.vendorTopMetaSupportList {
+  margin-left: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 2px;
+}
+
+.vendorTopMetaSupportItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vendorTopMetaSupportSubhead {
+  font-family: "Inter-medium", Arial, sans-serif;
+  font-size: 12.5px;
+  color: var(--vendorText);
+  opacity: 0.70;
+  padding-left: 3px; /* 3px right relative to Support heading */
+}
+
+.vendorTopMetaLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.vendorTopMetaLink:hover {
+  text-decoration: underline;
+}
+
+.vendorPillsTop {
+  max-width: 100%;
+}
+
+/* Vendor hero watermark letter */
+.vendorHeroWatermark {
+  position: absolute;
+  right: -40px;
+  bottom: -140px;
+  font-family: "Urbanist-ExtraBold", "Montserrat-Variable", Arial, sans-serif;
+  font-size: 600pt;
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--vendorWatermarkColor, #d3d3d3);
+  opacity: var(--vendorWatermarkOpacity, 0.06);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Vendor hero theme toggle (standard black/white switch) */
+.vendorThemeToggle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  /* length should be 20px only */
+  width: 20px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.85);
+  background: #ffffff;
+  padding: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.vendorThemeToggleKnob {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #000000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  transition: transform 180ms ease;
+}
+
+/* OFF (default): knob left */
+.vendorThemeToggle.off .vendorThemeToggleKnob {
+  transform: translateX(0);
+}
+
+/* ON: knob right */
+.vendorThemeToggle.on .vendorThemeToggleKnob {
+  transform: translateX(8px);
+}
+
+/* invert correctly in dark theme */
+.vendorPageDark .vendorThemeToggle {
+  background: #000000;
+  border-color: rgba(255,255,255,0.85);
+}
+
+.vendorPageDark .vendorThemeToggleKnob {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.12);
+}
+
 
 /* ===== Vendor hero buttons (Website / Confluence Page) ===== */
 .vendorInfoButtons {
@@ -110,11 +438,11 @@
   gap: 35px;
   flex-wrap: wrap;
 
-  /* push the buttons to the bottom of the left column */
-  margin-top: auto;
+  /* 30px below description; indented 40px from description's left */
+  margin-top: 30px;
 
   z-index: 2;
-  margin-left: 70px;
+  margin-left: 110px;
 }
 
 .vendorInfoBtn {
@@ -198,12 +526,96 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: #ffffff;
+  background: var(--vendorBg);
+  color: var(--vendorText);
 
   /* space inside section + space before site footer */
   padding: 22px 22px 44px;
   margin-bottom: 34px;
 }
+
+/* Invert black/white in table UI on toggle (leave grey text rules untouched) */
+.vendorPageDark .docTableTitle,
+.vendorPageDark .docTableTitleRow,
+.vendorPageDark .docDateValue,
+.vendorPageDark .docSearchInput,
+.vendorPageDark .docExportBtn,
+.vendorPageDark .docTable,
+.vendorPageDark .docHeaderCell,
+.vendorPageDark .docCell {
+  color: #ffffff;
+}
+
+.vendorPageDark .docDateControl,
+.vendorPageDark .docSearchWrap,
+.vendorPageDark .docSearchControl {
+  /* In dark mode these controls should be transparent (except Export). */
+  background: transparent;
+  border-color: rgba(255,255,255,0.22);
+}
+
+.vendorPageDark .docExportBtn {
+  /* keep Export button readable in dark mode */
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.vendorPageDark .docSearchInput {
+  background: transparent;
+  color: #ffffff;
+ }
+
+.vendorPageDark .docHeadRow {
+  background: rgba(255,255,255,0.12);
+ }
+
+.vendorPageDark .docTable {
+  background: #000000;
+  border-color: rgba(255,255,255,0.14);
+}
+
+.vendorPageDark .docRow {
+  border-color: rgba(255,255,255,0.14);
+}
+
+/* ===================== Vendor Details layout (2 columns, aligned with vendor name) ===================== */
+
+.vendorDetailsSection {
+  /* match hero background */
+  background: var(--vendorBg);
+  color: var(--vendorText);
+}
+
+.vendorDetailsInner {
+  padding-left: 70px;
+  padding-right: 22px;
+}
+
+.vendorDetailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 60px;
+  row-gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .vendorDetailsInner { padding-left: 22px; }
+  .vendorDetailsGrid { grid-template-columns: 1fr; }
+}
+
+/* Theme-aware text colors for details (invert black/white; keep greys as-is) */
+.vendorThemeLight .vendorDetailTitle,
+.vendorThemeLight .vendorDetailText,
+.vendorThemeLight .vendorDetailIcon {
+  color: rgba(0, 0, 0, 0.86);
+}
+
+.vendorThemeDark .vendorDetailTitle,
+.vendorThemeDark .vendorDetailText,
+.vendorThemeDark .vendorDetailIcon {
+  color: rgba(255, 255, 255, 0.92);
+}
+
 
 .docTableWrap {
   width: 100%;
@@ -372,6 +784,28 @@
   justify-content: center;
   background: #f4c44f;
   color: rgba(0,0,0,0.70);
+}
+
+.docUploadBtn {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,0.78);
+  font-family: "Inter-semibold", Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.docUploadBtn:hover {
+  filter: brightness(0.98);
+}
+
+.vendorPageDark .docUploadBtn {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.18);
+  color: #ffffff;
 }
 
 .docExportBtn:hover {
@@ -704,34 +1138,14 @@
   overflow: hidden;
 }
 
-.vendorInfoFxCanvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.vendorInfoFxCanvas .vanta-canvas {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-.vendorInfoSection > *:not(.vendorInfoFxCanvas) {
-  position: relative;
-  z-index: 1;
-}
-
 /* ===================== Vendor Details (Full-width section before table) ===================== */
 
 .vendorDetailsSection {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: #f5f5f5;
-    background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(212, 226, 250, 0.55) 100%);
+  background: var(--vendorBg, #ffffff);
+  color: var(--vendorText, #0a0a0a);
   padding: 10px 22px 26px;
 }
 
@@ -780,7 +1194,7 @@
 
 .vendorDetailTitle {
   font-family: "Poppins-semibold", Arial, sans-serif;
-  font-size: px;
+  font-size: 16px;
   color: rgba(0,0,0,0.92);
 }
 
@@ -1872,4 +2286,44 @@
     row-gap: 14px;
   }
 }
+
+
+
+/* =======================================================================
+   Vendor page theme overrides (Vendor only)
+   - Remove gradients/dots and keep all vendor sections in sync with hero
+   ======================================================================= */
+.vendorPageLight, .vendorPageDark {
+  background: var(--vendorBg, #ffffff);
+  color: var(--vendorText, #0a0a0a);
+}
+
+.vendorDetailsSection,
+.vendorDetailsSection * {
+  background: transparent;
+  color: inherit;
+}
+
+.vendorDetailsSection {
+  background: var(--vendorBg, #ffffff) !important;
+  color: var(--vendorText, #0a0a0a) !important;
+}
+
+.vendorDetailIcon { color: var(--vendorText, #0a0a0a) !important; opacity: 0.72; }
+.vendorDetailTitle { color: var(--vendorText, #0a0a0a) !important; opacity: 0.92; }
+.vendorDetailText { color: var(--vendorText, #0a0a0a) !important; opacity: 0.78; }
+.vendorSupportLabel { color: var(--vendorText, #0a0a0a) !important; opacity: 0.72; }
+.vendorSupportValue { color: var(--vendorText, #0a0a0a) !important; opacity: 0.88; }
+.vendorSupportLink { color: var(--vendorText, #0a0a0a) !important; }
+
+.vendorUsageList,
+.vendorUsageItem,
+.vendorUsageSqlWrap,
+.vendorUsageSqlBox {
+  background: transparent;
+}
+
+.vendorUsageTitle { color: var(--vendorText, #0a0a0a) !important; }
+.vendorUsageDesc { color: var(--vendorText, #0a0a0a) !important; opacity: 0.78; }
+.vendorCopyBtn { color: var(--vendorText, #0a0a0a) !important; }
 

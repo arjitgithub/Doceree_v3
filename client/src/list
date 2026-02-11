@@ -1,0 +1,387 @@
+[
+  {
+    "VENDOR_NAME": "FactSet",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.factset.com/contact"
+  },
+  {
+    "VENDOR_NAME": "LSEG",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.lseg.com/en/contact-us"
+  },
+  {
+    "VENDOR_NAME": "Bloomberg",
+    "SUPPORT_EMAIL": "contactus@bloombergsupport.com",
+    "OFFICIAL_SOURCE": "https://www.bloombergsupport.com/"
+  },
+  {
+    "VENDOR_NAME": "S&P Global",
+    "SUPPORT_EMAIL": "support.marketintelligence@spglobal.com",
+    "OFFICIAL_SOURCE": "https://www.spglobal.com/marketintelligence/en/contact-us"
+  },
+  {
+    "VENDOR_NAME": "MSCI",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.msci.com/contact-us"
+  },
+  {
+    "VENDOR_NAME": "Swaps Monitor",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://swapsmonitor.com/"
+  },
+  {
+    "VENDOR_NAME": "Preqin",
+    "SUPPORT_EMAIL": "info@preqin.com",
+    "OFFICIAL_SOURCE": "https://www.preqin.com/our-products/enterprise-data-solutions"
+  },
+  {
+    "VENDOR_NAME": "Harmonic Ai",
+    "SUPPORT_EMAIL": "support@harmonic.ai",
+    "OFFICIAL_SOURCE": "https://console.harmonic.ai/docs/api-reference/introduction"
+  },
+  {
+    "VENDOR_NAME": "CB Insights",
+    "SUPPORT_EMAIL": "info@cbinsights.com",
+    "OFFICIAL_SOURCE": "https://www.cbinsights.com/"
+  },
+  {
+    "VENDOR_NAME": "CoreLogic",
+    "SUPPORT_EMAIL": "support.claims@cotality.com",
+    "OFFICIAL_SOURCE": "https://www.corelogic.com/support"
+  },
+  {
+    "VENDOR_NAME": "U.S. Government",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.usa.gov/"
+  },
+  {
+    "VENDOR_NAME": "SWIFT",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.swift.com/contact-us"
+  },
+  {
+    "VENDOR_NAME": "U.K. Government",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.gov.uk/contact"
+  },
+  {
+    "VENDOR_NAME": "VocaLink",
+    "SUPPORT_EMAIL": "natalja.donovan@mastercard.com",
+    "OFFICIAL_SOURCE": "https://www.vocalink.com/newsroom/"
+  },
+  {
+    "VENDOR_NAME": "AFME",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.afme.eu/contact-us/"
+  },
+  {
+    "VENDOR_NAME": "Derivatives Service Bureau",
+    "SUPPORT_EMAIL": "technical.support@anna-dsb.com",
+    "OFFICIAL_SOURCE": "https://www.anna-dsb.com/ufaqs/dsb-support-contacts/"
+  },
+  {
+    "VENDOR_NAME": "Argus",
+    "SUPPORT_EMAIL": "conferencesupport@argusmedia.com",
+    "OFFICIAL_SOURCE": "https://www.argusmedia.com/en/events/conferences/latin-america-biofuels/contact"
+  },
+  {
+    "VENDOR_NAME": "CoStar Group",
+    "SUPPORT_EMAIL": "mblocher@costar.com",
+    "OFFICIAL_SOURCE": "https://www.costargroup.com/contact"
+  },
+  {
+    "VENDOR_NAME": "ETF Global",
+    "SUPPORT_EMAIL": "support@etfg.com",
+    "OFFICIAL_SOURCE": "https://www.etfg.com/etfg-contact-us"
+  },
+  {
+    "VENDOR_NAME": "Thinknum Alternative Data",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.thinknum.com/"
+  },
+  {
+    "VENDOR_NAME": "Wilmington Trust",
+    "SUPPORT_EMAIL": "olpsupport@wilmingtontrust.com",
+    "OFFICIAL_SOURCE": "https://www.wilmingtontrust.com/help/online-portfolio"
+  },
+  {
+    "VENDOR_NAME": "MKT Media Stats",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": null
+  },
+  {
+    "VENDOR_NAME": "Monetary Financial Institution",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": null
+  },
+  {
+    "VENDOR_NAME": "Moody's Corporation",
+    "SUPPORT_EMAIL": "clientservices@moodys.com",
+    "OFFICIAL_SOURCE": "https://www.moodys.com/web/en/us/help-support.html"
+  },
+  {
+    "VENDOR_NAME": "European Union",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://european-union.europa.eu/contact-eu_en"
+  },
+  {
+    "VENDOR_NAME": "Finaeon",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": null
+  },
+  {
+    "VENDOR_NAME": "Finchina",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": null
+  },
+  {
+    "VENDOR_NAME": "Nasdaq",
+    "SUPPORT_EMAIL": "optionshelpdesk@nasdaq.com",
+    "OFFICIAL_SOURCE": "https://www.nasdaqtrader.com/trader.aspx?id=contactlist"
+  },
+  {
+    "VENDOR_NAME": "Rimes Technologies",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.rimes.com/contact-us/"
+  },
+  {
+    "VENDOR_NAME": "Rose Ai",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://rose.ai/"
+  },
+  {
+    "VENDOR_NAME": "Intercontinental Exchange",
+    "SUPPORT_EMAIL": "media@theice.com",
+    "OFFICIAL_SOURCE": "https://ir.theice.com/investor-resources/investor-contacts/default.aspx"
+  },
+  {
+    "VENDOR_NAME": "Rystad Energy",
+    "SUPPORT_EMAIL": "info@rystadenergy.com",
+    "OFFICIAL_SOURCE": "https://www.rystadenergy.com/contact"
+  },
+  {
+    "VENDOR_NAME": "National Futures Association",
+    "SUPPORT_EMAIL": "information@nfa.futures.org",
+    "OFFICIAL_SOURCE": "https://www.nfa.futures.org/contact-nfa/index.html"
+  },
+  {
+    "VENDOR_NAME": "S3 Partners",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://s3partners.com/"
+  },
+  {
+    "VENDOR_NAME": "Snowflake Marketplace",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.snowflake.com/"
+  },
+  {
+    "VENDOR_NAME": "Trepp",
+    "SUPPORT_EMAIL": "support@trepp.com",
+    "OFFICIAL_SOURCE": "https://www.trepp.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Sourcescrub",
+    "SUPPORT_EMAIL": "marketing@sourcescrub.com",
+    "OFFICIAL_SOURCE": "https://live.sourcescrub.com/diversitysurvey"
+  },
+  {
+    "VENDOR_NAME": "The TCW Group",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.tcw.com/contact-us"
+  },
+  {
+    "VENDOR_NAME": "FINRA",
+    "SUPPORT_EMAIL": "FINRA_Support_Center@finra.org",
+    "OFFICIAL_SOURCE": "https://www.finra.org/registration-exams-ce/classic-crd/refund-requests-charges-assessed-error"
+  },
+  {
+    "VENDOR_NAME": "Simplify Asset Management",
+    "SUPPORT_EMAIL": "info@simplify.us",
+    "OFFICIAL_SOURCE": "https://www.simplify.us/contact-us-thank-you"
+  },
+  {
+    "VENDOR_NAME": "YipitData",
+    "SUPPORT_EMAIL": "clients@yipitdata.com",
+    "OFFICIAL_SOURCE": "https://www.yipitdata.com/live"
+  },
+  {
+    "VENDOR_NAME": "Yes Energy",
+    "SUPPORT_EMAIL": "support@yesenergy.com",
+    "OFFICIAL_SOURCE": "https://www.yesenergy.com/support"
+  },
+  {
+    "VENDOR_NAME": "SimCorp",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.simcorp.com/about-us/contact"
+  },
+  {
+    "VENDOR_NAME": "ClimateArc",
+    "SUPPORT_EMAIL": "info@climatearc.org",
+    "OFFICIAL_SOURCE": "https://climatearc.org/contact-us"
+  },
+  {
+    "VENDOR_NAME": "AlphaRoc",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.alpharoc.ai/contact"
+  },
+  {
+    "VENDOR_NAME": "RelPro",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.relpro.com/"
+  },
+  {
+    "VENDOR_NAME": "GreenStreet",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.greenstreet.com/"
+  },
+  {
+    "VENDOR_NAME": "CBRE",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.cbre.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Equilar",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.equilar.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "DTCC",
+    "SUPPORT_EMAIL": "GTRSupport@dtcc.com",
+    "OFFICIAL_SOURCE": "https://www.dtcc.com/repository-and-derivatives-services/repository-services/gtr-contact-us"
+  },
+  {
+    "VENDOR_NAME": "ESG Book",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.esgbook.com/contact"
+  },
+  {
+    "VENDOR_NAME": "DV01",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.dv01.co/"
+  },
+  {
+    "VENDOR_NAME": "Google",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://support.google.com/"
+  },
+  {
+    "VENDOR_NAME": "Kroll Bond Rating Agency",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.kbra.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Morningstar",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.morningstar.com/help"
+  },
+  {
+    "VENDOR_NAME": "Finsight",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://finsight.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Crunchbase",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://support.crunchbase.com/"
+  },
+  {
+    "VENDOR_NAME": "MSRB",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.msrb.org/contact"
+  },
+  {
+    "VENDOR_NAME": "Zengin System",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.zenginkyo.or.jp/en/"
+  },
+  {
+    "VENDOR_NAME": "Climate Action 100+",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.climateaction100.org/contact/"
+  },
+  {
+    "VENDOR_NAME": "Financial Conduct Authority",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.fca.org.uk/contact"
+  },
+  {
+    "VENDOR_NAME": "FFIEC",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.ffiec.gov/contact.htm"
+  },
+  {
+    "VENDOR_NAME": "GLEIF",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.gleif.org/en/contact"
+  },
+  {
+    "VENDOR_NAME": "Wood Mackenzie",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.woodmac.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "RavenPack",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.ravenpack.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "Quant IP",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://quant-ip.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "Transition Pathway Initiative",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.transitionpathwayinitiative.org/contact/"
+  },
+  {
+    "VENDOR_NAME": "EPFR",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.epfr.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "Novata",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.novata.com/contact/"
+  },
+  {
+    "VENDOR_NAME": "Haver Analytics",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.haver.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Turnleaf Analytics",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": null
+  },
+  {
+    "VENDOR_NAME": "Cognitive Credit",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.cognitivecredit.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Fitch",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.fitchratings.com/contact"
+  },
+  {
+    "VENDOR_NAME": "Rearc",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.rearc.io/contact"
+  },
+  {
+    "VENDOR_NAME": "Goldman Sachs",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.goldmansachs.com/contact-us/"
+  },
+  {
+    "VENDOR_NAME": "JP Morgan Chase",
+    "SUPPORT_EMAIL": null,
+    "OFFICIAL_SOURCE": "https://www.jpmorganchase.com/contact-us"
+  },
+  {
+    "VENDOR_NAME": "KRIS (Kamakura)",
+    "SUPPORT_EMAIL": "info@kamakuraco.com",
+    "OFFICIAL_SOURCE": "https://www.kamakuraco.com/contact-us/"
+  }
+]
