@@ -158,7 +158,7 @@
         <section className="catalogInfoBand">
           <div className="catalogInfoBandInner">
             <div className="catalogInfoTitle">
-              Resolve <span className="keystoneWord">Keystone</span> Tickets, Streamline user requests
+              Explore <span className="documentsWord">Documents</span> , Resolve <span className="keystoneWord">Keystone</span> Tickets, Streamline user requests
             </div>
             <div className="catalogInfoSub">Acquire access to the vendor user guides</div>
           </div>
@@ -167,84 +167,12 @@
         {/* ===== Top Categories (white background) ===== */}
         <section className="topCategoriesSection">
           <div className="topCategoriesInner">
-            <div className="topCategoriesHead">
-              <h2 className="topCategoriesTitle">Top Categories</h2>
-</div>
-
             <div className="topCategoriesGrid" role="list">
-              {[
-                { label: "Environmental, Social, and Governance", icon: "leaf", tint: "rgba(255, 203, 245, 0.55)" },
-                { label: "Exchange Traded Funds", icon: "briefcase", tint: "rgba(255, 233, 206, 0.70)" },
-                { label: "Ratings", icon: "star", tint: "rgba(209, 244, 255, 0.75)" },
-                { label: "Mortgages", icon: "home", tint: "rgba(221, 236, 255, 0.75)" },
-                { label: "Firmographics", icon: "chart", tint: "rgba(217, 255, 244, 0.75)" },
-                { label: "Funds", icon: "bank", tint: "rgba(236, 232, 255, 0.75)" },
-              ].map((c) => (
-                <div key={c.label} className="topCategoryItem" role="listitem">
-                  <div className="topCategoryIcon" style={{ background: c.tint }} aria-hidden="true">
-                    {c.icon === "leaf" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M20 4C13 4 6 8 4 20c8-2 12-9 12-16 0 6-3 12-10 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    )}
-                    {c.icon === "briefcase" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M4 8h16v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                        <path d="M4 12c5 3 11 3 16 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      </svg>
-                    )}
-                    {c.icon === "star" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M12 3l3 6 6 .9-4.5 4.3 1.1 6.2L12 17.9 6.4 20.7l1.1-6.2L3 9.9 9 9z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                      </svg>
-                    )}
-                    {c.icon === "home" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M3 11.5 12 4l9 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M5 10.8V20h14v-9.2" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                        <path d="M10 20v-6h4v6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                      </svg>
-                    )}
-                    {c.icon === "chart" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M4 19V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M4 19h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M8 16v-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M12 16V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M16 16v-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      </svg>
-                    )}
-                    {c.icon === "bank" && (
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                        <path d="M4 10h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M5 10V8l7-4 7 4v2" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                        <path d="M6 10v9M10 10v9M14 10v9M18 10v9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M4 19h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      </svg>
-                    )}
-                  </div>
-                  <div className="topCategoryLabel">{c.label}</div>
-                </div>
-              ))}
-            </div>
+              </div>
           </div>
-        </section>
-
-        {/* ===== Vendor Catalog hero band (blue background, headings only) ===== */}
-        <section className="vendorCatalogHero">
-          <div className="vendorCatalogHeroInner">
-            <div className="vendorCatalogHeroTitle">VENDOR CATALOG</div>
-            <div className="vendorCatalogHeroSub">
-              Browse from over 300 best-in-class data feeds, APIs, products, and solutions to find what you need to do your
-              best work.
-            </div>
-          </div>
-        </section>
-
-
         
-      <section className="catalogControlsBar">
+
+      <div className="catalogControlsBar">
         <div className="catalogControlsInner">
           <div className="catalogVendorCount">{visibleVendors.length} Vendors</div>
 
@@ -269,16 +197,6 @@
 
             {vendorDropdownOpen && (
               <div className="vendorDropdown" role="listbox" aria-label="Vendor selector">
-                <div className="vendorDropdownSearchWrap">
-                  <input
-                    className="vendorDropdownSearch"
-                    value={vendorSearch}
-                    onChange={(e) => setVendorSearch(e.target.value)}
-                    placeholder="Search vendors"
-                    type="text"
-                  />
-                </div>
-
                 <div className="vendorDropdownList">
                   {filteredVendorsByDropdown.map((v) => (
                     <label key={v.VENDOR_ID} className="vendorDropdownRow">
@@ -290,6 +208,27 @@
                       <span className="vendorDropdownName">{v.VENDOR_NAME}</span>
                     </label>
                   ))}
+                </div>
+
+                <div className="vendorDropdownActions">
+                  <button
+                    type="button"
+                    className="vendorDropdownBtn"
+                    onClick={() => {
+                      setSelectedVendor("");
+                      setSelectedVendors(new Set());
+                      setVendorSearch("");
+                    }}
+                  >
+                    Clear
+                  </button>
+                  <button
+                    type="button"
+                    className="vendorDropdownBtn vendorDropdownBtnPrimary"
+                    onClick={() => setVendorDropdownOpen(false)}
+                  >
+                    Search
+                  </button>
                 </div>
               </div>
             )}
@@ -337,9 +276,11 @@
           </div>
         </div>
       </div>
-      </section>
+      </div>
 
 
+
+        </section>
         <div className="catalogBody">
           <section className="catalogRight">
             {loading && <div className="muted">Loading vendors…</div>}

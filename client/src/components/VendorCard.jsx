@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-function getLogoSrc(fileName) {
+function toLogoCandidates(fileName) {
+  if (!fileName) return [];
+
+  const clean = String(fileName).trim();
+  if (!clean) return [];
+
+  // If an extension is already provided, use it as-is.
+  if (/\.(png|jpe?g|svg|webp)$/i.test(clean)) return [clean];
+
+  // Otherwise, try common raster formats.
+  return [`${clean}.png`, `${clean}.jpg`, `${clean}.jpeg`];
+}
+
+function logoUrl(fileName) {
   if (!fileName) return null;
   try {
     return new URL(`../DocHubAssets/VendorTileLogo/${fileName}`, import.meta.url).href;
@@ -16,17 +29,26 @@ export default function VendorCard({ vendor }) {
 
   const routeId = vendor.slug || vendor.VENDOR_ID;
   const vendorName = vendor.name || vendor.VENDOR_NAME;
+  const parentCompany = vendor.VENDOR_PARENT_COMPANY;
   const desc = vendor.tagline || vendor.VENDOR_TILE_DESC || "";
-  const logoSrc = getLogoSrc(vendor.VENDOR_TILE_LOGO);
+
+  const logoCandidates = useMemo(() => toLogoCandidates(vendor.VENDOR_TILE_LOGO), [vendor.VENDOR_TILE_LOGO]);
+  const [logoIdx, setLogoIdx] = useState(0);
+  const logoSrc = logoCandidates.length ? logoUrl(logoCandidates[logoIdx]) : null;
 
   return (
     <Link
       className="vendorTile"
       to={`/vendor/${routeId}`}
       state={{ vendor }}
-      style={{ ["--tileBg"]: bg, color: text }}
+      style={{ ["--tileBg"]: bg, color: text, position: "relative" }}
       aria-label={vendorName}
     >
+      {/* Task 5: keep this permanently visible (not hover-only) */}
+      <div className="vendorTileKicker" style={{ opacity: 1, visibility: "visible", display: "block" }}>
+        Vendor Data Product
+      </div>
+
       <div className="vendorTileMain">
         <div className="vendorTileIconBox" aria-hidden="true">
           {logoSrc ? (
@@ -35,6 +57,11 @@ export default function VendorCard({ vendor }) {
               src={logoSrc}
               alt=""
               onError={(e) => {
+                // Try png/jpg/jpeg fallbacks before hiding the image.
+                if (logoIdx + 1 < logoCandidates.length) {
+                  setLogoIdx((i) => i + 1);
+                  return;
+                }
                 e.currentTarget.style.display = "none";
               }}
             />
@@ -43,12 +70,11 @@ export default function VendorCard({ vendor }) {
 
         <div className="vendorTileTextStack">
           <div className="vendorTileTitle">{vendorName}</div>
-          <div className="vendorTileKicker">Vendor Data Product</div>
+          {parentCompany ? <div className="vendorTileParent">{parentCompany}</div> : null}
           {desc ? <div className="vendorTileDesc">{desc}</div> : null}
         </div>
       </div>
 
-      {/* Keep the arrow SVG as-is; only alignment is controlled via CSS */}
       <div className="vendorTileCta" aria-hidden="true">
         <svg className="vendorTileArrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
           <path
