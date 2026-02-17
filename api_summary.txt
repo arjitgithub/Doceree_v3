@@ -1,0 +1,109 @@
+API Summary (UI + Admin CRUD) — Secure, production-oriented
+
+1) End-user UI APIs (list, view, download)
+
+A. List vendors (catalog/dropdown)
+GET /api/vendors
+Returns: [{ vendorGuid, vendorName, taxonomy?, shortDesc? }, ...]
+
+B. Vendor details (header on vendor page)
+GET /api/vendors/:vendorGuid
+Returns: { vendorGuid, vendorName, taxonomy?, shortDesc?, longDesc?, websiteUrl?, confluenceUrl?, ... }
+
+C. List assets for a vendor (documents + links)
+GET /api/vendors/:vendorGuid/assets?assetType=DOCUMENT|LINK&tag=...&q=...&page=...&pageSize=...
+Returns:
+{
+  items: [
+    {
+      assetId, assetType, title, tags,
+      // for documents:
+      fileExt?, mimeType?, sizeBytes?, uploadedAt?, status?,
+      // for links:
+      url?, linkType?
+    }
+  ],
+  page, pageSize, total
+}
+Notes:
+- Server filters out deleted/replaced by default:
+  deleted_at IS NULL AND replaced_by_asset_id IS NULL
+- Use pagination always.
+
+D. Get a secure access URL for a document (view/download)
+POST /api/assets/:assetId/access
+Body: { action: "view" | "download" }
+Returns: { url, expiresAt }
+Implementation:
+- Preferred MVP: Presigned S3 GET URL (short TTL 60–300s).
+- Enterprise option: CloudFront signed URL/cookie.
+Security:
+- Must authorize user for vendor/asset access before issuing URL.
+- Never stream the file through the API—return a signed URL.
+
+E. (Optional) Asset details panel
+GET /api/assets/:assetId
+Returns: safe metadata + link/file fields (no secrets).
+
+2) Admin / backend CRUD APIs (secure operations)
+
+All admin endpoints should require auth (SSO/OIDC/JWT) + role-based authorization and be behind /api/admin/*.
+
+A. Vendors CRUD
+POST   /api/admin/vendors
+PATCH  /api/admin/vendors/:vendorGuid
+DELETE /api/admin/vendors/:vendorGuid     (soft delete)
+
+B. Create LINK asset
+POST /api/admin/assets/link
+Body: { vendorGuid, title, url, linkType, tags?, description? }
+Returns: { assetId }
+
+C. Document upload (DB-first, secure)
+POST /api/admin/assets/document/init
+Body: { vendorGuid, title, originalFileName, tags?, description? }
+Returns: { assetId, s3Bucket, s3Key, uploadUrl }
+Notes:
+- uploadUrl is a presigned PUT (or multipart upload flow for large files)
+- Insert asset row with status=PENDING_UPLOAD
+
+POST /api/admin/assets/document/complete
+Body: { assetId }
+Server:
+- HEAD object in S3 to fetch: etag, size_bytes, mime_type, uploaded_at
+- Update asset row status=READY (or ERROR)
+
+D. Edit asset metadata (title/tags/description; link url/type)
+PATCH /api/admin/assets/:assetId
+Body examples:
+- { title, tags, description }
+- For links: { url, linkType, title, tags, description }
+
+E. Replace a document (Option A: new asset_id)
+POST /api/admin/assets/:assetId/replace/init
+Body: { title?, originalFileName, tags?, description? }   // can inherit defaults
+Returns: { newAssetId, s3Bucket, s3Key, uploadUrl }
+
+POST /api/admin/assets/:assetId/replace/complete
+Body: { newAssetId }
+Server:
+- Set old row replaced_by_asset_id = newAssetId
+- Optionally set deleted_at for old row (hide immediately)
+- New row becomes READY after metadata finalize
+
+F. Delete (soft delete)
+DELETE /api/admin/assets/:assetId
+Server: set deleted_at = now()
+
+3) Security + optimization notes (architecture)
+
+- Storage: S3 private bucket (source of truth). Use signed access (presigned S3 or CloudFront signed).
+- Keys: vendors/{vendorGuid}/{category-or-tag-group}/{assetId}/{originalFileName} (or vendorGuid/assetId if no category).
+- AuthN: OIDC/SSO → JWT sessions.
+- AuthZ: vendor-level (and optionally asset-level) checks on every endpoint.
+- Audit: log admin create/edit/replace/delete actions (who/when/what).
+- Performance: pagination, DB indexes/cluster on (vendor_guid, asset_type, deleted_at, replaced_by_asset_id).
+- Reliability: retry S3 operations with backoff; use status field PENDING/READY/ERROR.
+- Do not serve files through API; always redirect via signed URL.
+
+End.
